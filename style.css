@@ -185,6 +185,96 @@ ul {
     transition: color 0.3s ease-in-out;
 }
 
+/*---------------------------background-lines styling -----------------*/
+.background-lines {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.background-lines ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.background-lines li {
+    height: 100%;
+    width: 2px;
+    background-color: #f0f0f0;
+    list-style-type: none;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Blue flowing effect on one line at a time */
+.background-lines li::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50.28px;
+    background: linear-gradient(#3f81fb00, #3F81FB, #3f81fb00);
+    /* Blue effect */
+    top: -20%;
+    animation: flowOneByOne 5s ease-in infinite;
+    opacity: 0.8;
+}
+
+/* Animation runs from top to bottom */
+@keyframes flowOneByOne {
+    0% {
+        top: -40%;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
+/* Apply animation with delay on different lines */
+.background-lines li:nth-child(1)::after {
+    animation-delay: 17s;
+    margin-top: 1300px
+}
+
+.background-lines li:nth-child(2)::after {
+    animation-delay: 3s;
+    margin-top: -400px
+}
+
+.background-lines li:nth-child(3)::after {
+    animation-delay: 21s;
+    margin-top: -700px
+}
+
+.background-lines li:nth-child(4)::after {
+    animation-delay: 4s;
+    margin-top: 600px
+}
+
+.background-lines li:nth-child(5)::after {
+    animation-delay: 11s;
+    margin-top: 400px
+}
+
+.background-lines li:nth-child(6)::after {
+    animation-delay: 19s;
+    margin-top: -900px
+}
+
+.background-lines li:nth-child(7)::after {
+    animation-delay: 9s;
+    margin-top: -300px
+}
+
 
 /*------------------------------------ Header ------------------------------------- */
 header {
@@ -986,16 +1076,9 @@ header {
     object-fit: contain;
 }
 
-@media screen and (min-width:992px) {
+@media screen and (min-width:1680px) {
     .sidebar {
         max-height: 455px;
-        overflow-y: auto;
-    }
-}
-
-@media screen and (min-width:768px) and (max-width:991px) {
-    .sidebar {
-        max-height: 597px;
         overflow-y: auto;
     }
 }
@@ -1393,6 +1476,31 @@ header {
     color: white;
 }
 
+.contact-us .p2-bold{
+    font-size: 20px;
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+.floating-image {
+    animation: float 6s ease-in-out infinite;
+}
+
 /*============================= Media Queries ==================================*/
 @media only screen and (max-width:1680px) {
     .container {
@@ -1405,10 +1513,10 @@ header {
     }
 
     h3 {
-        font-size: 50px;
+        font-size: 54px;
         line-height: 70px;
     }
-    
+
     .list-unstyled h3 {
         font-size: 40px;
         line-height: 50px;
@@ -1417,6 +1525,26 @@ header {
     h4 {
         font-size: 30px;
         line-height: 40px;
+    }
+
+    h5, .heading5 {
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    .healthcare-info {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .p2-regular, .p2-bold {
+        font-size: 20px;
+        line-height: 34px;
+    }
+
+    .p1-regular, .view_btn.circle-bg-blue a, .contact-us .p2-bold {
+        font-size: 16px;
+        line-height: 24px;
     }
 
     .custom-container-spacing {
@@ -1470,9 +1598,13 @@ header {
     }
 
     .business-image {
-        max-width: 400px;
+        max-width: 430px;
         width: 100%;
         margin-top: 160px;
+    }
+
+    .excellence .count {
+        padding: 120px 0 200px 0px;
     }
 
     .excellence .stats {
@@ -1487,10 +1619,263 @@ header {
     .services .slash::after {
         height: 60px;
         width: 5px;
+        top: 0px;
     }
 
     .portfolio__text {
         font-size: 90px;
         line-height: 90px;
+    }
+
+    .services .list-unstyled li img {
+        max-width: 275px;
+        width: 100%;
+        height: auto;
+    }
+
+    .services .android-dev:hover img, .services .ios-dev:hover img {
+        top: -120px;
+    }
+
+    .services .android-dev:hover img {
+        right: -60%;
+    }
+
+    .services .ios-dev:hover img {
+        left: -57%;
+    }
+
+    .services .flutter-dev:hover img, .services .react-dev:hover img, .services .ui-design:hover img {
+        top: -144px;
+    }
+
+    .award-item {
+        gap: 10px;
+    }
+
+    .rating {
+        width: 80px;
+    }
+
+    .award-title {
+        width: 300px;
+    }
+
+    .award-logo img {
+        max-width: 200px;
+    }
+
+    .year {
+        margin-left: auto;
+    }
+
+    .sidebar {
+        max-height: 420px;
+    }
+
+    .solutions-heading-container {
+        width: 38%;
+    }
+
+    .solution-content-container {
+        width: 62%;
+    }
+
+    .arrow_circle_blue_caret {
+        height: 42px;
+        width: 42px;
+    }
+
+    .arrow_circle_blue_caret i {
+        font-size: 18px;
+    }
+
+    .gif-slider .col-11 {
+        width: 90%;
+    }
+
+    .gif-slider .col-11 .row {
+        gap: 20px;
+    }
+
+    .gif-slider .col-4 {
+        width: 30%;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .gif-slider .col-4 img {
+        width: 100%;
+    }
+
+    .gif-slider .col-1 {
+        width: 10%;
+    }
+
+    .solution .info {
+        left: 0px;
+        width: 100%;
+    }
+
+    .view_btn.circle-bg-blue {
+        width: 135px;
+        height: 135px;
+    }
+}
+
+@media only screen and (max-width:1440px) {
+    .container {
+        max-width: 1140px;
+    }
+
+    h1, .development-container h1 {
+        font-size: 110px;
+        line-height: 140px;
+    }
+
+    h3 {
+        font-size: 40px;
+        line-height: 60px;
+    }
+
+    h4 {
+        font-size: 26px;
+        line-height: 30px;
+    }
+
+    h5, .heading5 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    h6 {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .p2-regular, .p2-bold {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    a, .circle-btn span i, .arrow_circle_white i, .contact-form .start-project button:hover .arrow_circle_white i {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .custom-container-spacing {
+        padding: 70px 0px;
+    }
+
+    .innovative, .services, .contact-form {
+        padding-bottom: 70px;
+    }
+
+    .nav-container img {
+        max-width: 180px;
+    }
+
+    .circle-btn span, .arrow_circle_white, .contact-form .start-project button:hover .arrow_circle_white {
+        height: 40px;
+        width: 40px;
+    }
+
+    .banner-content {
+        max-width: 840px;
+    }
+
+    .ai-development {
+        max-width: 420px;
+    }
+
+    .banner-top-right {
+        max-width: 290px;
+        top: 44px;
+        right: -60px;
+    }
+
+    .banner-bottom .banner-content {
+        max-width: 685px;
+    }
+
+    .banner-bottom-left {
+        position: absolute;
+        left: -60px;
+        margin-top: -45px;
+        z-index: -1;
+        max-width: 510px;
+    }
+
+    .business-content {
+        max-width: 820px;
+    }
+
+    .excellence .count {
+        padding: 120px 0 100px 0px;
+    }
+
+    .award-list {
+        max-width: 64%;
+    }
+
+    .award-logo img {
+        max-width: 160px;
+    }
+
+    #tech-grid .card {
+        padding: 20px;
+    }
+
+    #tech-grid .card img {
+        height: 50px;
+    }
+
+    .sidebar {
+        max-height: 340px;
+    }
+
+    .contact-content {
+        width: 45%;
+    }
+
+    .contact-form .card {
+        padding: 5px 10px !important;
+    }
+
+    .contact-form .start-project button {
+        font-size: 16px;
+        line-height: 20px;
+        height: 60px;
+        max-width: 280px;
+    }
+
+    .testimonial-container {
+        gap: 30px;
+    }
+
+    .testimonial-brands img, .build-container img {
+        max-width: 120px;
+    }
+
+    .testimonial-section .testimonial-brands, .build-container {
+        align-items: flex-end !important;
+    }
+
+    .testimonial-content {
+        width: 31%;
+    }
+
+    .footer-list li a {
+        font-size: 16px;
+        line-height: 35px;
+    }
+
+    .contact-us #text {
+        font-size: 400px;
     }
 }

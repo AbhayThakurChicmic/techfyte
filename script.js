@@ -59,18 +59,18 @@ window.intlTelInput(input, {
 });
 
 // Custom Owl button
-$(document).ready(function(){
-  const owl = $('.owl-carousel')
+$(document).ready(function () {
+  const owl = $(".owl-carousel");
   owl.owlCarousel({
-    loop:true,
-    margin:5,
-    nav:false,
+    loop: true,
+    margin: 5,
+    nav: false,
     items: 1,
-    dots: true
+    dots: true,
   });
 
-  $('.owl-carousel__next').click(() => owl.trigger('next.owl.carousel'))
-  $('.owl-carousel__prev').click(() => owl.trigger('prev.owl.carousel'))
+  $(".owl-carousel__next").click(() => owl.trigger("next.owl.carousel"));
+  $(".owl-carousel__prev").click(() => owl.trigger("prev.owl.carousel"));
 });
 
 const categories = {
@@ -185,3 +185,25 @@ Object.keys(categories).forEach((category) => {
 });
 
 loadCategory("Frontend");
+
+// Text Change
+document.addEventListener("DOMContentLoaded", function () {
+  const textArray = [
+    "AI Development",
+    "Machine Learning",
+    "Data Science",
+    "Deep Learning",
+  ];
+  let index = 0;
+  const textElement = document.getElementById("animated-text");
+
+  setInterval(() => {
+    textElement.classList.add("fade");
+
+    setTimeout(() => {
+      index = (index + 1) % textArray.length;
+      textElement.textContent = textArray[index];
+      textElement.classList.remove("fade");
+    }, 500);
+  }, 2000);
+});
