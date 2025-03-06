@@ -366,8 +366,11 @@ header {
     line-height: 150px;
 }
 
-.ai-development {
-    max-width: 536px;
+.ai-carousel .owl-item{
+    padding-left: 80px;
+}
+.ai-carousel .ai-development {
+    width: 536px;
     border: 2px solid #f0f0f0;
     background-color: #fff;
     padding: 24px 24px 10px 24px;
@@ -443,6 +446,7 @@ header {
 
 .expertise .service-card.large {
     grid-row: span 2;
+    max-height: 514px;
 }
 
 .expertise .service-card {
@@ -1569,6 +1573,10 @@ header {
         margin-top: 10px;
     }
 
+    .ai-carousel .owl-item{
+        padding-left: 60px;
+    }
+
     .banner-content {
         max-width: 1040px;
     }
@@ -1791,7 +1799,11 @@ header {
     }
 
     .ai-development {
-        max-width: 420px;
+        max-width: 400px;
+    }
+
+    .ai-carousel .owl-item{
+        padding-left: 0px;
     }
 
     .banner-top-right {
@@ -1878,5 +1890,36 @@ header {
 
     .contact-us #text {
         font-size: 400px;
+    }
+}
+
+@media only screen and (max-width:1024px) {
+    .container {
+        max-width: 900px;
+    }
+
+    h1, .development-container h1 {
+        font-size: 90px;
+        line-height: 120px;
+    }
+
+    h3 {
+        font-size: 32px;
+        line-height: 48px;
+    }
+
+    h4 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    h5, .heading5 {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    h6 {
+        font-size: 12px;
+        line-height: 20px;
     }
 }

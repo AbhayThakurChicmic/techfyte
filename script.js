@@ -6,6 +6,30 @@ function updateMargin() {
 $(document).ready(updateMargin);
 $(window).on("resize", updateMargin);
 
+// ai-carousel
+$(".ai-carousel").owlCarousel({
+  loop: true,
+  // autoplay: true,
+  // autoplayTimeout: 3000,
+  animateOut: "fadeOut",
+  // smartSpeed: 1000,
+  dots: true,
+  nav: false,
+  items: 1,
+  stagePadding: 30,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    600: {
+      items: 1,
+    },
+    1000: {
+      items: 1,
+    },
+  },
+});
+
 // Brands Carousel
 $(".brands-container").owlCarousel({
   loop: true,
@@ -187,23 +211,39 @@ Object.keys(categories).forEach((category) => {
 loadCategory("Frontend");
 
 // Text Change
+// document.addEventListener("DOMContentLoaded", function () {
+//   const textArray = [
+//     "AI Development",
+//     "Machine Learning",
+//     "Data Science",
+//     "Deep Learning",
+//   ];
+//   let index = 0;
+//   const textElement = document.getElementById("animated-text");
+
+//   setInterval(() => {
+//     textElement.classList.add("fade");
+
+//     setTimeout(() => {
+//       index = (index + 1) % textArray.length;
+//       textElement.textContent = textArray[index];
+//       textElement.classList.remove("fade");
+//     }, 500);
+//   }, 2000);
+// });
+
+// $(window).on("load", function () {
+//   $(".owl-carousel").trigger("refresh.owl.carousel");
+// });
+
+// bottom to top button in footer
 document.addEventListener("DOMContentLoaded", function () {
-  const textArray = [
-    "AI Development",
-    "Machine Learning",
-    "Data Science",
-    "Deep Learning",
-  ];
-  let index = 0;
-  const textElement = document.getElementById("animated-text");
+  const backToTop = document.getElementById("backToTop");
 
-  setInterval(() => {
-    textElement.classList.add("fade");
-
-    setTimeout(() => {
-      index = (index + 1) % textArray.length;
-      textElement.textContent = textArray[index];
-      textElement.classList.remove("fade");
-    }, 500);
-  }, 2000);
+  backToTop.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
 });

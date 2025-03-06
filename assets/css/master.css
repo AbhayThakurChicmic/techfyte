@@ -331,7 +331,7 @@ footer .back-to-top {
 }
 
 .footer-list li a:hover {
-  opacity: 0.5;
+  color:#007bff;
 }
 
 .footer-list-container  {
@@ -340,5 +340,9 @@ footer .back-to-top {
 }
 
 .footer-list li.more a {
-  color: #1B83EA;
+  color: #007bff;
+}
+
+.footer-list li.more a:hover{
+  color:#fff;
 }
