@@ -241,38 +241,38 @@ ul {
 
 /* Apply animation with delay on different lines */
 .background-lines li:nth-child(1)::after {
-    animation-delay: 17s;
-    margin-top: 1300px
+    animation-delay: 11s;
+    margin-top: 100px
 }
 
 .background-lines li:nth-child(2)::after {
-    animation-delay: 3s;
-    margin-top: -400px
+    animation-delay: 7s;
+    margin-top: -20px
 }
 
 .background-lines li:nth-child(3)::after {
-    animation-delay: 21s;
-    margin-top: -700px
+    animation-delay: 8s;
+    margin-top: -50px
 }
 
 .background-lines li:nth-child(4)::after {
-    animation-delay: 4s;
-    margin-top: 600px
+    animation-delay: 7s;
+    margin-top: -50px
 }
 
 .background-lines li:nth-child(5)::after {
-    animation-delay: 11s;
-    margin-top: 400px
+    animation-delay: 13s;
+    margin-top: 100px
 }
 
 .background-lines li:nth-child(6)::after {
-    animation-delay: 19s;
-    margin-top: -900px
+    animation-delay: 10s;
+    margin-top: -50px
 }
 
 .background-lines li:nth-child(7)::after {
     animation-delay: 9s;
-    margin-top: -300px
+    margin-top: -10px
 }
 
 
@@ -1502,6 +1502,7 @@ header {
 }
 
 /*============================= Media Queries ==================================*/
+
 @media only screen and (max-width:1680px) {
     .container {
         max-width: 1380px;
