@@ -9,14 +9,15 @@ $(window).on("resize", updateMargin);
 // ai-carousel
 $(".ai-carousel").owlCarousel({
   loop: true,
-  // autoplay: true,
-  // autoplayTimeout: 3000,
+  autoplay: true,
+  autoplayTimeout: 3000,
   animateOut: "fadeOut",
-  // smartSpeed: 1000,
-  dots: true,
+  smartSpeed: 1000,
+  dots: false,
   nav: false,
   items: 1,
-  stagePadding: 30,
+  margin: 20,
+  // stagePadding: 30,
   responsive: {
     0: {
       items: 1,
