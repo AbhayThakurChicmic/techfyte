@@ -42,10 +42,10 @@ $(".brands-container").owlCarousel({
   autoplayHoverPause: true,
   responsive: {
     0: {
-      items: 1,
+      items: 3,
     },
     600: {
-      items: 3,
+      items: 4,
     },
     1000: {
       items: 6,
@@ -65,10 +65,10 @@ $(".swiper-container").owlCarousel({
     0: {
       items: 1,
     },
-    600: {
-      items: 2,
-    },
-    1000: {
+    // 600: {
+    //   items: 2,
+    // },
+    992: {
       items: 2,
     },
   },
@@ -99,117 +99,77 @@ $(document).ready(function () {
 });
 
 const categories = {
-  Frontend: [
-    "Angular",
-    "JavaScript",
-    "Bootstrap",
-    "React",
-    "HTML",
-    "CSS",
-    "Next.js",
-    "Vue",
-    "Nuxt.js",
-    "Svelte",
-    "TypeScript",
-  ],
-  Backend: ["React", "Next.js", "Bootstrap", "Svelte", "Vue"],
-  Microsoft: ["Bootstrap", "CSS", "Nuxt.js", "TypeScript"],
-  Mobile: ["JavaScript", "React", "Vue", "CSS"],
+  "Frontend": ["Angular", "JavaScript", "Bootstrap", "React", "HTML", "CSS", "Next.js", "Vue", "Nuxt.js", "Svelte", "TypeScript"],
+  "Backend": ["React", "Next.js", "Bootstrap", "Svelte", "Vue"],
+  "Microsoft": ["Bootstrap", "CSS", "Nuxt.js", "TypeScript"],
+  "Mobile": ["JavaScript", "React", "Vue", "CSS"],
   "AI & ML": ["Angular", "Bootstrap", "Nuxt.js"],
-  DevOps: ["Bootstrap", "CSS", "Nuxt.js", "TypeScript"],
-  Cybersecurity: ["Angular", "JavaScript", "Bootstrap", "React", "HTML", "CSS"],
+  "DevOps": ["Bootstrap", "CSS", "Nuxt.js", "TypeScript"],
+  "Cybersecurity": ["Angular", "JavaScript", "Bootstrap", "React", "HTML", "CSS"],
   "Cloud Computing": ["Next.js", "Vue", "Nuxt.js", "Svelte", "TypeScript"],
-  Blockchain: ["JavaScript", "React", "Vue", "CSS"],
+  "Blockchain": ["JavaScript", "React", "Vue", "CSS"],
   "Big Data": ["React", "Next.js", "Bootstrap", "Svelte", "Vue"],
 };
 
-const categoryList = document.getElementById("category-list");
+const desktopCategoryList = document.getElementById("desktop-category-list");
+const mobileCategoryList = document.getElementById("mobile-category-list");
 const techGrid = document.getElementById("tech-grid");
-const accordionContainer = document.getElementById("accordion-container");
 
 function formatImageName(tech) {
-  return (
-    tech
-      .toLowerCase()
-      .replace(/\s+/g, "-")
-      .replace(/[^a-z0-9-]/g, "") + ".png"
-  );
+  return tech.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "") + ".png";
 }
 
 function loadCategory(category) {
-  techGrid.innerHTML = categories[category]
-    .map((tech) => {
-      let imgSrc = `images/${formatImageName(tech)}`;
-      return `
-      <div class="col-lg-3 col-md-4 col-sm-4 col-6">
+  techGrid.innerHTML = categories[category].map(tech => {
+    let imgSrc = `images/${formatImageName(tech)}`;
+    return `
+      <div class="col-lg-3 col-4">
         <div class="card p-4 d-flex justify-content-center text-center rounded-0 align-items-center h-100">
           <img src="${imgSrc}" onerror="this.onerror=null; this.src='images/default.png'" 
-              alt="${tech}" class="img-fluid mx-auto d-block my-2" 
-              style="max-height: 80px; width: auto; object-fit: contain;">
+              alt="${tech}" class="img-fluid mx-auto d-block my-2">
           <div class="p1-regular">${tech}</div>
         </div>
       </div>`;
-    })
-    .join("");
+  }).join('');
 
-  document
-    .querySelectorAll(".sidebar .nav-item")
-    .forEach((li) => li.classList.remove("active"));
-  document.getElementById(category).classList.add("active");
+ // Highlight active tab
+  document.querySelectorAll(".nav-item, .scrolling-tabs li").forEach(li => li.classList.remove("active"));
+  document.getElementById(category)?.classList.add("active");
+  document.getElementById(`mobile-${category}`)?.classList.add("active");
 }
 
-Object.keys(categories).forEach((category) => {
+Object.keys(categories).forEach(category => {
   const li = document.createElement("li");
-  li.classList.add(
-    "nav-item",
-    "px-4",
-    "py-3",
-    "text-light",
-    "d-flex",
-    "justify-content-between",
-    "align-items-center",
-    "heading5"
-  );
+  li.classList.add("nav-item", "px-4", "py-3", "text-light", "heading5", "d-flex", "justify-content-between");
   li.id = category;
   li.textContent = category;
   li.onclick = () => loadCategory(category);
-  categoryList.appendChild(li);
+  desktopCategoryList.appendChild(li);
+});
 
-  const accordionItem = document.createElement("div");
-  accordionItem.classList.add("accordion-item");
-  accordionItem.innerHTML = `
-    <h2 class="accordion-header" id="heading${category}">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-              data-bs-target="#collapse${category}" aria-expanded="false" 
-              aria-controls="collapse${category}">
-        ${category}
-      </button>
-    </h2>
-    <div id="collapse${category}" class="accordion-collapse collapse" 
-         aria-labelledby="heading${category}" data-bs-parent="#techAccordion">
-      <div class="accordion-body">
-        <div class="row">
-          ${categories[category]
-            .map((tech) => {
-              let imgSrc = `images/${formatImageName(tech)}`;
-              return `
-              <div class="col-6 col-sm-4">
-                <div class="card p-3 text-center">
-                  <img src="${imgSrc}" onerror="this.onerror=null; this.src='images/default.png'" 
-                      alt="${tech}" class="img-fluid mx-auto d-block my-2" 
-                      style="max-height: 80px; width: auto; object-fit: contain;">
-                  <div class="p1-regular">${tech}</div>
-                </div>
-              </div>`;
-            })
-            .join("")}
-        </div>
-      </div>
-    </div>`;
-  accordionContainer.appendChild(accordionItem);
+Object.keys(categories).forEach(category => {
+  const li = document.createElement("li");
+  li.classList.add("heading5");
+  li.id = `mobile-${category}`;
+  li.textContent = category;
+  li.onclick = () => loadCategory(category);
+  mobileCategoryList.appendChild(li);
 });
 
 loadCategory("Frontend");
+
+document.addEventListener("DOMContentLoaded", function () {
+  const tabContainer = document.querySelector(".scrolling-tabs-container");
+
+  tabContainer.addEventListener("wheel", function (event) {
+      event.preventDefault();
+      tabContainer.scrollLeft += event.deltaY*3; 
+  });
+  tabContainer.scrollBy({
+    behavior: "smooth"
+});
+});
+
 
 // Text Change
 // document.addEventListener("DOMContentLoaded", function () {

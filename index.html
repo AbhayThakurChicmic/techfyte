@@ -41,23 +41,26 @@
 
     <header>
         <div class="container">
-            <div class="nav-container ">
-                <div class="logo">
-                    <a href="#"><img src="./images/logo.png" alt="company-logo"></a>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid nav-container">
+                    <a class="navbar-brand logo" href="#"><img src="./images/logo.png" alt="company-logo"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="menu collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav m-auto">
+                            <li class="nav-item"><a href="#">Services</a></li>
+                            <li class="nav-item"><a href="#">Our Works</a></li>
+                            <li class="nav-item"><a href="#">Industries</a></li>
+                            <li class="nav-item"><a href="#">Technologies</a></li>
+                            <li class="nav-item"><a href="#">Company</a></li>
+                        </ul>
+                        <div class="circle-btn ms-lg-3 mt-lg-0">
+                            <a href="#">Contact us <span><i class="fa-solid fa-arrow-right-long fa-lg"></i></span></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="menu">
-                    <ul>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Our Works</a></li>
-                        <li><a href="#">Industries</a></li>
-                        <li><a href="#">Technologies</a></li>
-                        <li><a href="#">Company</a></li>
-                    </ul>
-                </div>
-                <div class="circle-btn">
-                    <a href="#">Contact us<span><i class="fa-solid fa-arrow-right-long fa-lg"></i></span></a>
-                </div>
-            </div>
+            </nav>
         </div>
     </header>
     
@@ -238,63 +241,108 @@
 
     <!--section services starts-->
     <section class="services ">
-        <div class="row-1">
+        <div class="services-desktop d-md-block d-none">
+            <div class="row-1">
+                <div class="container">
+                    <ul class="list-unstyled list-desktop">
+                        <li class="android-dev position-relative">
+                            <img src="./images/android-dev.png" class="image-fade-in position-absolute img-fluid"
+                                alt="development-img" />
+                            <h3>Android Development</h3>
+                        </li>
+                        <li class="ios-dev position-relative">
+                            <img src="./images/ios-dev.png" class="image-fade-in position-absolute img-fluid"
+                                alt="development-img" />
+                            <div class="slash position-relative"></div>
+                            <h3>IOS Development</h3>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row-2">
+                <div class="container">
+                    <ul class="list-unstyled list-desktop">
+                        <li class="flutter-dev position-relative">
+                            <img src="./images/flutter-dev.png" class="image-fade-in position-absolute img-fluid"
+                                alt="development-img" />
+                            <h3>Flutter Development</h3>
+                        </li>
+                        <li class="react-dev position-relative">
+                            <img src="./images/react-dev.png" class="image-fade-in position-absolute img-fluid"
+                                alt="development-img" />
+                            <div class="slash position-relative"></div>
+                            <h3>React Development</h3>
+                        </li>
+                        <li class="ui-design position-relative">
+                            <img src="./images/ui-design.png" class="image-fade-in position-absolute img-fluid"
+                                alt="development-img" />
+                            <div class="slash position-relative"></div>
+                            <h3>UI/UX Design</h3>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row-3">
+                <div class="container">
+                    <ul class="list-unstyled list-desktop">
+                        <li class="testing position-relative">
+                            <img src="./images/testing.png" class="image-fade-in position-absolute img-fluid"
+                                alt="development-img" />
+                            <h3>Manual & Automated Testing</h3>
+                        </li>
+                        <li class="bug position-relative">
+                            <img src="./images/bug.png" class="image-fade-in position-absolute img-fluid"
+                                alt="development-img" />
+                            <div class="slash position-relative"></div>
+                            <h3>Bug Fixes & Optimization</h3>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="services-mobile d-md-none d-block">
             <div class="container">
-                <ul class="list-unstyled">
-                    <li class="android-dev position-relative">
-                        <img src="./images/android-dev.png" class="image-fade-in position-absolute img-fluid"
-                            alt="development-img" />
+                <ul class="list-unstyled list-mobile position-relative">
+                    <li class="service-mob-img">
                         <h3>Android Development</h3>
+                        <img src="./images/android-dev.png" class="image-fade-in position-absolute img-fluid"
+                                alt="development-img" />
                     </li>
-                    <li class="ios-dev position-relative">
-                        <img src="./images/ios-dev.png" class="image-fade-in position-absolute img-fluid"
-                            alt="development-img" />
-                        <div class="slash position-relative"></div>
+                    <li class="service-mob-img">
                         <h3>IOS Development</h3>
+                        <img src="./images/ios-dev.png" class="image-fade-in position-absolute img-fluid"
+                                alt="development-img" />
                     </li>
-                </ul>
-            </div>
-        </div>
-        <div class="row-2">
-            <div class="container">
-                <ul class="list-unstyled">
-                    <li class="flutter-dev position-relative">
-                        <img src="./images/flutter-dev.png" class="image-fade-in position-absolute img-fluid"
-                            alt="development-img" />
+                    <li class="service-mob-img">
                         <h3>Flutter Development</h3>
+                        <img src="./images/flutter-dev.png" class="image-fade-in position-absolute img-fluid"
+                                alt="development-img" />
                     </li>
-                    <li class="react-dev position-relative">
-                        <img src="./images/react-dev.png" class="image-fade-in position-absolute img-fluid"
-                            alt="development-img" />
-                        <div class="slash position-relative"></div>
+                    <li class="service-mob-img">
                         <h3>React Development</h3>
+                        <img src="./images/react-dev.png" class="image-fade-in position-absolute img-fluid"
+                                alt="development-img" />
                     </li>
-                    <li class="ui-design position-relative">
-                        <img src="./images/ui-design.png" class="image-fade-in position-absolute img-fluid"
-                            alt="development-img" />
-                        <div class="slash position-relative"></div>
+                    <li class="service-mob-img">
                         <h3>UI/UX Design</h3>
+                        <img src="./images/ui-design.png" class="image-fade-in position-absolute img-fluid"
+                                alt="development-img" />
                     </li>
-                </ul>
-            </div>
-        </div>
-        <div class="row-3">
-            <div class="container">
-                <ul class="list-unstyled">
-                    <li class="testing position-relative">
-                        <img src="./images/testing.png" class="image-fade-in position-absolute img-fluid"
-                            alt="development-img" />
+                    <li class="service-mob-img">
                         <h3>Manual & Automated Testing</h3>
+                        <img src="./images/testing.png" class="image-fade-in position-absolute img-fluid"
+                                alt="development-img" />
                     </li>
-                    <li class="bug position-relative">
-                        <img src="./images/bug.png" class="image-fade-in position-absolute img-fluid"
-                            alt="development-img" />
-                        <div class="slash position-relative"></div>
+                    <li class="service-mob-img">
                         <h3>Bug Fixes & Optimization</h3>
+                        <img src="./images/bug.png" class="image-fade-in position-absolute img-fluid"
+                                alt="development-img" />
                     </li>
                 </ul>
             </div>
         </div>
+        
     </section>
 
     <!-- section project_work starts -->
@@ -314,7 +362,7 @@
                             <div
                                 class="item_info position-absolute d-xl-flex justify-content-xl-between align-items-xl-center d-block w-100">
                                 <h4 class="text-white">App Developed for Food</h4>
-                                <div class="circle-btn">
+                                <div class="circle-btn d-md-block d-none">
                                     <a href="#">Case Study<span><i class="fa-solid fa-arrow-right-long fa-lg"
                                                 aria-hidden="true"></i></span></a>
                                 </div>
@@ -329,7 +377,7 @@
                             <div
                                 class="item_info position-absolute d-xl-flex justify-content-xl-between align-items-xl-center d-block w-100">
                                 <h4 class="text-white">App Developed for Food</h4>
-                                <div class="circle-btn">
+                                <div class="circle-btn d-md-block d-none">
                                     <a href="#">Case Study<span><i class="fa-solid fa-arrow-right-long fa-lg"
                                                 aria-hidden="true"></i></span></a>
                                 </div>
@@ -344,7 +392,7 @@
                             <div
                                 class="item_info position-absolute d-xl-flex justify-content-xl-between align-items-xl-center d-block w-100">
                                 <h4 class="text-white">App Developed for Food</h4>
-                                <div class="circle-btn">
+                                <div class="circle-btn d-md-block d-none">
                                     <a href="#">Case Study<span><i class="fa-solid fa-arrow-right-long fa-lg"
                                                 aria-hidden="true"></i></span></a>
                                 </div>
@@ -359,7 +407,7 @@
                             <div
                                 class="item_info position-absolute d-xl-flex justify-content-xl-between align-items-xl-center d-block w-100">
                                 <h4 class="text-white">App Developed for Food</h4>
-                                <div class="circle-btn">
+                                <div class="circle-btn d-md-block d-none">
                                     <a href="#">Case Study<span><i class="fa-solid fa-arrow-right-long fa-lg"
                                                 aria-hidden="true"></i></span></a>
                                 </div>
@@ -374,7 +422,7 @@
                             <div
                                 class="item_info position-absolute d-xl-flex justify-content-xl-between align-items-xl-center d-block w-100">
                                 <h4 class="text-white">App Developed for Food</h4>
-                                <div class="circle-btn">
+                                <div class="circle-btn d-md-block d-none">
                                     <a href="#">Case Study<span><i class="fa-solid fa-arrow-right-long fa-lg"
                                                 aria-hidden="true"></i></span></a>
                                 </div>
@@ -389,7 +437,7 @@
                             <div
                                 class="item_info position-absolute d-xl-flex justify-content-xl-between align-items-xl-center d-block w-100">
                                 <h4 class="text-white">App Developed for Food</h4>
-                                <div class="circle-btn">
+                                <div class="circle-btn d-md-block d-none">
                                     <a href="#">Case Study<span><i class="fa-solid fa-arrow-right-long fa-lg"
                                                 aria-hidden="true"></i></span></a>
                                 </div>
@@ -420,7 +468,7 @@
                         Honors & <span class="custom-primary-blue">Awards</span>: Complete
                         <span class="custom-primary-blue">Commitment</span> from start to finish
                     </h3>
-                    <div class="bg-white btn_wrapper" data-speed="1" data-lag="0.2">
+                    <div class="bg-white btn_wrapper d-md-block d-none" data-speed="1" data-lag="0.2">
                         <a class=" wc-btn wc-btn-primary btn-hover btn-item" href="#"><span></span><i
                                 class="fa-solid fa-arrow-right-long fa-lg" aria-hidden="true"></i>Book a
                             <br>Consultation</a>
@@ -428,7 +476,7 @@
                 </div>
                 <div class="award-list">
                     <div class="award-item">
-                        <div class="rating"><img alt="award-img" src="./images/star.png">
+                        <div class="award-rating"><img alt="award-img" src="./images/star.png">
                             <p class="fw-semibold text-black">5</p>
                         </div>
                         <div class="award-title">
@@ -440,7 +488,7 @@
                         </div>
                     </div>
                     <div class="award-item">
-                        <div class="rating"><img alt="award-img" src="./images/star.png">
+                        <div class="award-rating"><img alt="award-img" src="./images/star.png">
                             <p class="fw-semibold text-black">5</p>
                         </div>
                         <div class="award-title">
@@ -452,7 +500,7 @@
                         </div>
                     </div>
                     <div class="award-item">
-                        <div class="rating"><img alt="award-img" src="./images/star.png">
+                        <div class="award-rating"><img alt="award-img" src="./images/star.png">
                             <p class="fw-semibold text-black">5</p>
                         </div>
                         <div class="award-title">
@@ -464,7 +512,7 @@
                         </div>
                     </div>
                     <div class="award-item">
-                        <div class="rating"><img alt="award-img" src="./images/star.png">
+                        <div class="award-rating"><img alt="award-img" src="./images/star.png">
                             <p class="fw-semibold text-black">5</p>
                         </div>
                         <div class="award-title">
@@ -476,7 +524,7 @@
                         </div>
                     </div>
                     <div class="award-item">
-                        <div class="rating"><img alt="award-img" src="./images/star.png">
+                        <div class="award-rating"><img alt="award-img" src="./images/star.png">
                             <p class="fw-semibold text-black">5</p>
                         </div>
                         <div class="award-title">
@@ -486,6 +534,11 @@
                         <div class="year">
                             <h6 class="fw-light">2022-23</h6>
                         </div>
+                    </div>
+                    <div class="bg-white btn_wrapper d-md-none m-auto" data-speed="1" data-lag="0.2">
+                        <a class=" wc-btn wc-btn-primary btn-hover btn-item" href="#"><span></span><i
+                                class="fa-solid fa-arrow-right-long fa-lg" aria-hidden="true"></i>Book a
+                            <br>Consultation</a>
                     </div>
                 </div>
             </div>
@@ -1098,7 +1151,7 @@
     </section>
 
     <!-- section tech-stack begins -->
-    <section class="tech-stack custom-secondary-radial px-sm-0 px-5">
+    <!-- <section class="tech-stack custom-secondary-radial px-sm-0 px-5">
         <div class="container py-5">
             <div class="row">
                 <div class="col-12">
@@ -1117,17 +1170,44 @@
                             <div id="tech-grid" class="row g-5 ps-md-5"></div>
                         </main>
                     </div>
-
-                    <!-- Accordion for small screens -->
                     <div class="accordion d-md-none" id="techAccordion">
                         <div class="accordion-item" id="accordion-container">
-                            <!-- Categories and content will be dynamically added here -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
+
+    <!-- section tech-stack begins -->
+    <section class="tech-stack custom-secondary-radial px-sm-0 px-5">
+        <div class="container py-5">
+          <div class="row">
+            <div class="col-12">
+              <h3 class="heading3 text-white pt-5 text-white">A Future-Ready <span class="custom-primary-blue">Tech
+                            Stack</span> At Your <span class="d-lg-block">Disposal</span></h3>
+            </div>
+            <div class="col-12 d-md-none d-block">
+              <div class="scrolling-tabs-container">
+                <ul class="scrolling-tabs" id="mobile-category-list"></ul>
+              </div>
+            </div>
+  
+            <div class="col-12 py-5">
+              <div class="row g-lg-5 g-md-4 g-3">
+                <div class="tech-nav col-md-4 d-none d-md-block">
+                  <nav class="sidebar scroll-container px-3 my-5" id="scrollable-div">
+                    <ul id="desktop-category-list" class="nav flex-column gap-4"></ul>
+                  </nav>
+                </div>
+                <main class="col-md-8 col-12 px-md-4">
+                  <div id="tech-grid" class="row g-lg-5 g-4 ps-lg-5"></div>
+                </main>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
     <!--section project begins-->
     <section class="project custom-secondary-bg-white custom-container-spacing">
@@ -1140,7 +1220,7 @@
                                     class="custom-primary-blue">Industry</span> at a time!</p>
                             </h3>
 
-                            <div class="bg-white btn_wrapper" data-speed="1" data-lag="0.2">
+                            <div class="bg-white btn_wrapper d-md-block d-none" data-speed="1" data-lag="0.2">
                                 <a class=" wc-btn wc-btn-primary btn-hover btn-item" href="#"><span></span><i
                                         class="fa-solid fa-arrow-right-long fa-lg" aria-hidden="true"></i>Book a
                                     <br>Consultation</a>
@@ -1214,7 +1294,12 @@
                             </div>
 
                         </div>
+                        <div class="bg-white btn_wrapper d-md-none m-auto" data-speed="1" data-lag="0.2" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                            <a class=" wc-btn wc-btn-primary btn-hover btn-item" href="#"><span></span><i class="fa-solid fa-arrow-right-long fa-lg" aria-hidden="true"></i>Book a
+                                <br>Consultation</a>
+                        </div>
                     </div>
+
                 </div>
             </div>
     </section>
@@ -1391,11 +1476,11 @@
             <div class="testimonial-container">
                 <div class="testimonial-content">
                     <h3>
-                        Hear From Our <span class="custom-primary-blue">Clients</span> <br>
-                        Vouch For Our <span class="custom-primary-blue"> <br>Credibility</span>
+                        Hear From Our <span class="custom-primary-blue">Clients</span> <div class="d-lg-inline-block d-inline"> Vouch For Our <span class="custom-primary-blue">Credibility</span></div>
+                       
                     </h3>
 
-                    <div class="testimonial-brands d-flex">
+                    <div class="testimonial-brands d-flex flex-wrap">
                         <div class="d-flex flex-column">
                             <img src="./images/contact-form-img1.png" alt="Upwork">
                             <img src="./images/contact-form-img2.png" alt="Upwork">
@@ -1616,19 +1701,19 @@
                         <div class="row">
                             <div class="col-4">
                                 <div class="email d-flex flex-column align-items-center">
-                                    <img alt="contact-img" src="./images/email.png">
+                                    <img alt="contact-img" class="contact-img" src="./images/email.png">
                                     <p2 class="p2-bold text-center custom-clr py-5">contact@techfyte.in</p2>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="phone d-flex flex-column align-items-center">
-                                    <img alt="contact-img" src="./images/phone2.png">
+                                    <img alt="contact-img" class="contact-img" src="./images/phone2.png">
                                     <p2 class="p2-bold text-center custom-clr py-5">+91-9501423775</p2>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="location d-flex flex-column align-items-center">
-                                    <img alt="contact-img" src="./images/location.png">
+                                    <img alt="contact-img" class="contact-img" src="./images/location.png">
                                     <p2 class="p2-bold custom-clr py-5 text-center">F-273, Phase VIII-B, Industrial
                                         Focal
                                         Point, Mohali,
