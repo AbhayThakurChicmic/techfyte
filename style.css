@@ -947,7 +947,7 @@ header {
 }
 
 /* ======================= Project Section =============================== */
-.award-content {
+.project .award-content {
     display: flex;
     align-items: center;
     gap: 60px;
@@ -1145,6 +1145,16 @@ header {
     background-color: #FFFFFF;
 }
 
+.solution{
+    padding-bottom: 120px;
+}
+
+.solution h3{
+    padding-bottom: 35px;
+}
+
+
+
 .solution .boundary {
     border-top: 1px solid #F0F0F0;
 }
@@ -1218,6 +1228,10 @@ header {
 /*============================= project section styling =================================*/
 .project {
     padding-bottom: 120px;
+}
+
+.project .project-intro{
+    text-transform: capitalize;
 }
 
 .project .sticky-head p {
@@ -1632,6 +1646,10 @@ footer {
     color:#fff;
   }
 
+  .project .sticky-head p:empty{
+    display: none;
+  }
+
 /*============================= Media Queries ==================================*/
 
 @media only screen and (max-width:1680px) {
@@ -1694,10 +1712,6 @@ footer {
 
     .banner-top {
         margin-top: 20px;
-    }
-
-    .development-container {
-        margin-top: 10px;
     }
 
     .ai-carousel .owl-item{
@@ -2166,9 +2180,8 @@ footer {
     }
 
     .gray-btn {
-        max-width: 60px;
-        width: 100%;
-        max-height: 60px;
+        width: 60px;
+        height: 60px;
     }
 
     
@@ -2187,8 +2200,8 @@ footer {
     }
 
     .social-section li{
-        max-width:70px;
-        height:70px;
+        max-width:60px;
+        height:60px;
     }
     .owl-carousel__prev i, .owl-carousel__next i {
         font-size: 18px;
@@ -2351,6 +2364,10 @@ footer {
         width: 100%;
     }
 
+    .solution h3 {
+        padding-bottom: 25px;
+    }
+
     .wc-btn {
         gap: 12px;
         width: 125px;
@@ -2376,9 +2393,8 @@ footer {
     }
 
     .gray-btn {
-        max-width: 50px;
-        width: 100%;
-        max-height: 50px;
+        width: 50px;
+        height: 50px;
     }
 
     .gray-btn img{
@@ -2403,6 +2419,10 @@ footer {
         font-size: 14px;
         line-height: 22px;
     }
+    .contact-form form .input-group input[type="tel"] {
+        padding-left: 135px !important;
+    }
+
 }
 
 @media screen and (max-width:767px){
@@ -2418,6 +2438,12 @@ footer {
         font-size: 24px;
         line-height: 34px;
     }
+
+    .p2-regular, .p2-bold {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
     .custom-container-spacing {
         padding: 60px 0px;
     }
@@ -2432,7 +2458,7 @@ footer {
         margin-bottom: 70px;
     }
 
-    .innovative, .services, .contact-form {
+    .innovative, .services, .contact-form, .solution {
         padding-bottom: 60px;
     }
 
@@ -2453,8 +2479,12 @@ footer {
         padding: 15px 30px;
     }
     .excellence .info {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 26px;
+    }
+    .excellence .stats {
+        font-size: 30px;
+        padding: 15px 20px;
     }
 
     .work_info{
@@ -2495,7 +2525,533 @@ footer {
         position: relative;
         top: 0px;
     }
+    .project .sticky-head {
+        position: relative;
+        top: 0px;
+    }
+
+    .project .award-content{
+        flex-direction: column;
+        gap:26px;
+    }
+
+    .project .award-img{
+        max-width: 100%;
+    }
+    .project .award-img img{
+        height: 500px;
+        object-fit: cover;
+    }
+    .project .project-content{
+        text-align: center;
+    }
+
+    .project .info{
+        display: flex;
+        justify-content: center;
+    }
     
+    .contact-form .contact-content{
+        width: 100%;
+    }
+    .gray-btn {
+        width: 60px;
+        height: 60px;
+    }
+    .gray-btn img{
+        max-width: 35px;
+    }
+
+    .resources .right-content img{
+        width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+    }
+
+    .resources .right-content h5{
+        padding: 10px 0;
+    }
+
+    .resources .p2-bold{
+        padding: 5px 0;
+    }
+
+    .resources .right-content .bottom-border {
+        padding-bottom: 0px;
+        margin-bottom: 30px;
+        border-bottom: 0;
+    }
+
+    .testimonial-section .testimonial-container{
+        flex-direction: column;
+    }
+    .testimonial-section .testimonial-content{
+        width: 100%;
+    }
+
+    .testimonial-section .testimonial-brands {
+        margin: 30px 0;
+        gap: 30px;
+    }
+
+    .testimonial-section .swiper-container {
+        width: calc(95% + 34px);
+    }
+
+    .solution h4{
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .solution h3 {
+        padding-bottom: 30px;
+    }
+
+    .solution .hover-area p{
+        padding: 10px 0;
+    }
+    .gif-slider {
+        display: none;
+    }
+    .gif-slider.active {
+        display: block; 
+    }
+    .gif-slider {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+    }
+    
+    .gif-slider.active {
+        max-height: 500px; 
+    }
+
+    .social-section ul{
+        padding: 20px 0 0 0;
+    }
+
+    footer .list-group-item{
+        border:none;
+        border-bottom: 1px solid #1A2F56;
+        background: transparent;
+        padding: 15px 0 7px 0;
+    }
+    footer .list-group{
+        background: transparent;
+    }
+    footer button{
+        border:0;
+        background: transparent;
+    }
+    footer button i{
+        color: #3F81FB;
+        font-size: 16px;
+    }
+     .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-in-out, padding 0.3s ease-in-out;
+        }
+
+        .accordion-content.show {
+            max-height: 500px; /* Adjust as needed */
+            padding-top: 10px;
+        }
+
+        .rotate {
+            transform: rotate(180deg);
+            transition: transform 0.3s ease-in-out;
+        }
 }
 
+@media screen and (max-width:680px) {
+    h1, .development-container h1 {
+        font-size: 56px;
+        line-height: 75px;
+    }
+    .portfolio__text {
+        font-size: 60px;
+        line-height: 90px;
+    }
+    h3, .list-unstyled h3 {
+        font-size: 34px;
+        line-height: 44px;
+    }
+    h4 {
+        font-size: 22px;
+        line-height: 34px;
+    }
+    h5, .heading5 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    h6 {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .p2-regular, .p2-bold {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .p2-bold {
+        font-weight: 500;
+    }
+    .banner-bottom .banner-content {
+        max-width: 333px;
+        padding: 40px 0 0;
+    }
+    .banner-bottom-left {
+        left: -20px;
+        margin-top: 7px;
+        max-width: 302px;
+    }
+    .banner-top-right {
+        max-width: 181px;
+        top: 34px;
+        right: -22px;
+    }
+
+    .expertise .grid-container {
+        gap: 15px;
+    }
+    .expertise .service-card.large img {
+        width: 100%;
+        max-height: 400px;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    
+    .reveal {
+        font-size: 30px;
+        line-height: 44px;
+    }
+    .excellence .count {
+        padding: 20px 0 20px 0px;
+    }
+    .excellence .info {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .excellence .stats {
+        font-size: 26px;
+        padding: 15px 20px;
+    }
+    .mob-business-image {
+        max-height: 330px;
+    }
+    
+    .services-mobile .list-mobile li {
+        padding: 25px 0 30px;
+    }
+    .work_info {
+        max-width: 450px;
+    }
+
+    .project h4 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .award-rating {
+        width: 45px;
+        gap: 8px;
+    }
+    .award-title {
+        max-width: 272px;
+    }
+    .solution h4 {
+        font-size: 22px;
+        line-height: 34px;
+    }
+    .scrolling-tabs li {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: .5px;
+    }
+    .project .award-img{
+        max-width: 100%;
+    }
+    .project .award-img img{
+        height: 400px;
+        object-fit: cover;
+    }
+
+    .social-section ul{
+        flex-wrap: wrap;
+    }
+    
+    
+}
+@media screen and (max-width:580px) {
+    h1, .development-container h1 {
+        font-size: 44px;
+        line-height: 50px;
+    }
+    h3, .list-unstyled h3 {
+        font-size: 28px;
+        line-height: 38px;
+    }
+    h4, .solution h4 {
+        font-size: 20px;
+        line-height: 29px;
+    }
+    h5, .heading5 {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .p1-regular{
+        font-size: 14px;
+    }
+    .p2-regular, .p2-bold {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .p2-bold {
+        font-weight: 400;
+    }
+
+    .banner-top-right {
+        max-width: 160px;
+        top: 16px;
+        right: -20px;
+    }
+
+    .banner-bottom-left {
+        left: -20px;
+        margin-top: 7px;
+        max-width: 283px;
+    }
+
+    .banner-bottom .banner-content {
+        max-width: 260px;
+        padding: 65px 0 0;
+    }
+
+    .circle-btn span, .arrow_circle_white, .contact-form .start-project button:hover .arrow_circle_white {
+        height: 35px;
+        width: 35px;
+    }
+    a, .circle-btn span i, .arrow_circle_white i, .contact-form .start-project button:hover .arrow_circle_white i {
+        font-size: 18px;
+    }
+    .circle-btn span i {
+        margin-top: 2px;
+    }
+
+    .brands h5{
+        font-size: 18px;
+    }
+    .brands .slider-container{
+        padding:0;
+    }
+
+    .expertise .service-card.large img {
+        max-height: 300px;
+    }
+    .expertise .service-card.small img {
+        height: 140px;
+    }
+    .expertise .service-card .overlay {
+        padding: 12px;
+    }
+
+    .reveal {
+        font-size: 26px;
+        line-height: 40px;
+    }
+    .excellence .stats {
+        font-size: 25px;
+        padding: 15px;
+    }
+    .excellence .info {
+        font-size: 12px;
+        line-height: 22px;
+    }
+    .mob-business-image {
+        max-height: 250px;
+    }
+    .services-mobile .list-mobile li {
+        padding: 22px 0 26px;
+    }
+    .portfolio__text{
+        padding: 0 0 40px 0;
+    }
+    .award-title {
+        max-width: 180px;
+    }
+
+    .solution .p2-bold {
+        font-weight: 400;
+    }
+    .social-section li {
+        max-width: 50px;
+        height: 50px;
+    }
+    .resources .heading5 {
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .resources .right-content h5 {
+        padding: 6px 0;
+    }
+
+    .project h4 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    .author-info .rating {
+        max-width: 98px;
+    }
+    .testimonial-author h5{
+        font-size: 18px;
+    }
+    .testimonial-section .quote {
+        max-width: 40px;
+    }
+    .contact-form form input {
+        height: 50px;
+        padding: 7px 10px;
+    }
+    .contact-form .iti__selected-flag {
+        padding: 15px 10px;
+        font-size: 14px !important;
+    }
+    .contact-form form .input-group input[type="tel"] {
+        padding-left: 90px !important;
+    }
+    .contact-form .text textarea {
+        padding: 10px;
+    }
+    .services .service-mob-img:hover img {
+        max-width: 250px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    h1, .development-container h1 {
+        font-size: 34px;
+        line-height: 42px;
+    }
+    
+    h3, .list-unstyled h3 {
+        font-size: 25px;
+        line-height: 33px;
+    }
+    h4, .solution h4 {
+        font-size: 17px;
+        line-height: 29px;
+    }
+    h5, .heading5 {
+        font-size: 13px;
+        line-height: 20px;
+    }
+    h6 {
+        font-size: 13px;
+        line-height: 20px;
+    }
+    .p2-regular, .p2-bold {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .banner-top-right {
+        max-width: 143px;
+        top: 10px;
+        right: -20px;
+    }
+    .banner-bottom-left {
+        left: -20px;
+        margin-top: 7px;
+        max-width: 220px;
+    }
+    .banner-bottom .banner-content {
+        max-width: 201px;
+        padding: 42px 0 0;
+    }
+    .ai-development .owl-carousel {
+        padding: 10px 10px 12px;
+    }
+
+    .expertise .service-card.large img {
+        max-height: 212px;
+    }
+    .expertise .service-card.small img {
+        height: 106px;
+    }
+
+    .expertise .service-card .overlay {
+        padding: 8px;
+    }
+    .reveal {
+        font-size: 25px;
+        line-height: 38px;
+    }
+    .excellence .info {
+        font-size: 11px;
+        line-height: 19px;
+    }
+    .excellence .stats {
+        padding: 8px;
+    }
+    .mob-business-image {
+        max-height: 165px;
+    }
+    .portfolio__text {
+        font-size: 40px;
+        line-height: 74px;
+    }
+    .honors p {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .award-rating {
+        width: 30px;
+        gap: 8px;
+    }
+    .award-rating img {
+        max-width: 12px;
+    }
+    .award-title {
+        max-width: 125px;
+    }
+    .award-logo img {
+        max-width: 100px;
+        width: 100%;
+    }
+    .wc-btn {
+        gap: 10px;
+        width: 92px;
+        height: 92px;
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 16px;
+    }
+    .wc-btn-secondary, .wc-btn-primary {
+        padding: 10px;
+    }
+    .arrow_circle_blue_caret {
+        height: 28px;
+        width: 28px;
+    }
+    .arrow_circle_blue_caret i {
+        font-size: 12px;
+    }
+    .scrolling-tabs li {
+        font-size: 17px;
+    }
+    .project h4 {
+        font-size: 24px;
+        line-height: 34px;
+    }
+    .btn_wrapper, #btn_wrapper {
+        height: 135px;
+        width: 135px;
+    }
+    footer .back-to-top{
+        top: 16px;
+    }
+
+    footer .address .email, footer .address .phone,footer .address .location {
+        gap:20px;
+    }
+}
 
