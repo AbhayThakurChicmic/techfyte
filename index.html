@@ -27,7 +27,7 @@
 
 <body>
     <!--section background-lines begins-->
-    <section class="background-lines d-lg-block d-none">
+    <section class="background-lines d-md-block d-none">
         <ul>
             <li></li>
             <li></li>
@@ -41,25 +41,29 @@
 
     <header>
         <div class="container">
-            <div class="nav-container">
-                <div class="logo">
-                    <a href="#"><img src="./images/logo.png" alt="company-logo"></a>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid nav-container">
+                    <a class="navbar-brand logo" href="#"><img src="./images/logo.png" alt="company-logo"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="menu collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav m-auto">
+                            <li class="nav-item"><a href="#">Services</a></li>
+                            <li class="nav-item"><a href="#">Our Works</a></li>
+                            <li class="nav-item"><a href="#">Industries</a></li>
+                            <li class="nav-item"><a href="#">Technologies</a></li>
+                            <li class="nav-item"><a href="#">Company</a></li>
+                        </ul>
+                        <div class="circle-btn ms-lg-3 mt-lg-0">
+                            <a href="#">Contact us <span><i class="fa-solid fa-arrow-right-long fa-lg"></i></span></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="menu">
-                    <ul>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Our Works</a></li>
-                        <li><a href="#">Industries</a></li>
-                        <li><a href="#">Technologies</a></li>
-                        <li><a href="#">Company</a></li>
-                    </ul>
-                </div>
-                <div class="circle-btn">
-                    <a href="#">Contact us<span><i class="fa-solid fa-arrow-right-long fa-lg"></i></span></a>
-                </div>
-            </div>
+            </nav>
         </div>
     </header>
+    
 
     <!-- section landing page starts -->
     <section class="landing-page">
@@ -70,17 +74,40 @@
                         <h1>Crafting Digital</h1>
                         <div class="development-container">
                             <h1>Dreams</h1>
-                            <div class="ai-development">
-                                <div class="">
-                                    <div class="circle-btn">
-                                        <a href="#">
-                                            <h4 id="animated-text">Ai Development</h4>
-                                            <span><i class="fa-solid fa-arrow-right-long fa-lg"></i></span>
-                                        </a>
+                            <div class="ai-development d-md-block d-none">
+                                <div class="owl-carousel ai-carousel">
+                                    <div class="item">
+                                        <div class="circle-btn">
+                                            <a href="#">
+                                                <h4>Ai Development</h4>
+                                                <span><i class="fa-solid fa-arrow-right-long fa-lg"></i></span>
+                                            </a>
+                                        </div>
+                                        <p>Capitalizing the metamorphic abilities of AI and helping our clients to be
+                                            ready for the future.</p>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="circle-btn">
+                                            <a href="#">
+                                                <h4>Machine Learning</h4>
+                                                <span><i class="fa-solid fa-arrow-right-long fa-lg"></i></span>
+                                            </a>
+                                        </div>
+                                        <p>Using ML algorithms to optimize and automate decision-making for businesses.
+                                        </p>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="circle-btn">
+                                            <a href="#">
+                                                <h4>Deep Learning</h4>
+                                                <span><i class="fa-solid fa-arrow-right-long fa-lg"></i></span>
+                                            </a>
+                                        </div>
+                                        <p>Implementing advanced neural networks to drive intelligent applications.</p>
                                     </div>
                                 </div>
-                                <p>Capitalizing the metamorphic abilities of AI and helping our clients to be ready for
-                                    the future.</p>
                             </div>
                         </div>
                     </div>
@@ -95,6 +122,41 @@
                     </div>
                     <div class="banner-content">
                         <h1>Into Tangible Realities</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="ai-development d-md-none m-auto">
+                <div class="owl-carousel ai-carousel">
+                    <div class="item">
+                        <div class="circle-btn">
+                            <a href="#">
+                                <h4>Ai Development</h4>
+                                <span><i class="fa-solid fa-arrow-right-long fa-lg"></i></span>
+                            </a>
+                        </div>
+                        <p>Capitalizing the metamorphic abilities of AI and helping our clients to be
+                            ready for the future.</p>
+                    </div>
+
+                    <div class="item">
+                        <div class="circle-btn">
+                            <a href="#">
+                                <h4>Machine Learning</h4>
+                                <span><i class="fa-solid fa-arrow-right-long fa-lg"></i></span>
+                            </a>
+                        </div>
+                        <p>Using ML algorithms to optimize and automate decision-making for businesses.
+                        </p>
+                    </div>
+
+                    <div class="item">
+                        <div class="circle-btn">
+                            <a href="#">
+                                <h4>Deep Learning</h4>
+                                <span><i class="fa-solid fa-arrow-right-long fa-lg"></i></span>
+                            </a>
+                        </div>
+                        <p>Implementing advanced neural networks to drive intelligent applications.</p>
                     </div>
                 </div>
             </div>
@@ -144,19 +206,19 @@
                     <img src="./images/game-dev.gif" alt="Game Development" class="img-fluid">
                     <h4 class="overlay">Game Development</h4>
                 </div>
-                <div class="service-card">
+                <div class="service-card small">
                     <img src="./images/web-dev.gif" alt="Web Development" class="img-fluid">
                     <h4 class="overlay">Web Development</h4>
                 </div>
-                <div class="service-card">
+                <div class="service-card small">
                     <img src="./images/app-dev.gif" alt="App Development" class="img-fluid">
                     <h4 class="overlay">App Development</h4>
                 </div>
-                <div class="service-card">
+                <div class="service-card small">
                     <img src="./images/blockhain.gif" alt="Blockchain" class="img-fluid">
                     <h4 class="overlay">Blockchain</h4>
                 </div>
-                <div class="service-card">
+                <div class="service-card small">
                     <img src="./images/ui-ux.gif" alt="UI/UX Design" class="img-fluid">
                     <h4 class="overlay">UI/UX Design</h4>
                 </div>
@@ -168,14 +230,13 @@
     <section class="innovative">
         <div class="container excellence">
             <div class="business">
-                <div class="business-image">
+                <div class="business-image d-lg-block d-none">
                     <img src="./images/hero.jpg" alt="business" class="img-fluid" />
                 </div>
                 <div class="business-content animate">
                     <h3 class="reveal">
                         We are a <span class="custom-primary-blue">Disruptive</span> force that is rewriting the rules
-                        of the
-                        market. Our <span class="custom-primary-blue">Open-Mindedness</span> and zeal for
+                        of the market. Our <span class="custom-primary-blue">Open-Mindedness</span> and zeal for
                         ingenuity and innovation makes us <span class="custom-primary-blue">Unstoppable!</span>
                     </h3>
                 </div>
@@ -207,68 +268,116 @@
                     <p class="info">Industries Served</p>
                 </div>
             </div>
+            <div class="mob-business-image d-lg-none d-block m-auto">
+                <img src="./images/hero.jpg" alt="business" class="img-fluid" />
+            </div>
         </div>
     </section>
 
     <!--section services starts-->
     <section class="services ">
-        <div class="row-1">
+        <div class="services-desktop d-md-block d-none">
+            <div class="row-1">
+                <div class="container">
+                    <ul class="list-unstyled list-desktop">
+                        <li class="android-dev position-relative">
+                            <img src="./images/android-dev.png" class="image-fade-in position-absolute img-fluid"
+                                alt="development-img" />
+                            <h3>Android Development</h3>
+                        </li>
+                        <li class="ios-dev position-relative">
+                            <img src="./images/ios-dev.png" class="image-fade-in position-absolute img-fluid"
+                                alt="development-img" />
+                            <div class="slash position-relative"></div>
+                            <h3>IOS Development</h3>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row-2">
+                <div class="container">
+                    <ul class="list-unstyled list-desktop">
+                        <li class="flutter-dev position-relative">
+                            <img src="./images/flutter-dev.png" class="image-fade-in position-absolute img-fluid"
+                                alt="development-img" />
+                            <h3>Flutter Development</h3>
+                        </li>
+                        <li class="react-dev position-relative">
+                            <img src="./images/react-dev.png" class="image-fade-in position-absolute img-fluid"
+                                alt="development-img" />
+                            <div class="slash position-relative"></div>
+                            <h3>React Development</h3>
+                        </li>
+                        <li class="ui-design position-relative">
+                            <img src="./images/ui-design.png" class="image-fade-in position-absolute img-fluid"
+                                alt="development-img" />
+                            <div class="slash position-relative"></div>
+                            <h3>UI/UX Design</h3>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row-3">
+                <div class="container">
+                    <ul class="list-unstyled list-desktop">
+                        <li class="testing position-relative">
+                            <img src="./images/testing.png" class="image-fade-in position-absolute img-fluid"
+                                alt="development-img" />
+                            <h3>Manual & Automated Testing</h3>
+                        </li>
+                        <li class="bug position-relative">
+                            <img src="./images/bug.png" class="image-fade-in position-absolute img-fluid"
+                                alt="development-img" />
+                            <div class="slash position-relative"></div>
+                            <h3>Bug Fixes & Optimization</h3>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="services-mobile d-md-none d-block">
             <div class="container">
-                <ul class="list-unstyled">
-                    <li class="android-dev position-relative">
-                        <img src="./images/android-dev.png" class="image-fade-in position-absolute img-fluid"
-                            alt="development-img" />
+                <ul class="list-unstyled list-mobile position-relative">
+                    <li class="service-mob-img">
                         <h3>Android Development</h3>
+                        <img src="./images/android-dev.png" class="image-fade-in position-absolute img-fluid"
+                                alt="development-img" />
                     </li>
-                    <li class="ios-dev position-relative">
-                        <img src="./images/ios-dev.png" class="image-fade-in position-absolute img-fluid"
-                            alt="development-img" />
-                        <div class="slash position-relative"></div>
+                    <li class="service-mob-img">
                         <h3>IOS Development</h3>
+                        <img src="./images/ios-dev.png" class="image-fade-in position-absolute img-fluid"
+                                alt="development-img" />
                     </li>
-                </ul>
-            </div>
-        </div>
-        <div class="row-2">
-            <div class="container">
-                <ul class="list-unstyled">
-                    <li class="flutter-dev position-relative">
-                        <img src="./images/flutter-dev.png" class="image-fade-in position-absolute img-fluid"
-                            alt="development-img" />
+                    <li class="service-mob-img">
                         <h3>Flutter Development</h3>
+                        <img src="./images/flutter-dev.png" class="image-fade-in position-absolute img-fluid"
+                                alt="development-img" />
                     </li>
-                    <li class="react-dev position-relative">
-                        <img src="./images/react-dev.png" class="image-fade-in position-absolute img-fluid"
-                            alt="development-img" />
-                        <div class="slash position-relative"></div>
+                    <li class="service-mob-img">
                         <h3>React Development</h3>
+                        <img src="./images/react-dev.png" class="image-fade-in position-absolute img-fluid"
+                                alt="development-img" />
                     </li>
-                    <li class="ui-design position-relative">
-                        <img src="./images/ui-design.png" class="image-fade-in position-absolute img-fluid"
-                            alt="development-img" />
-                        <div class="slash position-relative"></div>
+                    <li class="service-mob-img">
                         <h3>UI/UX Design</h3>
+                        <img src="./images/ui-design.png" class="image-fade-in position-absolute img-fluid"
+                                alt="development-img" />
                     </li>
-                </ul>
-            </div>
-        </div>
-        <div class="row-3">
-            <div class="container">
-                <ul class="list-unstyled">
-                    <li class="testing position-relative">
-                        <img src="./images/testing.png" class="image-fade-in position-absolute img-fluid"
-                            alt="development-img" />
+                    <li class="service-mob-img">
                         <h3>Manual & Automated Testing</h3>
+                        <img src="./images/testing.png" class="image-fade-in position-absolute img-fluid"
+                                alt="development-img" />
                     </li>
-                    <li class="bug position-relative">
-                        <img src="./images/bug.png" class="image-fade-in position-absolute img-fluid"
-                            alt="development-img" />
-                        <div class="slash position-relative"></div>
+                    <li class="service-mob-img">
                         <h3>Bug Fixes & Optimization</h3>
+                        <img src="./images/bug.png" class="image-fade-in position-absolute img-fluid"
+                                alt="development-img" />
                     </li>
                 </ul>
             </div>
         </div>
+        
     </section>
 
     <!-- section project_work starts -->
@@ -288,7 +397,7 @@
                             <div
                                 class="item_info position-absolute d-xl-flex justify-content-xl-between align-items-xl-center d-block w-100">
                                 <h4 class="text-white">App Developed for Food</h4>
-                                <div class="circle-btn">
+                                <div class="circle-btn d-md-block d-none">
                                     <a href="#">Case Study<span><i class="fa-solid fa-arrow-right-long fa-lg"
                                                 aria-hidden="true"></i></span></a>
                                 </div>
@@ -303,7 +412,7 @@
                             <div
                                 class="item_info position-absolute d-xl-flex justify-content-xl-between align-items-xl-center d-block w-100">
                                 <h4 class="text-white">App Developed for Food</h4>
-                                <div class="circle-btn">
+                                <div class="circle-btn d-md-block d-none">
                                     <a href="#">Case Study<span><i class="fa-solid fa-arrow-right-long fa-lg"
                                                 aria-hidden="true"></i></span></a>
                                 </div>
@@ -318,7 +427,7 @@
                             <div
                                 class="item_info position-absolute d-xl-flex justify-content-xl-between align-items-xl-center d-block w-100">
                                 <h4 class="text-white">App Developed for Food</h4>
-                                <div class="circle-btn">
+                                <div class="circle-btn d-md-block d-none">
                                     <a href="#">Case Study<span><i class="fa-solid fa-arrow-right-long fa-lg"
                                                 aria-hidden="true"></i></span></a>
                                 </div>
@@ -333,7 +442,7 @@
                             <div
                                 class="item_info position-absolute d-xl-flex justify-content-xl-between align-items-xl-center d-block w-100">
                                 <h4 class="text-white">App Developed for Food</h4>
-                                <div class="circle-btn">
+                                <div class="circle-btn d-md-block d-none">
                                     <a href="#">Case Study<span><i class="fa-solid fa-arrow-right-long fa-lg"
                                                 aria-hidden="true"></i></span></a>
                                 </div>
@@ -348,7 +457,7 @@
                             <div
                                 class="item_info position-absolute d-xl-flex justify-content-xl-between align-items-xl-center d-block w-100">
                                 <h4 class="text-white">App Developed for Food</h4>
-                                <div class="circle-btn">
+                                <div class="circle-btn d-md-block d-none">
                                     <a href="#">Case Study<span><i class="fa-solid fa-arrow-right-long fa-lg"
                                                 aria-hidden="true"></i></span></a>
                                 </div>
@@ -363,7 +472,7 @@
                             <div
                                 class="item_info position-absolute d-xl-flex justify-content-xl-between align-items-xl-center d-block w-100">
                                 <h4 class="text-white">App Developed for Food</h4>
-                                <div class="circle-btn">
+                                <div class="circle-btn d-md-block d-none">
                                     <a href="#">Case Study<span><i class="fa-solid fa-arrow-right-long fa-lg"
                                                 aria-hidden="true"></i></span></a>
                                 </div>
@@ -394,7 +503,7 @@
                         Honors & <span class="custom-primary-blue">Awards</span>: Complete
                         <span class="custom-primary-blue">Commitment</span> from start to finish
                     </h3>
-                    <div class="bg-white btn_wrapper" data-speed="1" data-lag="0.2">
+                    <div class="bg-white btn_wrapper d-md-block d-none pt-5" data-speed="1" data-lag="0.2">
                         <a class=" wc-btn wc-btn-primary btn-hover btn-item" href="#"><span></span><i
                                 class="fa-solid fa-arrow-right-long fa-lg" aria-hidden="true"></i>Book a
                             <br>Consultation</a>
@@ -402,7 +511,7 @@
                 </div>
                 <div class="award-list">
                     <div class="award-item">
-                        <div class="rating"><img alt="award-img" src="./images/star.png">
+                        <div class="award-rating"><img alt="award-img" src="./images/star.png">
                             <p class="fw-semibold text-black">5</p>
                         </div>
                         <div class="award-title">
@@ -414,7 +523,7 @@
                         </div>
                     </div>
                     <div class="award-item">
-                        <div class="rating"><img alt="award-img" src="./images/star.png">
+                        <div class="award-rating"><img alt="award-img" src="./images/star.png">
                             <p class="fw-semibold text-black">5</p>
                         </div>
                         <div class="award-title">
@@ -426,7 +535,7 @@
                         </div>
                     </div>
                     <div class="award-item">
-                        <div class="rating"><img alt="award-img" src="./images/star.png">
+                        <div class="award-rating"><img alt="award-img" src="./images/star.png">
                             <p class="fw-semibold text-black">5</p>
                         </div>
                         <div class="award-title">
@@ -438,7 +547,7 @@
                         </div>
                     </div>
                     <div class="award-item">
-                        <div class="rating"><img alt="award-img" src="./images/star.png">
+                        <div class="award-rating"><img alt="award-img" src="./images/star.png">
                             <p class="fw-semibold text-black">5</p>
                         </div>
                         <div class="award-title">
@@ -450,7 +559,7 @@
                         </div>
                     </div>
                     <div class="award-item">
-                        <div class="rating"><img alt="award-img" src="./images/star.png">
+                        <div class="award-rating"><img alt="award-img" src="./images/star.png">
                             <p class="fw-semibold text-black">5</p>
                         </div>
                         <div class="award-title">
@@ -461,618 +570,614 @@
                             <h6 class="fw-light">2022-23</h6>
                         </div>
                     </div>
+                    <div class="bg-white btn_wrapper d-md-none m-auto" data-speed="1" data-lag="0.2">
+                        <a class=" wc-btn wc-btn-primary btn-hover btn-item" href="#"><span></span><i
+                                class="fa-solid fa-arrow-right-long fa-lg" aria-hidden="true"></i>Book a
+                            <br>Consultation</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- solution section begins -->
-    <section class="solution custom-container-spacing pt-0">
+    <section class="solution custom-secondary-bg-white">
         <div class="container">
-            <h3 class="mb-5">Solutions That <span class="custom-primary-blue">Define</span> New Market <span
-                    class="d-block custom-primary-blue">Standards</span></h3>
+          <h3 >Solutions That <span class="custom-primary-blue">Define</span> New Market <span class="custom-primary-blue d-lg-block d-inline">Standards</span></h3>
         </div>
         <div class="boundary"></div>
         <div class="container">
-            <div class="hover-area">
-                <div class="row pt-3 pb-4">
-                    <div class="col-5 d-flex align-items-center solutions-heading-container">
-                        <span class="p2-bold me-3">01/</span>
-                        <h4 class="text-dark">Custom Software Development</h4>
-                    </div>
-                    <div class="col-7 d-flex justify-content-between solution-content-container">
-                        <div class="row">
-                            <div class="col-9">
-                                <p class="p2-regular ms-5 ps-5 mb-0">Tailored software solutions designed to meet unique
-                                    business
-                                    needs, enhancing efficiency, scalability, and performance with cutting-edge
-                                    technology.
-                                </p>
-                            </div>
-                            <div class="col-3 d-flex justify-content-end align-items-center">
-                                <div
-                                    class="arrow_circle_blue_caret rounded-circle d-flex justify-content-center align-items-center">
-                                    <i class="fa-solid fa-angle-down"></i>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
+          <div class="hover-area">
+            <div class="row py-3">
+              <div class="col-md-5 col-9 d-flex align-items-center">
+                <span class="p2-bold me-3">01/</span>
+                <h4 class="text-dark">Custom Software Development</h4>
+                <!-- <img src="./images/gif2.gif" alt="Hover Image" class="cursor-image" > -->
+              </div>
+              <div class="col-3 d-md-none d-flex justify-content-end align-items-center">
+                <div class="arrow_circle_blue_caret rounded-circle d-flex justify-content-center align-items-center">
+                  <i class="fa-solid fa-angle-down"></i>
                 </div>
-                <div class="gif-slider">
-                    <div class="row">
-                        <div class="col-11">
-                            <div class="row mb-4">
-                                <div class="col-4 position-relative">
-                                    <img src="./images/gif-sol.gif" alt="GIF 1">
-                                    <a href="#"
-                                        class="info d-flex align-items-center justify-content-between position-absolute ">
-                                        <h5 class="h5">App Portfolio Video</h5>
-                                        <div
-                                            class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
-                                            <i class="fa-solid fa-arrow-right-long fa-lg"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-4 position-relative">
-                                    <img src="./images/gif-sol.gif" alt="GIF 1">
-                                    <a href="#"
-                                        class="info d-flex align-items-center justify-content-between position-absolute ">
-                                        <h5 class="h5">UI/UX Design</h5>
-                                        <div
-                                            class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
-                                            <i class="fa-solid fa-arrow-right-long fa-lg"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-4 position-relative">
-                                    <img src="./images/gif-sol.gif" alt="GIF 1">
-                                    <a href="#"
-                                        class="info d-flex align-items-center justify-content-between position-absolute">
-                                        <h5 class="h5">Game Developed</h5>
-                                        <div
-                                            class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
-                                            <i class="fa-solid fa-arrow-right-long fa-lg"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-1 d-flex align-items-center justify-content-center">
-                            <div class="view_btn circle-bg-blue">
-                                <a href="#">Book a <br>Consultation<span><i class="fa-solid fa-arrow-right-long fa-lg"
-                                            aria-hidden="true"></i></span></a>
-                            </div>
-                        </div>
+              </div>
+              <div class="col-md-7 col-12 d-flex justify-content-between">
+                <div class="row">
+                  <div class="col-md-9 d-md-block d-none">
+                    <p class="p2-regular ms-lg-5 ps-lg-5 mb-0">Tailored software solutions designed to meet unique business
+                      needs, enhancing efficiency, scalability, and performance with cutting-edge technology.
+                    </p>
+                  </div>
+                  <div class="col-3 d-md-flex d-none justify-content-end align-items-center">
+                    <div class="arrow_circle_blue_caret rounded-circle d-flex justify-content-center align-items-center">
+                      <i class="fa-solid fa-angle-down"></i>
                     </div>
+                  </div>
+                  
                 </div>
+              </div>
             </div>
+            <div class="gif-slider">
+              <div class="row">
+                <div class="col-md-11">
+                    <div class="row mb-4 d-md-flex d-none">
+                        <div class="col-4 position-relative">
+                            <img src="./images/gif-sol.gif" alt="GIF 1">
+                            <a href="#" class="info d-flex align-items-center justify-content-between position-absolute ">
+                                <h5 class="h5">App Portfolio Video</h5>
+                                <div class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
+                                <i class="fa-solid fa-arrow-right-long fa-lg"></i></div> 
+                            </a>
+                        </div>
+                        <div class="col-4 position-relative">
+                            <img src="./images/gif-sol.gif" alt="GIF 1">
+                            <a href="#" class="info d-flex align-items-center justify-content-between position-absolute ">
+                                <h5 class="h5">UI/UX Design</h5>
+                                <div class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
+                                <i class="fa-solid fa-arrow-right-long fa-lg"></i></div> 
+                            </a>
+                        </div>
+                        <div class="col-4 position-relative">
+                            <img src="./images/gif-sol.gif" alt="GIF 1">
+                            <a href="#" class="info d-flex align-items-center justify-content-between position-absolute">
+                                <h5 class="h5">Game Developed</h5>
+                                <div class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
+                                <i class="fa-solid fa-arrow-right-long fa-lg"></i></div> 
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1 col-12 d-flex align-items-center justify-content-center flex-column">
+                    <p class="p2-regular ms-lg-5 ps-lg-5 mb-0">Tailored software solutions designed to meet unique business
+                        needs, enhancing efficiency, scalability, and performance with cutting-edge technology.
+                    </p>
+                    <div class="bg-white btn_wrapper d-md-block pt-5" data-speed="1" data-lag="0.2">
+                        <a class=" wc-btn wc-btn-primary btn-hover btn-item" href="#"><span></span><i
+                                class="fa-solid fa-arrow-right-long fa-lg" aria-hidden="true"></i>Book a
+                            <br>Consultation</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="boundary"></div>
         <div class="container">
-            <div class="hover-area">
-                <div class="row pt-3 pb-4">
-                    <div class="col-5 d-flex align-items-center solutions-heading-container">
-                        <span class="p2-bold me-3">02/</span>
-                        <h4 class="text-dark">Enterprise Digital Transformation</h4>
-                    </div>
-                    <div class="col-7 d-flex justify-content-between solution-content-container">
-                        <div class="row">
-                            <div class="col-9">
-                                <p class="p2-regular ms-5 ps-5 mb-0">Helping businesses integrate digital technologies
-                                    across all
-                                    departments to improve efficiency, customer experience, and overall business
-                                    performance.
-                                </p>
-                            </div>
-                            <div class="col-3 d-flex justify-content-end align-items-center">
-                                <div
-                                    class="arrow_circle_blue_caret rounded-circle d-flex justify-content-center align-items-center">
-                                    <i class="fa-solid fa-angle-down"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          <div class="hover-area">
+            <div class="row py-3">
+              <div class="col-md-5 col-9 d-flex align-items-center">
+                <span class="p2-bold me-3">02/</span>
+                <h4 class="text-dark">Enterprise Digital Transformation</h4>
+                <!-- <img src="./images/gif3.gif" alt="Hover Image" class="cursor-image" > -->
+              </div>
+              <div class="col-3 d-md-none d-flex justify-content-end align-items-center">
+                <div class="arrow_circle_blue_caret rounded-circle d-flex justify-content-center align-items-center">
+                  <i class="fa-solid fa-angle-down"></i>
                 </div>
-                <div class="gif-slider">
-                    <div class="row">
-                        <div class="col-11">
-                            <div class="row mb-4">
-                                <div class="col-4 position-relative">
-                                    <img src="./images/gif-sol.gif" alt="GIF 1">
-                                    <a href="#"
-                                        class="info d-flex align-items-center justify-content-between position-absolute ">
-                                        <h5 class="h5">App Portfolio Video</h5>
-                                        <div
-                                            class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
-                                            <i class="fa-solid fa-arrow-right-long fa-lg"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-4 position-relative">
-                                    <img src="./images/gif-sol.gif" alt="GIF 1">
-                                    <a href="#"
-                                        class="info d-flex align-items-center justify-content-between position-absolute ">
-                                        <h5 class="h5">UI/UX Design</h5>
-                                        <div
-                                            class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
-                                            <i class="fa-solid fa-arrow-right-long fa-lg"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-4 position-relative">
-                                    <img src="./images/gif-sol.gif" alt="GIF 1">
-                                    <a href="#"
-                                        class="info d-flex align-items-center justify-content-between position-absolute">
-                                        <h5 class="h5">Game Developed</h5>
-                                        <div
-                                            class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
-                                            <i class="fa-solid fa-arrow-right-long fa-lg"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-1 d-flex align-items-center justify-content-center">
-                            <div class="view_btn circle-bg-blue">
-                                <a href="#">Book a <br>Consultation<span><i class="fa-solid fa-arrow-right-long fa-lg"
-                                            aria-hidden="true"></i></span></a>
-                            </div>
-                        </div>
+              </div>
+              <div class="col-md-7 col-12 d-flex justify-content-between">
+                <div class="row">
+                  <div class="col-md-9 d-md-block d-none">
+                    <p class="p2-regular ms-lg-5 ps-lg-5 mb-0">Helping businesses integrate digital technologies across all
+                      departments to improve efficiency, customer experience, and overall business performance.
+                    </p>
+                  </div>
+                  <div class="col-3 d-md-flex d-none justify-content-end align-items-center">
+                    <div class="arrow_circle_blue_caret rounded-circle d-flex justify-content-center align-items-center">
+                      <i class="fa-solid fa-angle-down"></i>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
+            <div class="gif-slider">
+              <div class="row">
+                <div class="col-md-11">
+                  <div class="row mb-4 d-md-flex d-none">
+                    <div class="col-4 position-relative">
+                      <img src="./images/gif-sol.gif" alt="GIF 1">
+                      <a href="#" class="info d-flex align-items-center justify-content-between position-absolute ">
+                        <h5 class="h5">App Portfolio Video</h5>
+                        <div class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-arrow-right-long fa-lg"></i></div> 
+                      </a>
+                    </div>
+                    <div class="col-4 position-relative">
+                      <img src="./images/gif-sol.gif" alt="GIF 1">
+                      <a href="#" class="info d-flex align-items-center justify-content-between position-absolute ">
+                        <h5 class="h5">UI/UX Design</h5>
+                        <div class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-arrow-right-long fa-lg"></i></div> 
+                      </a>
+                    </div>
+                    <div class="col-4 position-relative">
+                      <img src="./images/gif-sol.gif" alt="GIF 1">
+                      <a href="#" class="info d-flex align-items-center justify-content-between position-absolute">
+                        <h5 class="h5">Game Developed</h5>
+                        <div class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-arrow-right-long fa-lg"></i></div> 
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-1 col-12 d-flex align-items-center justify-content-center flex-column">
+                    <p class="p2-regular ms-lg-5 ps-lg-5 mb-0">Tailored software solutions designed to meet unique business
+                        needs, enhancing efficiency, scalability, and performance with cutting-edge technology.
+                    </p>
+                    <div class="bg-white btn_wrapper d-md-block pt-5" data-speed="1" data-lag="0.2">
+                        <a class=" wc-btn wc-btn-primary btn-hover btn-item" href="#"><span></span><i
+                                class="fa-solid fa-arrow-right-long fa-lg" aria-hidden="true"></i>Book a
+                            <br>Consultation</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="boundary"></div>
         <div class="container">
-            <div class="hover-area">
-                <div class="row pt-3 pb-4">
-                    <div class="col-5 d-flex align-items-center solutions-heading-container">
-                        <span class="p2-bold me-3">03/</span>
-                        <h4 class="text-dark">AI & Automation Services</h4>
-                    </div>
-                    <div class="col-7 d-flex justify-content-between solution-content-container">
-                        <div class="row">
-                            <div class="col-9">
-                                <p class="p2-regular ms-5 ps-5 mb-0">Implementing Artificial Intelligence and automation
-                                    solutions
-                                    to streamline processes, improve decision-making, and reduce costs.
-                            </div>
-                            <div class="col-3 d-flex justify-content-end align-items-center">
-                                <div
-                                    class="arrow_circle_blue_caret rounded-circle d-flex justify-content-center align-items-center">
-                                    <i class="fa-solid fa-angle-down"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          <div class="hover-area">
+            <div class="row py-3">
+              <div class="col-md-5 col-9 d-flex align-items-center">
+                <span class="p2-bold me-3">03/</span>
+                <h4 class="text-dark">AI & Automation Services</h4>
+                <!-- <img src="./images/gif4.gif" alt="Hover Image" class="cursor-image" > -->
+              </div>
+              <div class="col-3 d-md-none d-flex justify-content-end align-items-center">
+                <div class="arrow_circle_blue_caret rounded-circle d-flex justify-content-center align-items-center">
+                  <i class="fa-solid fa-angle-down"></i>
                 </div>
-                <div class="gif-slider">
-                    <div class="row">
-                        <div class="col-11">
-                            <div class="row mb-4">
-                                <div class="col-4 position-relative">
-                                    <img src="./images/gif-sol.gif" alt="GIF 1">
-                                    <a href="#"
-                                        class="info d-flex align-items-center justify-content-between position-absolute ">
-                                        <h5 class="h5">App Portfolio Video</h5>
-                                        <div
-                                            class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
-                                            <i class="fa-solid fa-arrow-right-long fa-lg"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-4 position-relative">
-                                    <img src="./images/gif-sol.gif" alt="GIF 1">
-                                    <a href="#"
-                                        class="info d-flex align-items-center justify-content-between position-absolute ">
-                                        <h5 class="h5">UI/UX Design</h5>
-                                        <div
-                                            class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
-                                            <i class="fa-solid fa-arrow-right-long fa-lg"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-4 position-relative">
-                                    <img src="./images/gif-sol.gif" alt="GIF 1">
-                                    <a href="#"
-                                        class="info d-flex align-items-center justify-content-between position-absolute">
-                                        <h5 class="h5">Game Developed</h5>
-                                        <div
-                                            class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
-                                            <i class="fa-solid fa-arrow-right-long fa-lg"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-1 d-flex align-items-center justify-content-center">
-                            <div class="view_btn circle-bg-blue">
-                                <a href="#">Book a <br>Consultation<span><i class="fa-solid fa-arrow-right-long fa-lg"
-                                            aria-hidden="true"></i></span></a>
-                            </div>
-                        </div>
+              </div>
+              <div class="col-md-7 col-12 d-flex justify-content-between">
+                <div class="row">
+                  <div class="col-md-9 d-md-block d-none">
+                    <p class="p2-regular ms-lg-5 ps-lg-5 mb-0">Implementing Artificial Intelligence and automation solutions
+                      to streamline processes, improve decision-making, and reduce costs.
+                  </div>
+                  <div class="col-3 d-md-flex d-none justify-content-end align-items-center">
+                    <div class="arrow_circle_blue_caret rounded-circle d-flex justify-content-center align-items-center">
+                      <i class="fa-solid fa-angle-down"></i>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
+            <div class="gif-slider">
+              <div class="row">
+                <div class="col-md-11">
+                  <div class="row mb-4 d-md-flex d-none">
+                    <div class="col-4 position-relative">
+                      <img src="./images/gif-sol.gif" alt="GIF 1">
+                      <a href="#" class="info d-flex align-items-center justify-content-between position-absolute ">
+                        <h5 class="h5">App Portfolio Video</h5>
+                        <div class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-arrow-right-long fa-lg"></i></div> 
+                      </a>
+                    </div>
+                    <div class="col-4 position-relative">
+                      <img src="./images/gif-sol.gif" alt="GIF 1">
+                      <a href="#" class="info d-flex align-items-center justify-content-between position-absolute ">
+                        <h5 class="h5">UI/UX Design</h5>
+                        <div class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-arrow-right-long fa-lg"></i></div> 
+                      </a>
+                    </div>
+                    <div class="col-4 position-relative">
+                      <img src="./images/gif-sol.gif" alt="GIF 1">
+                      <a href="#" class="info d-flex align-items-center justify-content-between position-absolute">
+                        <h5 class="h5">Game Developed</h5>
+                        <div class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-arrow-right-long fa-lg"></i></div> 
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-1 col-12 d-flex align-items-center justify-content-center flex-column">
+                    <p class="p2-regular ms-lg-5 ps-lg-5 mb-0">Tailored software solutions designed to meet unique business
+                        needs, enhancing efficiency, scalability, and performance with cutting-edge technology.
+                    </p>
+                    <div class="bg-white btn_wrapper d-md-block pt-5" data-speed="1" data-lag="0.2">
+                        <a class=" wc-btn wc-btn-primary btn-hover btn-item" href="#"><span></span><i
+                                class="fa-solid fa-arrow-right-long fa-lg" aria-hidden="true"></i>Book a
+                            <br>Consultation</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="boundary"></div>
         <div class="container">
-            <div class="hover-area">
-                <div class="row pt-3 pb-4">
-                    <div class="col-5 d-flex align-items-center solutions-heading-container">
-                        <span class="p2-bold me-3">04/</span>
-                        <h4 class="text-dark">Cloud & DevOps Integration</h4>
-                    </div>
-                    <div class="col-7 d-flex justify-content-between solution-content-container">
-                        <div class="row">
-                            <div class="col-9">
-                                <p class="p2-regular ms-5 ps-5 mb-0"> Helping businesses migrate to the cloud and
-                                    implement
-                                    DevOps practices for faster, more reliable software development and deployment.
-                                </p>
-                            </div>
-                            <div class="col-3 d-flex justify-content-end align-items-center">
-                                <div
-                                    class="arrow_circle_blue_caret rounded-circle d-flex justify-content-center align-items-center">
-                                    <i class="fa-solid fa-angle-down"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          <div class="hover-area">
+            <div class="row py-3">
+              <div class="col-md-5 col-9 d-flex align-items-center">
+                <span class="p2-bold me-3">04/</span>
+                <h4 class="text-dark">Cloud & DevOps Integration</h4>
+                <!-- <img src="./images/gif5.gif" alt="Hover Image" class="cursor-image" > -->
+              </div>
+              <div class="col-3 d-md-none d-flex justify-content-end align-items-center">
+                <div class="arrow_circle_blue_caret rounded-circle d-flex justify-content-center align-items-center">
+                  <i class="fa-solid fa-angle-down"></i>
                 </div>
-                <div class="gif-slider">
-                    <div class="row">
-                        <div class="col-11">
-                            <div class="row mb-4">
-                                <div class="col-4 position-relative">
-                                    <img src="./images/gif-sol.gif" alt="GIF 1">
-                                    <a href="#"
-                                        class="info d-flex align-items-center justify-content-between position-absolute ">
-                                        <h5 class="h5">App Portfolio Video</h5>
-                                        <div
-                                            class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
-                                            <i class="fa-solid fa-arrow-right-long fa-lg"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-4 position-relative">
-                                    <img src="./images/gif-sol.gif" alt="GIF 1">
-                                    <a href="#"
-                                        class="info d-flex align-items-center justify-content-between position-absolute ">
-                                        <h5 class="h5">UI/UX Design</h5>
-                                        <div
-                                            class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
-                                            <i class="fa-solid fa-arrow-right-long fa-lg"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-4 position-relative">
-                                    <img src="./images/gif-sol.gif" alt="GIF 1">
-                                    <a href="#"
-                                        class="info d-flex align-items-center justify-content-between position-absolute">
-                                        <h5 class="h5">Game Developed</h5>
-                                        <div
-                                            class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
-                                            <i class="fa-solid fa-arrow-right-long fa-lg"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-1 d-flex align-items-center justify-content-center">
-                            <div class="view_btn circle-bg-blue">
-                                <a href="#">Book a <br>Consultation<span><i class="fa-solid fa-arrow-right-long fa-lg"
-                                            aria-hidden="true"></i></span></a>
-                            </div>
-                        </div>
+              </div>
+              <div class="col-md-7 col-12 d-flex justify-content-between">
+                <div class="row">
+                  <div class="col-md-9 d-md-block d-none">
+                    <p class="p2-regular ms-lg-5 ps-lg-5 mb-0"> Helping businesses migrate to the cloud and implement
+                      DevOps practices for faster, more reliable software development and deployment.
+                    </p>
+                  </div>
+                  <div class="col-3 d-md-flex d-none justify-content-end align-items-center">
+                    <div class="arrow_circle_blue_caret rounded-circle d-flex justify-content-center align-items-center">
+                      <i class="fa-solid fa-angle-down"></i>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
+            <div class="gif-slider">
+              <div class="row">
+                <div class="col-md-11">
+                  <div class="row mb-4 d-md-flex d-none">
+                    <div class="col-4 position-relative">
+                      <img src="./images/gif-sol.gif" alt="GIF 1">
+                      <a href="#" class="info d-flex align-items-center justify-content-between position-absolute ">
+                        <h5 class="h5">App Portfolio Video</h5>
+                        <div class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-arrow-right-long fa-lg"></i></div> 
+                      </a>
+                    </div>
+                    <div class="col-4 position-relative">
+                      <img src="./images/gif-sol.gif" alt="GIF 1">
+                      <a href="#" class="info d-flex align-items-center justify-content-between position-absolute ">
+                        <h5 class="h5">UI/UX Design</h5>
+                        <div class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-arrow-right-long fa-lg"></i></div> 
+                      </a>
+                    </div>
+                    <div class="col-4 position-relative">
+                      <img src="./images/gif-sol.gif" alt="GIF 1">
+                      <a href="#" class="info d-flex align-items-center justify-content-between position-absolute">
+                        <h5 class="h5">Game Developed</h5>
+                        <div class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-arrow-right-long fa-lg"></i></div> 
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-1 col-12 d-flex align-items-center justify-content-center flex-column">
+                    <p class="p2-regular ms-lg-5 ps-lg-5 mb-0">Tailored software solutions designed to meet unique business
+                        needs, enhancing efficiency, scalability, and performance with cutting-edge technology.
+                    </p>
+                    <div class="bg-white btn_wrapper d-md-block pt-5" data-speed="1" data-lag="0.2">
+                        <a class=" wc-btn wc-btn-primary btn-hover btn-item" href="#"><span></span><i
+                                class="fa-solid fa-arrow-right-long fa-lg" aria-hidden="true"></i>Book a
+                            <br>Consultation</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="boundary"></div>
         <div class="container">
-            <div class="hover-area">
-                <div class="row pt-3 pb-4">
-                    <div class="col-5 d-flex align-items-center solutions-heading-container">
-                        <span class="p2-bold me-3">05/</span>
-                        <h4 class="text-dark">E-Commerce & Marketplace</h4>
-                    </div>
-                    <div class="col-7 d-flex justify-content-between solution-content-container">
-                        <div class="row">
-                            <div class="col-9">
-                                <p class="p2-regular ms-5 ps-5 mb-0">Building and managing online stores and
-                                    marketplaces to
-                                    facilitate online sales and reach a wider customer base. Expand your reach and drive
-                                    online
-                                    sales with our comprehensive solutions.
-                                </p>
-                            </div>
-                            <div class="col-3 d-flex justify-content-end align-items-center">
-                                <div
-                                    class="arrow_circle_blue_caret rounded-circle d-flex justify-content-center align-items-center">
-                                    <i class="fa-solid fa-angle-down"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          <div class="hover-area">
+            <div class="row py-3">
+              <div class="col-md-5 col-9 d-flex align-items-center">
+                <span class="p2-bold me-3">05/</span>
+                <h4 class="text-dark">E-Commerce & Marketplace</h4>
+                <!-- <img src="./images/gif2.gif" alt="Hover Image" class="cursor-image" > -->
+              </div>
+              <div class="col-3 d-md-none d-flex justify-content-end align-items-center">
+                <div class="arrow_circle_blue_caret rounded-circle d-flex justify-content-center align-items-center">
+                  <i class="fa-solid fa-angle-down"></i>
                 </div>
-                <div class="gif-slider">
-                    <div class="row">
-                        <div class="col-11">
-                            <div class="row mb-4">
-                                <div class="col-4 position-relative">
-                                    <img src="./images/gif-sol.gif" alt="GIF 1">
-                                    <a href="#"
-                                        class="info d-flex align-items-center justify-content-between position-absolute ">
-                                        <h5 class="h5">App Portfolio Video</h5>
-                                        <div
-                                            class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
-                                            <i class="fa-solid fa-arrow-right-long fa-lg"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-4 position-relative">
-                                    <img src="./images/gif-sol.gif" alt="GIF 1">
-                                    <a href="#"
-                                        class="info d-flex align-items-center justify-content-between position-absolute ">
-                                        <h5 class="h5">UI/UX Design</h5>
-                                        <div
-                                            class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
-                                            <i class="fa-solid fa-arrow-right-long fa-lg"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-4 position-relative">
-                                    <img src="./images/gif-sol.gif" alt="GIF 1">
-                                    <a href="#"
-                                        class="info d-flex align-items-center justify-content-between position-absolute">
-                                        <h5 class="h5">Game Developed</h5>
-                                        <div
-                                            class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
-                                            <i class="fa-solid fa-arrow-right-long fa-lg"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-1 d-flex align-items-center justify-content-center">
-                            <div class="view_btn circle-bg-blue">
-                                <a href="#">Book a <br>Consultation<span><i class="fa-solid fa-arrow-right-long fa-lg"
-                                            aria-hidden="true"></i></span></a>
-                            </div>
-                        </div>
+              </div>
+              <div class="col-md-7 col-12 d-flex justify-content-between">
+                <div class="row">
+                  <div class="col-md-9 d-md-block d-none">
+                    <p class="p2-regular ms-lg-5 ps-lg-5 mb-0">Building and managing online stores and marketplaces to
+                      facilitate online sales and reach a wider customer base. Expand your reach and drive online
+                      sales with our comprehensive solutions.
+                    </p>
+                  </div>
+                  <div class="col-3 d-md-flex d-none justify-content-end align-items-center">
+                    <div class="arrow_circle_blue_caret rounded-circle d-flex justify-content-center align-items-center">
+                      <i class="fa-solid fa-angle-down"></i>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
+            <div class="gif-slider">
+              <div class="row">
+                <div class="col-md-11">
+                  <div class="row mb-4 d-md-flex d-none">
+                    <div class="col-4 position-relative">
+                      <img src="./images/gif-sol.gif" alt="GIF 1">
+                      <a href="#" class="info d-flex align-items-center justify-content-between position-absolute ">
+                        <h5 class="h5">App Portfolio Video</h5>
+                        <div class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-arrow-right-long fa-lg"></i></div> 
+                      </a>
+                    </div>
+                    <div class="col-4 position-relative">
+                      <img src="./images/gif-sol.gif" alt="GIF 1">
+                      <a href="#" class="info d-flex align-items-center justify-content-between position-absolute ">
+                        <h5 class="h5">UI/UX Design</h5>
+                        <div class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-arrow-right-long fa-lg"></i></div> 
+                      </a>
+                    </div>
+                    <div class="col-4 position-relative">
+                      <img src="./images/gif-sol.gif" alt="GIF 1">
+                      <a href="#" class="info d-flex align-items-center justify-content-between position-absolute">
+                        <h5 class="h5">Game Developed</h5>
+                        <div class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-arrow-right-long fa-lg"></i></div> 
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-1 col-12 d-flex align-items-center justify-content-center flex-column">
+                    <p class="p2-regular ms-lg-5 ps-lg-5 mb-0">Tailored software solutions designed to meet unique business
+                        needs, enhancing efficiency, scalability, and performance with cutting-edge technology.
+                    </p>
+                    <div class="bg-white btn_wrapper d-md-block pt-5" data-speed="1" data-lag="0.2">
+                        <a class=" wc-btn wc-btn-primary btn-hover btn-item" href="#"><span></span><i
+                                class="fa-solid fa-arrow-right-long fa-lg" aria-hidden="true"></i>Book a
+                            <br>Consultation</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="boundary"></div>
         <div class="container">
-            <div class="hover-area">
-                <div class="row pt-3 pb-4">
-                    <div class="col-5 d-flex align-items-center solutions-heading-container">
-                        <span class="p2-bold me-3">06/</span>
-                        <h4 class="text-dark">Blockchain & Fintech Innovations</h4>
-                    </div>
-                    <div class="col-7 d-flex justify-content-between solution-content-container">
-                        <div class="row">
-                            <div class="col-9">
-                                <p class="p2-regular ms-5 ps-5 mb-0">Developing blockchain-based solutions for financial
-                                    services, supply chain management, and other industries. Explore the transformative
-                                    potential of blockchain technology and fintech solutions.
-                                </p>
-                            </div>
-                            <div class="col-3 d-flex justify-content-end align-items-center">
-                                <div
-                                    class="arrow_circle_blue_caret rounded-circle d-flex justify-content-center align-items-center">
-                                    <i class="fa-solid fa-angle-down"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          <div class="hover-area">
+            <div class="row py-3">
+              <div class="col-md-5 col-9 d-flex align-items-center">
+                <span class="p2-bold me-3">06/</span>
+                <h4 class="text-dark">Blockchain & Fintech Innovations</h4>
+                <!-- <img src="./images/gif3.gif" alt="Hover Image" class="cursor-image" > -->
+              </div>
+              <div class="col-3 d-md-none d-flex justify-content-end align-items-center">
+                <div class="arrow_circle_blue_caret rounded-circle d-flex justify-content-center align-items-center">
+                  <i class="fa-solid fa-angle-down"></i>
                 </div>
-                <div class="gif-slider">
-                    <div class="row">
-                        <div class="col-11">
-                            <div class="row mb-4">
-                                <div class="col-4 position-relative">
-                                    <img src="./images/gif-sol.gif" alt="GIF 1">
-                                    <a href="#"
-                                        class="info d-flex align-items-center justify-content-between position-absolute ">
-                                        <h5 class="h5">App Portfolio Video</h5>
-                                        <div
-                                            class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
-                                            <i class="fa-solid fa-arrow-right-long fa-lg"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-4 position-relative">
-                                    <img src="./images/gif-sol.gif" alt="GIF 1">
-                                    <a href="#"
-                                        class="info d-flex align-items-center justify-content-between position-absolute ">
-                                        <h5 class="h5">UI/UX Design</h5>
-                                        <div
-                                            class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
-                                            <i class="fa-solid fa-arrow-right-long fa-lg"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-4 position-relative">
-                                    <img src="./images/gif-sol.gif" alt="GIF 1">
-                                    <a href="#"
-                                        class="info d-flex align-items-center justify-content-between position-absolute">
-                                        <h5 class="h5">Game Developed</h5>
-                                        <div
-                                            class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
-                                            <i class="fa-solid fa-arrow-right-long fa-lg"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-1 d-flex align-items-center justify-content-center">
-                            <div class="view_btn circle-bg-blue">
-                                <a href="#">Book a <br>Consultation<span><i class="fa-solid fa-arrow-right-long fa-lg"
-                                            aria-hidden="true"></i></span></a>
-                            </div>
-                        </div>
+              </div>
+              <div class="col-md-7 col-12 d-flex justify-content-between">
+                <div class="row">
+                  <div class="col-md-9 d-md-block d-none">
+                    <p class="p2-regular ms-lg-5 ps-lg-5 mb-0">Developing blockchain-based solutions for financial
+                      services, supply chain management, and other industries. Explore the transformative
+                      potential of blockchain technology and fintech solutions.
+                    </p>
+                  </div>
+                  <div class="col-3 d-md-flex d-none justify-content-end align-items-center">
+                    <div class="arrow_circle_blue_caret rounded-circle d-flex justify-content-center align-items-center">
+                      <i class="fa-solid fa-angle-down"></i>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
+            <div class="gif-slider">
+              <div class="row">
+                <div class="col-md-11">
+                  <div class="row mb-4 d-md-flex d-none">
+                    <div class="col-4 position-relative">
+                      <img src="./images/gif-sol.gif" alt="GIF 1">
+                      <a href="#" class="info d-flex align-items-center justify-content-between position-absolute ">
+                        <h5 class="h5">App Portfolio Video</h5>
+                        <div class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-arrow-right-long fa-lg"></i></div> 
+                      </a>
+                    </div>
+                    <div class="col-4 position-relative">
+                      <img src="./images/gif-sol.gif" alt="GIF 1">
+                      <a href="#" class="info d-flex align-items-center justify-content-between position-absolute ">
+                        <h5 class="h5">UI/UX Design</h5>
+                        <div class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-arrow-right-long fa-lg"></i></div> 
+                      </a>
+                    </div>
+                    <div class="col-4 position-relative">
+                      <img src="./images/gif-sol.gif" alt="GIF 1">
+                      <a href="#" class="info d-flex align-items-center justify-content-between position-absolute">
+                        <h5 class="h5">Game Developed</h5>
+                        <div class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-arrow-right-long fa-lg"></i></div> 
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-1 col-12 d-flex align-items-center justify-content-center flex-column">
+                    <p class="p2-regular ms-lg-5 ps-lg-5 mb-0">Tailored software solutions designed to meet unique business
+                        needs, enhancing efficiency, scalability, and performance with cutting-edge technology.
+                    </p>
+                    <div class="bg-white btn_wrapper d-md-block pt-5" data-speed="1" data-lag="0.2">
+                        <a class=" wc-btn wc-btn-primary btn-hover btn-item" href="#"><span></span><i
+                                class="fa-solid fa-arrow-right-long fa-lg" aria-hidden="true"></i>Book a
+                            <br>Consultation</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="boundary"></div>
         <div class="container">
-            <div class="hover-area">
-                <div class="row pt-3 pb-4">
-                    <div class="col-5 d-flex align-items-center solutions-heading-container">
-                        <span class="p2-bold me-3">07/</span>
-                        <h4 class="text-dark">IoT & Smart Technology</h4>
-                    </div>
-                    <div class="col-7 d-flex justify-content-between solution-content-container">
-                        <div class="row">
-                            <div class="col-9">
-                                <p class="p2-regular ms-5 ps-5 mb-0">Implementing Internet of Things (IoT) solutions and
-                                    smart technologies to connect devices, collect data, and automate processes.
-                                </p>
-                            </div>
-                            <div class="col-3 d-flex justify-content-end align-items-center">
-                                <div
-                                    class="arrow_circle_blue_caret rounded-circle d-flex justify-content-center align-items-center">
-                                    <i class="fa-solid fa-angle-down"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          <div class="hover-area">
+            <div class="row py-3">
+              <div class="col-md-5 col-9 d-flex align-items-center">
+                <span class="p2-bold me-3">07/</span>
+                <h4 class="text-dark">IoT & Smart Technology</h4>
+                <!-- <img src="./images/gif4.gif" alt="Hover Image" class="cursor-image" > -->
+              </div>
+              <div class="col-3 d-md-none d-flex justify-content-end align-items-center">
+                <div class="arrow_circle_blue_caret rounded-circle d-flex justify-content-center align-items-center">
+                  <i class="fa-solid fa-angle-down"></i>
                 </div>
-                <div class="gif-slider">
-                    <div class="row">
-                        <div class="col-11">
-                            <div class="row mb-4">
-                                <div class="col-4 position-relative">
-                                    <img src="./images/gif-sol.gif" alt="GIF 1">
-                                    <a href="#"
-                                        class="info d-flex align-items-center justify-content-between position-absolute ">
-                                        <h5 class="h5">App Portfolio Video</h5>
-                                        <div
-                                            class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
-                                            <i class="fa-solid fa-arrow-right-long fa-lg"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-4 position-relative">
-                                    <img src="./images/gif-sol.gif" alt="GIF 1">
-                                    <a href="#"
-                                        class="info d-flex align-items-center justify-content-between position-absolute ">
-                                        <h5 class="h5">UI/UX Design</h5>
-                                        <div
-                                            class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
-                                            <i class="fa-solid fa-arrow-right-long fa-lg"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-4 position-relative">
-                                    <img src="./images/gif-sol.gif" alt="GIF 1">
-                                    <a href="#"
-                                        class="info d-flex align-items-center justify-content-between position-absolute">
-                                        <h5 class="h5">Game Developed</h5>
-                                        <div
-                                            class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
-                                            <i class="fa-solid fa-arrow-right-long fa-lg"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-1 d-flex align-items-center justify-content-center">
-                            <div class="view_btn circle-bg-blue">
-                                <a href="#">Book a <br>Consultation<span><i class="fa-solid fa-arrow-right-long fa-lg"
-                                            aria-hidden="true"></i></span></a>
-                            </div>
-                        </div>
+              </div>
+              <div class="col-md-7 col-12 d-flex justify-content-between">
+                <div class="row">
+                  <div class="col-md-9 d-md-block d-none">
+                    <p class="p2-regular ms-lg-5 ps-lg-5 mb-0">Implementing Internet of Things (IoT) solutions and
+                      smart technologies to connect devices, collect data, and automate processes.
+                    </p>
+                  </div>
+                  <div class="col-3 d-md-flex d-none justify-content-end align-items-center">
+                    <div class="arrow_circle_blue_caret rounded-circle d-flex justify-content-center align-items-center">
+                      <i class="fa-solid fa-angle-down"></i>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
+            <div class="gif-slider">
+              <div class="row">
+                <div class="col-md-11">
+                  <div class="row mb-4 d-md-flex d-none">
+                    <div class="col-4 position-relative">
+                      <img src="./images/gif-sol.gif" alt="GIF 1">
+                      <a href="#" class="info d-flex align-items-center justify-content-between position-absolute ">
+                        <h5 class="h5">App Portfolio Video</h5>
+                        <div class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-arrow-right-long fa-lg"></i></div> 
+                      </a>
+                    </div>
+                    <div class="col-4 position-relative">
+                      <img src="./images/gif-sol.gif" alt="GIF 1">
+                      <a href="#" class="info d-flex align-items-center justify-content-between position-absolute ">
+                        <h5 class="h5">UI/UX Design</h5>
+                        <div class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-arrow-right-long fa-lg"></i></div> 
+                      </a>
+                    </div>
+                    <div class="col-4 position-relative">
+                      <img src="./images/gif-sol.gif" alt="GIF 1">
+                      <a href="#" class="info d-flex align-items-center justify-content-between position-absolute">
+                        <h5 class="h5">Game Developed</h5>
+                        <div class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-arrow-right-long fa-lg"></i></div> 
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-1 col-12 d-flex align-items-center justify-content-center flex-column">
+                    <p class="p2-regular ms-lg-5 ps-lg-5 mb-0">Tailored software solutions designed to meet unique business
+                        needs, enhancing efficiency, scalability, and performance with cutting-edge technology.
+                    </p>
+                    <div class="bg-white btn_wrapper d-md-block pt-5" data-speed="1" data-lag="0.2">
+                        <a class=" wc-btn wc-btn-primary btn-hover btn-item" href="#"><span></span><i
+                                class="fa-solid fa-arrow-right-long fa-lg" aria-hidden="true"></i>Book a
+                            <br>Consultation</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="boundary"></div>
         <div class="container">
-            <div class="hover-area">
-                <div class="row pt-3 pb-4">
-                    <div class="col-5 d-flex align-items-center solutions-heading-container">
-                        <span class="p2-bold me-3">08/</span>
-                        <h4 class="text-dark">Cybersecurity & Data Protection</h4>
-                    </div>
-                    <div class="col-7 d-flex justify-content-between solution-content-container">
-                        <div class="row">
-                            <div class="col-9">
-                                <p class="p2-regular ms-5 ps-5 mb-0">Providing security services to protect businesses
-                                    from cyber threats and ensure data privacy and compliance. We help you mitigate
-                                    risks
-                                    and protect your valuable assets.
-                                </p>
-                            </div>
-                            <div class="col-3 d-flex justify-content-end align-items-center">
-                                <div
-                                    class="arrow_circle_blue_caret rounded-circle d-flex justify-content-center align-items-center">
-                                    <i class="fa-solid fa-angle-down"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          <div class="hover-area">
+            <div class="row py-3">
+              <div class="col-md-5 col-9 d-flex align-items-center">
+                <span class="p2-bold me-3">08/</span>
+                <h4 class="text-dark">Cybersecurity & Data Protection</h4>
+                <!-- <img src="./images/gif5.gif" alt="Hover Image" class="cursor-image" > -->
+              </div>
+              <div class="col-3 d-md-none d-flex justify-content-end align-items-center">
+                <div class="arrow_circle_blue_caret rounded-circle d-flex justify-content-center align-items-center">
+                  <i class="fa-solid fa-angle-down"></i>
                 </div>
-                <div class="gif-slider">
-                    <div class="row">
-                        <div class="col-11">
-                            <div class="row mb-4">
-                                <div class="col-4 position-relative">
-                                    <img src="./images/gif-sol.gif" alt="GIF 1">
-                                    <a href="#"
-                                        class="info d-flex align-items-center justify-content-between position-absolute ">
-                                        <h5 class="h5">App Portfolio Video</h5>
-                                        <div
-                                            class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
-                                            <i class="fa-solid fa-arrow-right-long fa-lg"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-4 position-relative">
-                                    <img src="./images/gif-sol.gif" alt="GIF 1">
-                                    <a href="#"
-                                        class="info d-flex align-items-center justify-content-between position-absolute ">
-                                        <h5 class="h5">UI/UX Design</h5>
-                                        <div
-                                            class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
-                                            <i class="fa-solid fa-arrow-right-long fa-lg"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-4 position-relative">
-                                    <img src="./images/gif-sol.gif" alt="GIF 1">
-                                    <a href="#"
-                                        class="info d-flex align-items-center justify-content-between position-absolute">
-                                        <h5 class="h5">Game Developed</h5>
-                                        <div
-                                            class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
-                                            <i class="fa-solid fa-arrow-right-long fa-lg"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-1 d-flex align-items-center justify-content-center">
-                            <div class="view_btn circle-bg-blue">
-                                <a href="#">Book a <br>Consultation<span><i class="fa-solid fa-arrow-right-long fa-lg"
-                                            aria-hidden="true"></i></span></a>
-                            </div>
-                        </div>
+              </div>
+              <div class="col-md-7 col-12 d-flex justify-content-between">
+                <div class="row">
+                  <div class="col-md-9 d-md-block d-none">
+                    <p class="p2-regular ms-lg-5 ps-lg-5 mb-0">Providing security services to protect businesses
+                      from cyber threats and ensure data privacy and compliance. We help you mitigate risks
+                      and protect your valuable assets.
+                    </p>
+                  </div>
+                  <div class="col-3 d-md-flex d-none justify-content-end align-items-center">
+                    <div class="arrow_circle_blue_caret rounded-circle d-flex justify-content-center align-items-center">
+                      <i class="fa-solid fa-angle-down"></i>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
+            <div class="gif-slider">
+              <div class="row">
+                <div class="col-md-11">
+                  <div class="row mb-4 d-md-flex d-none">
+                    <div class="col-4 position-relative">
+                      <img src="./images/gif-sol.gif" alt="GIF 1">
+                      <a href="#" class="info d-flex align-items-center justify-content-between position-absolute ">
+                        <h5 class="h5">App Portfolio Video</h5>
+                        <div class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-arrow-right-long fa-lg"></i></div> 
+                      </a>
+                    </div>
+                    <div class="col-4 position-relative">
+                      <img src="./images/gif-sol.gif" alt="GIF 1">
+                      <a href="#" class="info d-flex align-items-center justify-content-between position-absolute ">
+                        <h5 class="h5">UI/UX Design</h5>
+                        <div class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-arrow-right-long fa-lg"></i></div> 
+                      </a>
+                    </div>
+                    <div class="col-4 position-relative">
+                      <img src="./images/gif-sol.gif" alt="GIF 1">
+                      <a href="#" class="info d-flex align-items-center justify-content-between position-absolute">
+                        <h5 class="h5">Game Developed</h5>
+                        <div class="arrow_circle_white rounded-circle d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-arrow-right-long fa-lg"></i></div> 
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-1 col-12 d-flex align-items-center justify-content-center flex-column">
+                    <p class="p2-regular ms-lg-5 ps-lg-5 mb-0">Tailored software solutions designed to meet unique business
+                        needs, enhancing efficiency, scalability, and performance with cutting-edge technology.
+                    </p>
+                    <div class="bg-white btn_wrapper d-md-block pt-5" data-speed="1" data-lag="0.2">
+                        <a class=" wc-btn wc-btn-primary btn-hover btn-item" href="#"><span></span><i
+                                class="fa-solid fa-arrow-right-long fa-lg" aria-hidden="true"></i>Book a
+                            <br>Consultation</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="boundary"></div>
-    </section>
+      </section>
 
     <!-- section tech-stack begins -->
-    <section class="tech-stack custom-secondary-radial px-sm-0 px-5">
+    <!-- <section class="tech-stack custom-secondary-radial px-sm-0 px-5">
         <div class="container py-5">
             <div class="row">
                 <div class="col-12">
@@ -1081,7 +1186,7 @@
                             Stack</span> At Your <span class="d-lg-block">Disposal</span></h3>
                 </div>
                 <div class="col-12 py-5">
-                    <div class="row g-5 d-lg-flex d-none">
+                    <div class="row g-5 d-md-flex d-none">
                         <div class="tech-nav col-lg-4 col-md-5 col-12">
                             <nav class="d-md-block sidebar scroll-container px-3 my-5" id="scrollable-div">
                                 <ul id="category-list" class="nav flex-column gap-4"></ul>
@@ -1091,30 +1196,57 @@
                             <div id="tech-grid" class="row g-5 ps-md-5"></div>
                         </main>
                     </div>
-
-                    <!-- Accordion for small screens -->
-                    <div class="accordion d-lg-none" id="techAccordion">
+                    <div class="accordion d-md-none" id="techAccordion">
                         <div class="accordion-item" id="accordion-container">
-                            <!-- Categories and content will be dynamically added here -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
+
+    <!-- section tech-stack begins -->
+    <section class="tech-stack custom-secondary-radial">
+        <div class="container py-5">
+          <div class="row">
+            <div class="col-12">
+              <h3 class="heading3 text-white pt-md-5 pt-3 text-white">A Future-Ready <span class="custom-primary-blue">Tech
+                            Stack</span> At Your <span class="d-lg-block">Disposal</span></h3>
+            </div>
+            <div class="col-12 d-md-none d-block">
+              <div class="scrolling-tabs-container">
+                <ul class="scrolling-tabs" id="mobile-category-list"></ul>
+              </div>
+            </div>
+  
+            <div class="col-12 py-5">
+              <div class="row g-lg-5 g-md-4 g-3">
+                <div class="tech-nav col-md-4 d-none d-md-block">
+                  <nav class="sidebar scroll-container px-3 my-5" id="scrollable-div">
+                    <ul id="desktop-category-list" class="nav flex-column gap-4"></ul>
+                  </nav>
+                </div>
+                <main class="col-md-8 col-12 px-md-4">
+                  <div id="tech-grid" class="row g-lg-5 g-4 ps-lg-5"></div>
+                </main>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
     <!--section project begins-->
     <section class="project custom-secondary-bg-white custom-container-spacing">
         <div class="container">
             <div class="project-container">
                 <div class="row">
-                    <div class="honor-intro">
+                    <div class="honor-intro  project-intro">
                         <div class="sticky-head">
                             <h3><span class="custom-primary-blue">Shaking</span> up things… One <span
                                     class="custom-primary-blue">Industry</span> at a time!</p>
                             </h3>
 
-                            <div class="bg-white btn_wrapper" data-speed="1" data-lag="0.2">
+                            <div class="bg-white btn_wrapper d-md-block d-none pt-5" data-speed="1" data-lag="0.2">
                                 <a class=" wc-btn wc-btn-primary btn-hover btn-item" href="#"><span></span><i
                                         class="fa-solid fa-arrow-right-long fa-lg" aria-hidden="true"></i>Book a
                                     <br>Consultation</a>
@@ -1123,7 +1255,7 @@
                     </div>
                     <div class="award-list">
                         <div class="content-container">
-                            <div class="award-content">
+                            <div class="award-content healthcare-content">
                                 <div class="award-img">
                                     <div class="project-img" id="scrollDiv">
                                         <img id="hoverImage" class="scrollImage w-full" alt="project-img"
@@ -1189,6 +1321,7 @@
 
                         </div>
                     </div>
+
                 </div>
             </div>
     </section>
@@ -1198,12 +1331,11 @@
         <div class="container">
             <div class="row align-items-start justify-content-between position-relative">
                 <!-- Left Section -->
-                <div class="col-lg-6 contact-content">
+                <div class="col-md-6 contact-content">
                     <div class="contact-bg"></div>
                     <h3 class="fw-bold">Let's Build Something <span class="text-primary d-md-inline-block">Amazing
                             Together</span> - Get In Touch!</h3>
-                    <div
-                        class="d-flex flex-row justify-content-start align-items-start gap-lg-5 gap-md-4 gap-5 py-lg-5 py-3 build-container">
+                    <div class="form-img d-flex flex-row justify-content-start align-items-start gap-lg-5 gap-md-4 gap-5 py-lg-5 build-container">
                         <div class="d-flex flex-column align-items-center">
                             <img src="./images/contact-form-img1.png" alt="">
                             <img src="./images/contact-form-img2.png" alt="">
@@ -1211,8 +1343,9 @@
                         <div class="d-flex flex-column align-items-center">
                             <img src="./images/contact-form-img3.png" alt="">
                         </div>
-
+                        
                     </div>
+                        
                     <div class="row">
                         <div class="col-12 d-flex justify-content-start py-md-3 py-5">
                             <ul class="grey-btn-container d-flex list-unstyled gap-4 flex-wrap pt-0">
@@ -1233,7 +1366,7 @@
                 </div>
 
                 <!-- Right Section (Contact Form) -->
-                <div class="col-lg-6">
+                <div class="col-md-6">
                     <div class="card rounded-0 p-5 ms-auto">
                         <form>
                             <div class="row p-3">
@@ -1297,14 +1430,14 @@
                 <h3><span>Follow</span> Us On</h3>
             </div>
             <ul class="list-unstyled d-flex justify-content-center">
-                <li class="mx-4"><a href="#"><img src="./images/linkedin.png" alt="LinkedIn"></a></li>
-                <li class="mx-4"><a href="#"><img src="./images/pinterest.png" alt="Pinterest"></a></li>
-                <li class="mx-4"><a href="#"><img src="./images/x.png" alt="X"></a></li>
-                <li class="mx-4"><a href="#"><img src="./images/youtube.png" alt="YouTube"></a></li>
-                <li class="mx-4"><a href="#"><img src="./images/behance.png" alt="Behance"></a></li>
-                <li class="mx-4"><a href="#"><img src="./images/upwork.png" alt="Upwork"></a></li>
-                <li class="mx-4"><a href="#"><img src="./images/facebook.png" alt="Facebook"></a></li>
-                <li class="mx-4"><a href="#"><img src="./images/instagram.png" alt="Instagram"></a></li>
+                <li class="m-4"><a href="#"><img src="./images/linkedin.png" alt="LinkedIn" class="img-fluid"></a></li>
+                <li class="m-4"><a href="#"><img src="./images/pinterest.png" alt="Pinterest" class="img-fluid"></a></li>
+                <li class="m-4"><a href="#"><img src="./images/x.png" alt="X" class="img-fluid"></a></li>
+                <li class="m-4"><a href="#"><img src="./images/youtube.png" alt="YouTube" class="img-fluid"></a></li>
+                <li class="m-4"><a href="#"><img src="./images/behance.png" alt="Behance" class="img-fluid"></a></li>
+                <li class="m-4"><a href="#"><img src="./images/upwork.png" alt="Upwork" class="img-fluid"></a></li>
+                <li class="m-4"><a href="#"><img src="./images/facebook.png" alt="Facebook" class="img-fluid"></a></li>
+                <li class="m-4"><a href="#"><img src="./images/instagram.png" alt="Instagram" class="img-fluid"></a></li>
             </ul>
         </div>
     </section>
@@ -1317,12 +1450,12 @@
         <div class="container resource-container py-5">
             <h3 class="heading3 text-white pb-5 text-white">Resources - <span class="custom-primary-blue">Keep
                     Yourself</span> Updated</h3>
-            <div class="d-lg-flex gap-5">
-                <div class="left-content d-lg-block d-none">
+            <div class="d-md-flex gap-5">
+                <div class="left-content d-md-block d-none">
                     <img src="./images/resources1.png" alt="resources" class="img-fluid">
                 </div>
                 <div class="right-content ps-lg-4">
-                    <img src="./images/resources1.png" alt="resources" class="img-fluid d-lg-none">
+                    <img src="./images/resources1.png" alt="resources" class="img-fluid d-md-none">
                     <h5 class="heading5 text-white">Sed ut perspiciatis unde omnis iste natus error sit
                         volupt atem
                         accusantium</h3>
@@ -1330,7 +1463,7 @@
                             accusantiumSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
                         <p class="p2-bold text-white bottom-border">By : TechFyte</p>
                         <div class="row g-5">
-                            <div class="col-lg-6">
+                            <div class="col-md-6">
                                 <div class="pe-lg-3">
                                     <img src="./images/resources2.png" alt="resources" class="img-fluid">
                                     <h5 class="heading5 text-white pt-3">Sed ut pers it cpi ciatis unde...
@@ -1342,7 +1475,7 @@
                                 </div>
 
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-md-6">
                                 <div class="ps-lg-3">
                                     <img src="./images/resources3.png" alt="resources" class="img-fluid">
                                     <h5 class="heading5 text-white pt-3">Sed ut pers it cpi ciatis unde...
@@ -1365,11 +1498,11 @@
             <div class="testimonial-container">
                 <div class="testimonial-content">
                     <h3>
-                        Hear From Our <span class="custom-primary-blue">Clients</span> <br>
-                        Vouch For Our <span class="custom-primary-blue"> <br>Credibility</span>
+                        Hear From Our <span class="custom-primary-blue">Clients</span> <div class="d-lg-inline-block d-inline"> Vouch For Our <span class="custom-primary-blue">Credibility</span></div>
+                       
                     </h3>
 
-                    <div class="testimonial-brands d-flex">
+                    <div class="testimonial-brands d-flex flex-wrap">
                         <div class="d-flex flex-column">
                             <img src="./images/contact-form-img1.png" alt="Upwork">
                             <img src="./images/contact-form-img2.png" alt="Upwork">
@@ -1393,7 +1526,7 @@
                             best meets the
                             specific needs and challenges of every section.
                         </p>
-                        <div class="author-info d-flex justify-content-between">
+                        <div class="author-info d-flex justify-content-between align-items-end">
                             <div>
                                 <div class="testimonial-author">
                                     <h5>Mark Julina <span class="p1-regular">(USA)</span></h5>
@@ -1403,7 +1536,7 @@
                                 </div>
                             </div>
                             <div class="quote">
-                                <img src="./images/quotes.png" alt="">
+                                <img src="./images/quotes.png" alt="" class="img-fluid">
                             </div>
                         </div>
                     </div>
@@ -1417,7 +1550,7 @@
                             manageable
                             components and assign resources based.
                         </p>
-                        <div class="author-info d-flex justify-content-between">
+                        <div class="author-info d-flex justify-content-between align-items-end">
                             <div>
                                 <div class="testimonial-author">
                                     <h5>Mark Julina <span class="p1-regular">(USA)</span></h5>
@@ -1428,7 +1561,7 @@
                             </div>
 
                             <div class="quote">
-                                <img src="./images/quotes.png" alt="">
+                                <img src="./images/quotes.png" alt="" class="img-fluid">
                             </div>
                         </div>
                     </div>
@@ -1436,7 +1569,7 @@
                         <p class="p2-regular">
                             Our streamlined workflow ensures timely delivery while maintaining quality and efficiency.
                         </p>
-                        <div class="author-info d-flex justify-content-between">
+                        <div class="author-info d-flex justify-content-between align-items-end">
                             <div>
                                 <div class="testimonial-author">
                                     <h5>Sarah Thomas <span class="p1-regular">(UK)</span></h5>
@@ -1446,7 +1579,7 @@
                                 </div>
                             </div>
                             <div class="quote">
-                                <img src="./images/quotes.png" alt="">
+                                <img src="./images/quotes.png" alt="" class="img-fluid">
                             </div>
                         </div>
                     </div>
@@ -1454,7 +1587,7 @@
                         <p class="p2-regular">
                             The team provided excellent support and guidance throughout the entire process.
                         </p>
-                        <div class="author-info d-flex justify-content-between">
+                        <div class="author-info d-flex justify-content-between align-items-end">
                             <div>
                                 <div class="testimonial-author ">
                                     <h5>James Carter <span class="p1-regular">(Canada)</span></h5>
@@ -1464,7 +1597,7 @@
                                 </div>
                             </div>
                             <div class="quote">
-                                <img src="./images/quotes.png" alt="">
+                                <img src="./images/quotes.png" alt="quote" class="img-fluid">
                             </div>
                         </div>
                     </div>
@@ -1476,7 +1609,7 @@
     <!--footer starts-->
     <footer class="custom-secondary-radial mt-3">
         <div class="container position-relative">
-            <div class="footer-list-container py-5 mb-2">
+            <div class="footer-list-container d-md-block d-none py-5 mb-2">
                 <div class="footer-list-content">
                     <ul class="footer-list">
                         <li class="custom-clr pt-5">
@@ -1560,6 +1693,115 @@
                     </ul>
                 </div>
             </div>
+            <div class="footer-mob-container d-md-none d-block">
+                <ul class="list-group">
+                    
+                    <li class="list-group-item">
+                        <button class="accordion-btn w-100 text-start d-flex justify-content-between align-items-center"
+                                data-bs-toggle="collapse" data-bs-target="#collapseAbout" aria-expanded="false">
+                                <h4 class="text-white mb-2">About</h4>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                        <div id="collapseAbout" class="collapse accordion-content">
+                            <ul class="footer-list">
+                                <li><a href="#">Our Company</a></li>
+                                <li><a href="#">Career</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Events</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <button class="accordion-btn w-100 text-start d-flex justify-content-between align-items-center"
+                                data-bs-toggle="collapse" data-bs-target="#collapseServices" aria-expanded="false">
+                                <h4 class="text-white mb-2">
+                                    Services
+                                </h4>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                        <div id="collapseServices" class="collapse accordion-content">
+                            <ul class="footer-list">
+                                <li><a href="#">iOS App Development</a></li>
+                                <li><a href="#">Android App Development</a></li>
+                                <li><a href="#">2D/3D Design</a></li>
+                                <li><a href="#">UI/UX Design</a></li>
+                                <li><a href="#">Web Development</a></li>
+                                <li><a href="#">Mobile App Development</a></li>
+                                <li><a href="#">On Demand App Development</a></li>
+                                <li><a href="#">Digital Market</a></li>
+                                <li class="more"><a href="#">More...</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <button class="accordion-btn w-100 text-start d-flex justify-content-between align-items-center"
+                                data-bs-toggle="collapse" data-bs-target="#collapseTech" aria-expanded="false">
+                                <h4 class="text-white mb-2">
+                                    Technologies
+                                </h4>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                        <div id="collapseTech" class="collapse accordion-content">
+                            <ul class="footer-list">
+                                <li><a href="#">Blockchain</a></li>
+                                <li> <a href="#">AR and VR</a></li>
+                                <li><a href="#">Artificial Intelligence</a></li>
+                                <li><a href="#">React/React Native</a></li>
+                                <li><a href="#">Internet of Things</a></li>
+                                <li><a href="#">NFT Development</a></li>
+                                <li><a href="#">Figma</a></li>
+                                <li><a href="#">Node.js</a></li>
+                                <li class="more"><a href="#">More...</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <button class="accordion-btn w-100 text-start d-flex justify-content-between align-items-center"
+                                data-bs-toggle="collapse" data-bs-target="#collapseIndustry" aria-expanded="false">
+                                <h4 class="text-white mb-2">
+                                    Industries
+                                </h4>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                        <div id="collapseIndustry" class="collapse accordion-content">
+                            <ul class="footer-list">
+                                <li><a href="#">Health care</a></li>
+                                <li> <a href="#">Fitness</a></li>
+                                <li><a href="#">Education</a></li>
+                                <li> <a href="#">On-Demand</a></li>
+                                <li> <a href="#">eCommerce</a></li>
+                                <li><a href="#">Food Ordering</a></li>
+                                <li><a href="#">Real Estate</a></li>
+                                <li><a href="#">Transportation</a></li>
+                                <li class="more"><a href="#">More...</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="accordion-btn list-group-item">
+                        <button class="w-100 text-start d-flex justify-content-between align-items-center"
+                                data-bs-toggle="collapse" data-bs-target="#collapseExpertise" aria-expanded="false">
+                                <h4 class="text-white mb-2">Expertise In</h4>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                        <div id="collapseExpertise" class="collapse accordion-content">
+                            <ul class="footer-list">
+                                <li><a href="#">Blockchain App Development</a></li>
+                                <li> <a href="#">NFT Marketplace Development</a></li>
+                                <li> <a href="#"> Wallet App Development</a></li>
+                                <li> <a href="#"> AR / VR App Development</a></li>
+                                <li><a href="#"> Fintech App Development</a></li>
+                                <li><a href="#"> Growth & Marketing</a></li>
+                                <li><a href="#">App Development</a></li>
+                                <li> <a href="#">Web Development</a></li>
+                                <li class="more"><a href="#">More...</a></li>
+                            </ul>
+                        </div>
+                    </li>
+            
+                    
+                </ul>
+            </div>
             <div class="contact-us position-relative">
                 <h2 class="center-text HeadingText">
                     <svg id="mySvg" width="2000" height="420">
@@ -1585,25 +1827,25 @@
                     </svg>
                 </h2>
                 <h3 class="text-center custom-clr py-5 pt-4">Contact Us</h3>
-                <div class="row">
-                    <div class="col-10 offset-1">
-                        <div class="row">
-                            <div class="col-4">
-                                <div class="email d-flex flex-column align-items-center">
-                                    <img alt="contact-img" src="./images/email.png">
-                                    <p2 class="p2-bold text-center custom-clr py-5">contact@techfyte.in</p2>
+                <div class="row address">
+                    <div class="col-md-10 offset-md-1">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="email d-flex flex-md-column align-items-md-center">
+                                    <img alt="contact-img" class="contact-img" src="./images/email.png">
+                                    <p2 class="p2-bold text-md-center custom-clr py-md-5">contact@techfyte.in</p2>
                                 </div>
                             </div>
-                            <div class="col-4">
-                                <div class="phone d-flex flex-column align-items-center">
-                                    <img alt="contact-img" src="./images/phone2.png">
-                                    <p2 class="p2-bold text-center custom-clr py-5">+91-9501423775</p2>
+                            <div class="col-md-4">
+                                <div class="phone d-flex flex-md-column align-items-md-center">
+                                    <img alt="contact-img" class="contact-img" src="./images/phone2.png">
+                                    <p2 class="p2-bold text-md-center custom-clr py-md-5">+91-9501423775</p2>
                                 </div>
                             </div>
-                            <div class="col-4">
-                                <div class="location d-flex flex-column align-items-center">
-                                    <img alt="contact-img" src="./images/location.png">
-                                    <p2 class="p2-bold custom-clr py-5 text-center">F-273, Phase VIII-B, Industrial
+                            <div class="col-md-4">
+                                <div class="location d-flex flex-md-column align-items-md-center">
+                                    <img alt="contact-img" class="contact-img" src="./images/location.png">
+                                    <p2 class="p2-bold custom-clr py-md-5 text-md-center">F-273, Phase VIII-B, Industrial
                                         Focal
                                         Point, Mohali,
                                         SAS Nagar, Punjab, 160071 </p2>
@@ -1612,11 +1854,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <button id="backToTop"
+                <button id="backToTop"
                 class="back-to-top position-absolute d-flex justify-content-center align-items-center">
                 <img src="./images/top.png">
-            </button>
+                </button>
+            </div>
+           
             <p1 class="p1-regular disclaimer d-flex justify-content-center position-relative">2024 © Copyright TechFyte
                 |
                 Privacy
@@ -1628,20 +1871,24 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
     integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.23/bundled/lenis.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"
     integrity="sha512-1PKqXBz2ju2JcAerHKL0ldg0PT/1vr3LghYAtc59+9xy8e19QEtaNUyt1gprouyWnpOPqNJjL4gXMRMEpHYyLQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollSmoother.min.js"></script>
 <script src="assets/js/ScrollSmoother.min.js"></script>
 <script src="https://unpkg.com/split-type"></script>
 <script src="./script.js"></script>
