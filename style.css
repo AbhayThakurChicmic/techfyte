@@ -2646,21 +2646,12 @@ footer {
         color: #3F81FB;
         font-size: 16px;
     }
-     .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease-in-out, padding 0.3s ease-in-out;
-        }
-
-        .accordion-content.show {
-            max-height: 500px; /* Adjust as needed */
-            padding-top: 10px;
-        }
-
-        .rotate {
-            transform: rotate(180deg);
-            transition: transform 0.3s ease-in-out;
-        }
+    footer .address .email, footer .address .phone,footer .address .location {
+        gap:20px;
+    }
+    footer .back-to-top{
+        top: 16px;
+    }
 }
 
 @media screen and (max-width:680px) {
@@ -3046,9 +3037,7 @@ footer {
         height: 135px;
         width: 135px;
     }
-    footer .back-to-top{
-        top: 16px;
-    }
+   
 
     footer .address .email, footer .address .phone,footer .address .location {
         gap:20px;
