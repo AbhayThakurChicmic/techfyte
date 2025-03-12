@@ -1154,8 +1154,6 @@ header {
     padding-bottom: 35px;
 }
 
-
-
 .solution .boundary {
     border-top: 1px solid #F0F0F0;
 }
@@ -1170,26 +1168,25 @@ header {
     position: relative;
 }
 
-.solution .hover-area:hover .gif-slider {
+/* .solution .hover-area:hover .gif-slider {
     display: block;
-}
+} */
 
-.solution .hover-area:hover .arrow_circle_blue_caret i {
+/* .solution .hover-area:hover .arrow_circle_blue_caret i {
     transform: rotate(180deg);
-}
+} */
 
-.solution .hover-area:hover .arrow_circle_blue_caret {
+/* .solution .hover-area:hover .arrow_circle_blue_caret {
     background: #3F81FB;
     transition: background 0.3s ease-in-out;
-}
+} */
 
-.solution .hover-area:hover .arrow_circle_blue_caret i {
+/* .solution .hover-area:hover .arrow_circle_blue_caret i {
     color: #FFFFFF;
     transition: color 0.3s ease-in-out;
     transform: rotate(180deg);
-    /* Rotates the icon */
     transition: color 0.3s ease-in-out, transform 0.5s ease-in-out;
-}
+} */
 
 .solution .info {
     bottom: 0;
@@ -1324,12 +1321,12 @@ header {
 
 
 .secret-success .scroll-container {
+    padding: 57px 0 0 0;
     display: flex;
-    overflow-x: scroll;
+    overflow-x:hidden;
     scroll-behavior: smooth;
     gap: 16px;
-    padding-bottom: 20px;
-    margin-left: 9%;
+    margin-left: 142px;
 }
 
 .secret-success .scroll-container::-webkit-scrollbar {
@@ -2691,6 +2688,9 @@ footer {
     }
     footer .disclaimer {
         padding: 20px 0 20px;
+    }
+    footer .contact-us #text {
+        font-size: 100px;
     }
 }
 
