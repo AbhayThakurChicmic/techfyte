@@ -458,7 +458,10 @@ header {
 
 .expertise .service-card.large {
     grid-row: span 2;
-    max-height: 514px;
+    height: 514px;
+}
+.expertise .service-card.small-img{
+    height: 242px;
 }
 
 .expertise .service-card {
@@ -1700,6 +1703,13 @@ footer {
         padding: 90px 0px;
     }
 
+    .expertise .service-card.large {
+        height: 460px;
+    }
+    .expertise .service-card.small-img{
+        height: 215px;
+    }
+
     .innovative, .services {
         padding-bottom: 90px;
     }
@@ -1927,6 +1937,15 @@ footer {
         padding: 70px 0px;
     }
 
+    .expertise .service-card.large {
+        height: 386px;
+    }
+    .expertise .service-card.small-img{
+        height: 183px;
+    }
+    .expertise .grid-container {
+        gap: 20px;
+    }
     .innovative, .services, .contact-form {
         padding-bottom: 70px;
     }
@@ -2117,6 +2136,12 @@ footer {
     .expertise .grid-container{
         gap: 20px;
     }
+    .expertise .service-card.large {
+        height: 350px;
+    }
+    .expertise .service-card.small-img{
+        height: 165px;
+    }
 
     
     .expertise .service-card .overlay{
@@ -2224,7 +2249,7 @@ footer {
     }
 }
 
-@media screen and (max-width:992px) {
+@media screen and (max-width:991px) {
     h1, .development-container h1 {
         font-size: 81px;
         line-height: 100px;
@@ -2239,7 +2264,11 @@ footer {
         line-height: 34px;
     }
 
-    
+    header{
+        box-shadow: 0px 4px 35px #0000001A;
+        background: #fff;
+        padding: 16px 0;
+    }
 
     .navbar-collapse {
         flex-basis: 100%;
@@ -2295,6 +2324,13 @@ footer {
     .expertise .grid-container {
         gap: 15px;
     }
+    .expertise .service-card.large {
+        height: 311px;
+    }
+    .expertise .service-card.small-img{
+        height: 148px;
+    }
+
 
     .business-content {
         max-width: 100%;
@@ -2447,14 +2483,16 @@ footer {
         padding: 60px 0px;
     }
 
-    header{
-        box-shadow: 0px 4px 35px #0000001A;
-        background: #fff;
-        padding: 16px 0;
-    }
+    
 
     .expertise {
         margin-bottom: 70px;
+    }
+    .expertise .service-card.large {
+        height: 480px;
+    }
+    .expertise .service-card.small-img{
+        height: 206px;
     }
 
     .innovative, .services, .contact-form, .solution {
@@ -2594,7 +2632,7 @@ footer {
     }
 
     .testimonial-section .swiper-container {
-        width: calc(95% + 34px);
+        width: 100%;
     }
 
     .solution h4{
@@ -2607,6 +2645,9 @@ footer {
 
     .solution .hover-area p{
         padding: 10px 0;
+    }
+    .solution .hover-area:hover .arrow_circle_blue_caret i {
+        transform: rotate(0deg);
     }
     .gif-slider {
         display: none;
@@ -2699,16 +2740,11 @@ footer {
         top: 34px;
         right: -22px;
     }
-
-    .expertise .grid-container {
-        gap: 15px;
+    .expertise .service-card.large {
+        height: 420px;
     }
-    .expertise .service-card.large img {
-        width: 100%;
-        max-height: 400px;
-        height: 100%;
-        object-fit: cover;
-        display: block;
+    .expertise .service-card.small-img {
+        height: 180px;
     }
     
     .reveal {
@@ -2833,15 +2869,17 @@ footer {
     .brands .slider-container{
         padding:0;
     }
-
-    .expertise .service-card.large img {
-        max-height: 300px;
-    }
-    .expertise .service-card.small img {
-        height: 140px;
-    }
     .expertise .service-card .overlay {
         padding: 12px;
+    }
+    .expertise .service-card.large {
+        height: 350px;
+    }
+    .expertise .service-card.small-img {
+        height: 154px;
+    }
+    .expertise .grid-container {
+        gap: 18px;
     }
 
     .reveal {
@@ -2961,13 +2999,15 @@ footer {
         padding: 10px 10px 12px;
     }
 
-    .expertise .service-card.large img {
-        max-height: 212px;
+    .expertise .service-card.large {
+        height: 280px;
     }
-    .expertise .service-card.small img {
-        height: 106px;
+    .expertise .service-card.small-img {
+        height: 130px;
     }
-
+    .expertise .grid-container {
+        gap: 15px;
+    }
     .expertise .service-card .overlay {
         padding: 8px;
     }
@@ -3036,10 +3076,17 @@ footer {
         height: 135px;
         width: 135px;
     }
-   
+}
 
-    footer .address .email, footer .address .phone,footer .address .location {
-        gap:20px;
+@media screen and (max-width:380px) {
+    .expertise .grid-container {
+        gap: 12px;
+    }
+    .expertise .service-card.large {
+        height: 215px;
+    }
+    .expertise .service-card.small-img {
+        height: 107px;
     }
 }
 

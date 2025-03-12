@@ -123,7 +123,6 @@
   height: 250px;
   width: 250px;
   border-radius: 100%;
-  margin-left: -40px;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
@@ -132,7 +131,6 @@
   #btn_wrapper {
     width: 220px;
     height: 220px;
-    margin-left: -25px;
   }
 }
 
@@ -152,7 +150,6 @@
   #btn_wrapper {
     width: 180px;
     height: 180px;
-    margin-left: -5px;
   }
 }
 
@@ -162,7 +159,6 @@
   #btn_wrapper {
     height: 175px;
     width: 175px;
-    margin-left: -2.5px;
   }
 }
 
