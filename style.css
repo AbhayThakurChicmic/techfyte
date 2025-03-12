@@ -358,7 +358,6 @@ header {
 }
 
 .development-container {
-    margin-top: 20px;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -2774,7 +2773,7 @@ footer {
 }
 @media screen and (max-width:580px) {
     h1, .development-container h1 {
-        font-size: 44px;
+        font-size: 46px;
         line-height: 50px;
     }
     h3, .list-unstyled h3 {
@@ -2802,8 +2801,8 @@ footer {
 
     .banner-top-right {
         max-width: 160px;
-        top: 16px;
-        right: -20px;
+        top: 23px;
+        right: -15px;
     }
 
     .banner-bottom-left {
@@ -2813,7 +2812,7 @@ footer {
     }
 
     .banner-bottom .banner-content {
-        max-width: 260px;
+        max-width: 272px;
         padding: 65px 0 0;
     }
 
@@ -2919,8 +2918,8 @@ footer {
 
 @media screen and (max-width:480px) {
     h1, .development-container h1 {
-        font-size: 34px;
-        line-height: 42px;
+        font-size: 36px;
+        line-height: 44px;
     }
     
     h3, .list-unstyled h3 {
@@ -2945,18 +2944,18 @@ footer {
     }
 
     .banner-top-right {
-        max-width: 143px;
-        top: 10px;
+        max-width: 145px;
+        top: 25px;
         right: -20px;
     }
     .banner-bottom-left {
         left: -20px;
-        margin-top: 7px;
-        max-width: 220px;
+        margin-top: 20px;
+        max-width: 240px;
     }
     .banner-bottom .banner-content {
-        max-width: 201px;
-        padding: 42px 0 0;
+        max-width: 214px;
+        padding: 56px 0 0;
     }
     .ai-development .owl-carousel {
         padding: 10px 10px 12px;
