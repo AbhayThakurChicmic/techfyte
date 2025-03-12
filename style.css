@@ -694,14 +694,14 @@ header {
     border-bottom: 1px solid #F0F0F0;
 }
 
-.services .service-mob-img:hover img {
+/* .services .service-mob-img:hover img {
     display: block;
     z-index: 100;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
     max-width: 350px;
-}
+} */
 .project_work {
     background: radial-gradient(circle, #0A2658, #04183E);
     color: white;
@@ -2692,6 +2692,12 @@ footer {
     footer .back-to-top{
         top: 16px;
     }
+    footer .contact-us{
+        padding:0 0 20px 0;
+    }
+    footer .disclaimer {
+        padding: 20px 0 20px;
+    }
 }
 
 @media screen and (max-width:680px) {
@@ -2805,7 +2811,10 @@ footer {
         flex-wrap: wrap;
     }
     
-    
+    footer .contact-img {
+        max-width: 20px;
+        height: auto;
+    }
 }
 @media screen and (max-width:580px) {
     h1, .development-container h1 {
