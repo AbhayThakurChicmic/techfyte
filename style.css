@@ -1732,10 +1732,6 @@ footer {
         margin-top: 20px;
     }
 
-    .ai-carousel .owl-item{
-        padding-left: 60px;
-    }
-
     .banner-content {
         max-width: 1040px;
     }
@@ -1888,6 +1884,10 @@ footer {
     .view_btn.circle-bg-blue {
         width: 135px;
         height: 135px;
+    }
+
+    .form-img img {
+        max-width: 140px;
     }
 }
 
