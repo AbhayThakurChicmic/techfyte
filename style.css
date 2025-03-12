@@ -1650,6 +1650,15 @@ footer {
     display: none;
   }
 
+  .ai-carousel .owl-item {
+    opacity: 0;
+    transition: 1s ease;
+  }
+
+  .ai-carousel .owl-item.active {
+    opacity: 1;
+  }
+
 /*============================= Media Queries ==================================*/
 
 @media only screen and (max-width:1680px) {
