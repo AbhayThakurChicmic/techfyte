@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /************************************** */
   //  Portfolio Animation
-  if (device_width > 767) {
+  if (device_width > 320) {
     let portfolioline = gsap.timeline({
       scrollTrigger: {
         trigger: ".portfolio__area",

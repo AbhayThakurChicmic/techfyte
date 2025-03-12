@@ -481,7 +481,7 @@ header {
     bottom: 0px;
     left: 0;
     width: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
     padding: 15px 20px;
     color: #ffffff;
     font-weight: bold;
@@ -694,19 +694,19 @@ header {
     border-bottom: 1px solid #F0F0F0;
 }
 
-.services .service-mob-img:hover img {
+/* .services .service-mob-img:hover img {
     display: block;
     z-index: 100;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
     max-width: 350px;
-}
+} */
 .project_work {
     background: radial-gradient(circle, #0A2658, #04183E);
     color: white;
     width: 100%;
-    padding: 80px 0;
+    padding: 40px 0;
     box-sizing: border-box;
     font-family: "Oswald", serif;
 }
@@ -1136,12 +1136,11 @@ header {
   }
 
 
-@media screen and (min-width:1680px) {
-    .sidebar {
-        max-height: 455px;
-        overflow-y: auto;
-    }
+.sidebar {
+    max-height: 455px;
+    overflow-y: auto;
 }
+
 
 .custom-secondary-bg-white, .solution {
     background-color: #FFFFFF;
@@ -1833,10 +1832,6 @@ footer {
         margin-left: auto;
     }
 
-    .sidebar {
-        max-height: 420px;
-    }
-
     .solutions-heading-container {
         width: 38%;
     }
@@ -2026,10 +2021,6 @@ footer {
 
     #tech-grid .card img {
         height: 50px;
-    }
-
-    .sidebar {
-        max-height: 340px;
     }
 
     .contact-content {
@@ -2222,6 +2213,9 @@ footer {
         width: 290px;
     }
 
+    .tech-stack .sidebar::-webkit-scrollbar {
+        width: 14px;
+    }
     .contact-form form input {
         height: 60px;
         box-sizing: border-box;
@@ -2701,6 +2695,12 @@ footer {
     footer .back-to-top{
         top: 16px;
     }
+    footer .contact-us{
+        padding:0 0 20px 0;
+    }
+    footer .disclaimer {
+        padding: 20px 0 20px;
+    }
 }
 
 @media screen and (max-width:680px) {
@@ -2814,7 +2814,10 @@ footer {
         flex-wrap: wrap;
     }
     
-    
+    footer .contact-img {
+        max-width: 20px;
+        height: auto;
+    }
 }
 @media screen and (max-width:580px) {
     h1, .development-container h1 {
