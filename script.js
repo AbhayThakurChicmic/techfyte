@@ -198,6 +198,17 @@ document.addEventListener("DOMContentLoaded", function () {
 // });
 
 // solutions section
+document.querySelectorAll(".hover-area").forEach((item) => {
+  item.addEventListener("click", function () {
+      // Toggle the gif-slider inside the clicked hover-area
+      const gifSlider = this.querySelector(".gif-slider");
+      gifSlider.classList.toggle("open");
+
+      // Find the caret icon inside the clicked hover-area and rotate it
+      const caretIcon = this.querySelector(".caret-icon");
+      caretIcon.classList.toggle("rotate");
+  });
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   const toggles = document.querySelectorAll(".hover-area");

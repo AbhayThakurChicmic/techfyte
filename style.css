@@ -139,23 +139,22 @@ ul {
     transition: color 0.3s ease-in-out;
 }
 
-.arrow_circle_blue:hover, .arrow_circle_blue_caret:hover {
+/* .arrow_circle_blue:hover, .arrow_circle_blue_caret:hover {
     background: #3F81FB;
     transition: background 0.3s ease-in-out;
-}
+} */
 
 .arrow_circle_blue:hover i {
     color: #FFFFFF !important;
     transition: color 0.3s ease-in-out;
 }
 
-.arrow_circle_blue_caret:hover i {
+/* .arrow_circle_blue_caret:hover i {
     color: #FFFFFF;
     transition: color 0.3s ease-in-out;
     transform: rotate(180deg);
-    /* Rotates the icon */
     transition: color 0.3s ease-in-out, transform 0.5s ease-in-out;
-}
+} */
 
 .arrow_circle_white {
     height: 52px;
@@ -543,7 +542,7 @@ header {
 
 .excellence .info {
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 0;
     font-family: "Urbanist", serif;
     color: #212121;
@@ -1161,12 +1160,21 @@ header {
 .solution .p2-bold {
     color: #8C8C8C;
 }
-
-.solution .gif-slider {
-    display: none;
-    width: 100%;
-    position: relative;
+.solution .hover-area{
+    cursor: pointer;
 }
+.solution .gif-slider {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+  }
+.solution  .gif-slider.open {
+    max-height: 500px; 
+  }
+.solution .rotate {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease-in-out;
+  }
 
 /* .solution .hover-area:hover .gif-slider {
     display: block;
@@ -2025,7 +2033,11 @@ footer {
         height: 60px;
         max-width: 280px;
     }
-
+    .wc-btn {
+        width: 140px;
+        height: 140px;
+        font-size: 18px;
+    }
     .testimonial-container {
         gap: 30px;
     }
@@ -2166,8 +2178,8 @@ footer {
 
     .wc-btn {
         gap: 12px;
-        width: 145px;
-        height: 145px;
+        width: 130px;
+        height: 130px;
         font-size: 16px;
         font-weight: 700;
         line-height: 24px;
