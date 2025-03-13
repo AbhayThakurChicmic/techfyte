@@ -1,6 +1,7 @@
 function updateMargin() {
   let marginLeft = $(".resource-container").css("margin-left");
   $(".testimonial-container").css("margin-left", marginLeft);
+  $(".scroll-container").css("margin-left", marginLeft);
 }
 
 $(document).ready(updateMargin);
