@@ -1336,7 +1336,6 @@ header {
     overflow-x:hidden;
     scroll-behavior: smooth;
     gap: 16px;
-    margin-left: 142px;
 }
 .secret-success p{
     color:#2f2b2b
