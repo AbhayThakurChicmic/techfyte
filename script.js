@@ -210,6 +210,18 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // solutions section
+document.querySelectorAll(".hover-area").forEach((item) => {
+  item.addEventListener("click", function () {
+      // Toggle the gif-slider inside the clicked hover-area
+      const gifSlider = this.querySelector(".gif-slider");
+      gifSlider.classList.toggle("open");
+
+      // Find the caret icon inside the clicked hover-area and rotate it
+      const caretIcon = this.querySelector(".caret-icon");
+      caretIcon.classList.toggle("rotate");
+  });
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   const toggles = document.querySelectorAll(".hover-area");
 
@@ -244,6 +256,42 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  let accordionItems = document.querySelectorAll(".accordion-item");
+
+  accordionItems.forEach((item, index) => {
+      let statusIcon = item.querySelector(".status-icon");
+      let button = item.querySelector(".accordion-button");
+
+      statusIcon.innerHTML = '<i class="fa-solid fa-check"></i>';
+      statusIcon.style.backgroundColor = "#3F81FB";
+
+      button.addEventListener("click", function () {
+          let isExpanded = !this.classList.contains("collapsed");
+
+          accordionItems.forEach((otherItem, otherIndex) => {
+              let otherStatusIcon = otherItem.querySelector(".status-icon");
+              if (otherIndex !== index) {
+                  otherStatusIcon.innerHTML = '<i class="fa-solid fa-check"></i>'; 
+                  otherStatusIcon.style.backgroundColor = "#3F81FB"; 
+              }
+          });
+
+          
+          if (isExpanded) {
+              statusIcon.innerHTML = index + 1; 
+              statusIcon.style.backgroundColor = "#000"; 
+          } else {
+              statusIcon.innerHTML = '<i class="fa-solid fa-check"></i>'; 
+              statusIcon.style.backgroundColor = "#3F81FB"; 
+          }
+      });
+  });
+});
+
+
+
 
 // bottom to top button in footer
 document.addEventListener("DOMContentLoaded", function () {
