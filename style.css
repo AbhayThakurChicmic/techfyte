@@ -1176,6 +1176,10 @@ header {
     transition: transform 0.3s ease-in-out;
   }
 
+.solution .sol-num{
+    margin-right: 8px;
+}
+
 /* .solution .hover-area:hover .gif-slider {
     display: block;
 } */
@@ -1318,9 +1322,7 @@ header {
 }
 
 /*================================= section secret-success starts ================================*/
-.secret-success {
-    padding: 120px 0;
-}
+
 
 .secret-success .success-card h4 {
     padding-bottom: 40px;
@@ -1335,6 +1337,9 @@ header {
     scroll-behavior: smooth;
     gap: 16px;
     margin-left: 142px;
+}
+.secret-success p{
+    color:#2f2b2b
 }
 
 .secret-success .scroll-container::-webkit-scrollbar {
@@ -2019,6 +2024,10 @@ footer {
         height: 50px;
     }
 
+    .solution .info {
+        padding: 16px 14px;
+    }
+
     .contact-content {
         width: 45%;
     }
@@ -2064,6 +2073,15 @@ footer {
     }
 }
 
+
+@media only screen and (max-width:1280px) {
+    .wc-btn {
+        gap: 16px;
+        width: 135px;
+        height: 135px;
+        font-size: 18px;
+    }
+}
 @media only screen and (max-width:1024px) {
     
 
@@ -2408,16 +2426,17 @@ footer {
 
     .wc-btn {
         gap: 12px;
-        width: 125px;
-        height: 125px;
+        width: 108px;
+        height: 108px;
         font-size: 14px;
         font-weight: 700;
         line-height: 18px;
     }
-
     .sidebar .active::after {
         font-size: 24px;
     }
+
+    
 
     .form-img{
         padding: 30px 0;
@@ -2591,6 +2610,61 @@ footer {
         justify-content: center;
     }
     
+    .secret-success #customAccordion {
+        padding-top: 30px;
+    }
+
+    .secret-success .accordion-body{
+        border-top: 2px solid #f0f0f0;
+        padding: 20px 15px;
+    }
+    .secret-success .accordion-button {
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding: 15px;
+    }
+    .secret-success .accordion-item {
+        border: 2px solid #f0f0f0; 
+        margin-bottom: 12px; 
+        position: relative;
+    }
+
+    .secret-success .accordion-button::after {
+        display: none !important;
+    }
+    
+    .secret-success .status-icon {
+        font-size: 15px;
+        font-weight: bold;
+        color: #fff;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #3F81FB;
+        transition: transform 0.3s ease;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
+    .secret-success .status-icon i {
+        font-size: 18px;
+    }
+
+    .secret-success .accordion-body img{
+        max-width: 100px;
+        width: 100%;
+    }
+    .secret-success .accordion-button:focus, .accordion-button:not(.collapsed) {
+        background-color: transparent !important; 
+        box-shadow: none !important; 
+        color: inherit; 
+    }
+
+    
+
     .contact-form .contact-content{
         width: 100%;
     }
@@ -2638,6 +2712,12 @@ footer {
         width: 100%;
     }
 
+    .wc-btn {
+        gap: 14px;
+        width: 125px;
+        height: 125px;
+        font-size: 16px;
+    }
     .solution h4{
         font-size: 24px;
         line-height: 36px;
@@ -2648,6 +2728,9 @@ footer {
 
     .solution .hover-area p{
         padding: 10px 0;
+    }
+    .solution .sol-num {
+        margin-right: 20px;
     }
     .solution .hover-area:hover .arrow_circle_blue_caret i {
         transform: rotate(0deg);
@@ -2701,7 +2784,7 @@ footer {
     footer .disclaimer {
         padding: 20px 0 20px;
     }
-    footer .contact-us #text {
+    footer .contact-us #text-mob {
         font-size: 100px;
     }
 }
@@ -2737,6 +2820,9 @@ footer {
     }
     .p2-bold {
         font-weight: 500;
+    }
+    .nav-container img {
+        max-width: 160px;
     }
     .banner-bottom .banner-content {
         max-width: 333px;
@@ -2800,6 +2886,9 @@ footer {
         font-size: 22px;
         line-height: 34px;
     }
+    .solution .sol-num {
+        margin-right: 18px;
+    }
     .scrolling-tabs li {
         font-size: 16px;
         font-weight: 600;
@@ -2850,6 +2939,9 @@ footer {
         font-weight: 400;
     }
 
+    .nav-container img {
+        max-width: 140px;
+    }
     .banner-top-right {
         max-width: 160px;
         top: 23px;
@@ -2925,6 +3017,9 @@ footer {
     .solution .p2-bold {
         font-weight: 400;
     }
+    .solution .sol-num {
+        margin-right: 16px;
+    }
     .social-section li {
         max-width: 50px;
         height: 50px;
@@ -2995,7 +3090,18 @@ footer {
         font-size: 13px;
         line-height: 20px;
     }
-
+    header {
+        padding: 18px 0;
+    }
+    .brands h5 {
+        margin-bottom: 14px;
+    }
+    .nav-container img {
+        max-width: 120px;
+    }
+    .navbar, .navbar-brand{
+        padding: 0;
+    }
     .banner-top-right {
         max-width: 145px;
         top: 25px;
@@ -3015,10 +3121,10 @@ footer {
     }
 
     .expertise .service-card.large {
-        height: 280px;
+        height: 260px;
     }
     .expertise .service-card.small-img {
-        height: 130px;
+        height: 124px;
     }
     .expertise .grid-container {
         gap: 15px;
@@ -3061,6 +3167,21 @@ footer {
     .award-logo img {
         max-width: 100px;
         width: 100%;
+    }
+
+    .secret-success #customAccordion h5{
+        font-size: 18px;
+    }
+    .secret-success .status-icon {
+        font-size: 12px;
+        width: 27px;
+        height: 27px;
+    }
+    .secret-success .status-icon i{
+        font-size: 15px;
+    }
+    .solution .sol-num {
+        margin-right: 14px;
     }
     .wc-btn {
         gap: 10px;

@@ -38,11 +38,11 @@ $(".brands-container").owlCarousel({
   nav: false,
   dots: false,
   autoplay: true,
-  autoplayTimeout: 1000,
+  autoplayTimeout: 2000,
   autoplayHoverPause: true,
   responsive: {
     0: {
-      items: 3,
+      items: 2,
     },
     600: {
       items: 4,
@@ -239,6 +239,42 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  let accordionItems = document.querySelectorAll(".accordion-item");
+
+  accordionItems.forEach((item, index) => {
+      let statusIcon = item.querySelector(".status-icon");
+      let button = item.querySelector(".accordion-button");
+
+      statusIcon.innerHTML = '<i class="fa-solid fa-check"></i>';
+      statusIcon.style.backgroundColor = "#3F81FB";
+
+      button.addEventListener("click", function () {
+          let isExpanded = !this.classList.contains("collapsed");
+
+          accordionItems.forEach((otherItem, otherIndex) => {
+              let otherStatusIcon = otherItem.querySelector(".status-icon");
+              if (otherIndex !== index) {
+                  otherStatusIcon.innerHTML = '<i class="fa-solid fa-check"></i>'; 
+                  otherStatusIcon.style.backgroundColor = "#3F81FB"; 
+              }
+          });
+
+          
+          if (isExpanded) {
+              statusIcon.innerHTML = index + 1; 
+              statusIcon.style.backgroundColor = "#000"; 
+          } else {
+              statusIcon.innerHTML = '<i class="fa-solid fa-check"></i>'; 
+              statusIcon.style.backgroundColor = "#3F81FB"; 
+          }
+      });
+  });
+});
+
+
+
 
 // bottom to top button in footer
 document.addEventListener("DOMContentLoaded", function () {
