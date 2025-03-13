@@ -1,10 +1,12 @@
 function updateMargin() {
-  var marginLeft = $(".resource-container").css("margin-left");
+  let marginLeft = $(".resource-container").css("margin-left");
   $(".testimonial-container").css("margin-left", marginLeft);
 }
 
 $(document).ready(updateMargin);
 $(window).on("resize", updateMargin);
+
+// Smooth Scroll
 
 // ai-carousel
 $(".ai-carousel").owlCarousel({
@@ -43,6 +45,7 @@ $(".brands-container").owlCarousel({
   responsive: {
     0: {
       items: 3,
+      margin: 20,
     },
     600: {
       items: 4,
@@ -65,14 +68,14 @@ $(".swiper-container").owlCarousel({
   nav: false,
   dots: false,
   autoplay: false,
-  // autoplayTimeout: 1000,
-  // autoplayHoverPause: true,
   responsive: {
     0: {
-      items: 1.5,
+      items: 1.2,
+      margin:20,
     },
     600: {
-      items: 1,
+      items: 1.2,
+      margin:20,
     },
     992: {
       items: 2,
@@ -81,7 +84,7 @@ $(".swiper-container").owlCarousel({
 });
 
 // Telephone Field
-var input = document.querySelector("#phone");
+let input = document.querySelector("#phone");
 window.intlTelInput(input, {
   initialCountry: "in",
   separateDialCode: true,
@@ -205,61 +208,39 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Text Change
-// document.addEventListener("DOMContentLoaded", function () {
-//   const textArray = [
-//     "AI Development",
-//     "Machine Learning",
-//     "Data Science",
-//     "Deep Learning",
-//   ];
-//   let index = 0;
-//   const textElement = document.getElementById("animated-text");
-
-//   setInterval(() => {
-//     textElement.classList.add("fade");
-
-//     setTimeout(() => {
-//       index = (index + 1) % textArray.length;
-//       textElement.textContent = textArray[index];
-//       textElement.classList.remove("fade");
-//     }, 500);
-//   }, 2000);
-// });
-
-// $(window).on("load", function () {
-//   $(".owl-carousel").trigger("refresh.owl.carousel");
-// });
-
 // solutions section
-
 document.addEventListener("DOMContentLoaded", function () {
   const toggles = document.querySelectorAll(".hover-area");
 
-  toggles.forEach(toggle => {
-      toggle.addEventListener("click", function (event) {
-          event.stopPropagation();
+  toggles.forEach((toggle) => {
+    toggle.addEventListener("click", function (event) {
+      event.stopPropagation();
 
       const parentRow = this.closest(".hover-area");
       const content = parentRow.querySelector(".gif-slider");
       const arrowIcon = this.querySelector("i");
 
-          if (content.classList.contains("active")) {
-              content.style.maxHeight = "0";
-              content.classList.remove("active");
-              arrowIcon.style.transform = "rotate(0deg)";
-          } else {
-              document.querySelectorAll(".gif-slider.active").forEach(openSlider => {
-                  openSlider.style.maxHeight = "0";
-                  openSlider.classList.remove("active");
-                  openSlider.closest(".hover-area").querySelector(".arrow_circle_blue_caret i").style.transform = "rotate(0deg)";
-              });
+      if (content.classList.contains("active")) {
+        content.style.maxHeight = "0";
+        content.classList.remove("active");
+        arrowIcon.style.transform = "rotate(0deg)";
+      } else {
+        document
+          .querySelectorAll(".gif-slider.active")
+          .forEach((openSlider) => {
+            openSlider.style.maxHeight = "0";
+            openSlider.classList.remove("active");
+            openSlider
+              .closest(".hover-area")
+              .querySelector(".arrow_circle_blue_caret i").style.transform =
+              "rotate(0deg)";
+          });
 
-              content.classList.add("active");
-              content.style.maxHeight = content.scrollHeight + "px";
-              arrowIcon.style.transform = "rotate(180deg)";
-          }
-      });
+        content.classList.add("active");
+        content.style.maxHeight = content.scrollHeight + "px";
+        arrowIcon.style.transform = "rotate(180deg)";
+      }
+    });
   });
 });
 
