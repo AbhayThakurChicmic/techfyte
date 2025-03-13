@@ -1,7 +1,7 @@
 function updateMargin() {
   let marginLeft = $(".resource-container").css("margin-left");
   $(".testimonial-container").css("margin-left", marginLeft);
-  $(".scroll-container").css("margin-left", marginLeft);
+  $(".success-slider").css("margin-left", marginLeft);
 }
 
 $(document).ready(updateMargin);
@@ -255,6 +255,21 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+});
+
+
+// secret-success
+$(".success-container").owlCarousel({
+  loop: true,
+  nav: false,
+  dots: false,
+
+  responsive: {
+    0: {
+      items: 2,
+      margin: 20,
+    },
+  },
 });
 
 document.addEventListener("DOMContentLoaded", function () {
