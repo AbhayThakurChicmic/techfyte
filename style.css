@@ -139,23 +139,22 @@ ul {
     transition: color 0.3s ease-in-out;
 }
 
-.arrow_circle_blue:hover, .arrow_circle_blue_caret:hover {
+/* .arrow_circle_blue:hover, .arrow_circle_blue_caret:hover {
     background: #3F81FB;
     transition: background 0.3s ease-in-out;
-}
+} */
 
 .arrow_circle_blue:hover i {
     color: #FFFFFF !important;
     transition: color 0.3s ease-in-out;
 }
 
-.arrow_circle_blue_caret:hover i {
+/* .arrow_circle_blue_caret:hover i {
     color: #FFFFFF;
     transition: color 0.3s ease-in-out;
     transform: rotate(180deg);
-    /* Rotates the icon */
     transition: color 0.3s ease-in-out, transform 0.5s ease-in-out;
-}
+} */
 
 .arrow_circle_white {
     height: 52px;
@@ -481,7 +480,7 @@ header {
     bottom: 0px;
     left: 0;
     width: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
     padding: 15px 20px;
     color: #ffffff;
     font-weight: bold;
@@ -543,7 +542,7 @@ header {
 
 .excellence .info {
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 0;
     font-family: "Urbanist", serif;
     color: #212121;
@@ -706,7 +705,7 @@ header {
     background: radial-gradient(circle, #0A2658, #04183E);
     color: white;
     width: 100%;
-    padding: 80px 0;
+    padding: 40px 0;
     box-sizing: border-box;
     font-family: "Oswald", serif;
 }
@@ -1136,12 +1135,11 @@ header {
   }
 
 
-@media screen and (min-width:1680px) {
-    .sidebar {
-        max-height: 455px;
-        overflow-y: auto;
-    }
+.sidebar {
+    max-height: 455px;
+    overflow-y: auto;
 }
+
 
 .custom-secondary-bg-white, .solution {
     background-color: #FFFFFF;
@@ -1155,8 +1153,6 @@ header {
     padding-bottom: 35px;
 }
 
-
-
 .solution .boundary {
     border-top: 1px solid #F0F0F0;
 }
@@ -1164,33 +1160,41 @@ header {
 .solution .p2-bold {
     color: #8C8C8C;
 }
-
+.solution .hover-area{
+    cursor: pointer;
+}
 .solution .gif-slider {
-    display: none;
-    width: 100%;
-    position: relative;
-}
-
-.solution .hover-area:hover .gif-slider {
-    display: block;
-}
-
-.solution .hover-area:hover .arrow_circle_blue_caret i {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+  }
+.solution  .gif-slider.open {
+    max-height: 500px; 
+  }
+.solution .rotate {
     transform: rotate(180deg);
-}
+    transition: transform 0.3s ease-in-out;
+  }
 
-.solution .hover-area:hover .arrow_circle_blue_caret {
+/* .solution .hover-area:hover .gif-slider {
+    display: block;
+} */
+
+/* .solution .hover-area:hover .arrow_circle_blue_caret i {
+    transform: rotate(180deg);
+} */
+
+/* .solution .hover-area:hover .arrow_circle_blue_caret {
     background: #3F81FB;
     transition: background 0.3s ease-in-out;
-}
+} */
 
-.solution .hover-area:hover .arrow_circle_blue_caret i {
+/* .solution .hover-area:hover .arrow_circle_blue_caret i {
     color: #FFFFFF;
     transition: color 0.3s ease-in-out;
     transform: rotate(180deg);
-    /* Rotates the icon */
     transition: color 0.3s ease-in-out, transform 0.5s ease-in-out;
-}
+} */
 
 .solution .info {
     bottom: 0;
@@ -1325,12 +1329,12 @@ header {
 
 
 .secret-success .scroll-container {
+    padding: 57px 0 0 0;
     display: flex;
-    overflow-x: scroll;
+    overflow-x:hidden;
     scroll-behavior: smooth;
     gap: 16px;
-    padding-bottom: 20px;
-    margin-left: 9%;
+    margin-left: 142px;
 }
 
 .secret-success .scroll-container::-webkit-scrollbar {
@@ -1828,10 +1832,6 @@ footer {
         margin-left: auto;
     }
 
-    .sidebar {
-        max-height: 420px;
-    }
-
     .solutions-heading-container {
         width: 38%;
     }
@@ -2019,10 +2019,6 @@ footer {
         height: 50px;
     }
 
-    .sidebar {
-        max-height: 340px;
-    }
-
     .contact-content {
         width: 45%;
     }
@@ -2037,7 +2033,11 @@ footer {
         height: 60px;
         max-width: 280px;
     }
-
+    .wc-btn {
+        width: 140px;
+        height: 140px;
+        font-size: 18px;
+    }
     .testimonial-container {
         gap: 30px;
     }
@@ -2178,8 +2178,8 @@ footer {
 
     .wc-btn {
         gap: 12px;
-        width: 145px;
-        height: 145px;
+        width: 130px;
+        height: 130px;
         font-size: 16px;
         font-weight: 700;
         line-height: 24px;
@@ -2213,6 +2213,9 @@ footer {
         width: 290px;
     }
 
+    .tech-stack .sidebar::-webkit-scrollbar {
+        width: 14px;
+    }
     .contact-form form input {
         height: 60px;
         box-sizing: border-box;
@@ -2697,6 +2700,9 @@ footer {
     }
     footer .disclaimer {
         padding: 20px 0 20px;
+    }
+    footer .contact-us #text {
+        font-size: 100px;
     }
 }
 
