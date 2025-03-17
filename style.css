@@ -459,7 +459,8 @@ header {
     grid-row: span 2;
     height: 514px;
 }
-.expertise .service-card.small-img{
+
+.expertise .service-card.small-img {
     height: 242px;
 }
 
@@ -510,9 +511,10 @@ header {
     display: flex;
     justify-content: flex-end;
 }
-.mob-business-image{
-    width: 530px; 
-    height: 350px; 
+
+.mob-business-image {
+    width: 530px;
+    height: 350px;
     overflow: hidden;
     position: relative;
 }
@@ -689,7 +691,7 @@ header {
     border-top: 1px solid #F0F0F0;
 }
 
-.services-mobile .list-mobile li:last-child{
+.services-mobile .list-mobile li:last-child {
     border-bottom: 1px solid #F0F0F0;
 }
 
@@ -904,6 +906,7 @@ header {
     padding: 20px 0 30px 0px;
     border-bottom: 1px solid #F0F0F0;
 }
+
 .award-item:nth-child(1) {
     border-top: 1px solid #f0f0f0;
 }
@@ -1100,39 +1103,43 @@ header {
 }
 
 .scrolling-tabs-container {
+    margin-top: 10px;
+}
+
+.scrolling-tabs-container .scrolling-tabs {
     overflow-x: auto;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
-    padding: 10px 0;
+    padding: 10px;
     scrollbar-width: none;
     scroll-behavior: smooth;
-  }
-  
-  .scrolling-tabs {
+}
+
+.scrolling-tabs {
     display: flex;
     gap: 15px;
     padding: 5px 6px;
     list-style: none;
     border: 1.2px solid #1A2F56;
-  }
-  
-  .scrolling-tabs li {
+}
+
+.scrolling-tabs li {
     display: inline-block;
     padding: 10px 15px;
     color: white;
     cursor: pointer;
     white-space: nowrap;
-    font-size:17px;
+    font-size: 17px;
     font-weight: 600;
     line-height: normal;
     font-family: 'Oswald';
     background-color: #1A2F56;
-  }
-  
-  .scrolling-tabs li.active {
+}
+
+.scrolling-tabs li.active {
     border: 2px solid #fff;
     box-sizing: border-box;
-  }
+}
 
 
 .sidebar {
@@ -1145,11 +1152,11 @@ header {
     background-color: #FFFFFF;
 }
 
-.solution{
+.solution {
     padding-bottom: 120px;
 }
 
-.solution h3{
+.solution h3 {
     padding-bottom: 35px;
 }
 
@@ -1240,7 +1247,7 @@ header {
     padding-bottom: 120px;
 }
 
-.project .project-intro{
+.project .project-intro {
     text-transform: capitalize;
 }
 
@@ -1330,10 +1337,10 @@ header {
 }
 
 
-.secret-success .scroll-container {
+.secret-success .success-slider {
     padding: 57px 0 0 0;
     display: flex;
-    overflow-x:hidden;
+    overflow-x: auto;
     scroll-behavior: smooth;
     gap: 16px;
 }
@@ -1341,13 +1348,19 @@ header {
     color:#2f2b2b
 }
 
-.secret-success .scroll-container::-webkit-scrollbar {
+.secret-success .success-slider::-webkit-scrollbar {
     display: none;
 }
 
+.secret-success .success-content{
+    padding:45px 0;
+}
+.secret-success .success-content img{
+    max-width: 100px;
+    height: auto;
+}
+
 .secret-success .scroll-item {
-    min-width: 914px;
-    height: 405px;
     border: 2px solid #F0F0F0;
     padding: 40px 60px;
     background: white;
@@ -1431,7 +1444,8 @@ header {
     left: 1%;
     width: 100%;
     height: 100%;
-    background: url('../images/contact-form-bg.png') no-repeat;
+    background-image: url(./images/contact-form-bg.png);
+    background-repeat: no-repeat;
     z-index: -99;
 }
 
@@ -1560,7 +1574,7 @@ header {
     color: white;
 }
 
-.contact-us .p2-bold{
+.contact-us .p2-bold {
     font-size: 20px;
 }
 
@@ -1570,15 +1584,17 @@ header {
 }
 
 @keyframes float {
-	0% {
-		transform: translatey(0px);
-	}
-	50% {
-		transform: translatey(-20px);
-	}
-	100% {
-		transform: translatey(0px);
-	}
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-20px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
 }
 
 .floating-image {
@@ -1588,37 +1604,37 @@ header {
 /* footer styling begins*/
 footer {
     overflow: hidden;
-  }
-  
-  footer .custom-clr {
+}
+
+footer .custom-clr {
     color: #ffffff !important;
-  
-  }
-  
-  footer .more a {
+
+}
+
+footer .more a {
     color: #3F81FB;
-  }
-  
-  footer .contact-us {
+}
+
+footer .contact-us {
     border-top: 1px solid #1A2F56;
     border-bottom: 1px solid #1A2F56;
     z-index: 100;
-  }
-  
-  .HeadingText {
+}
+
+.HeadingText {
     position: absolute;
     top: 26px;
     left: -217px;
     z-index: -1;
-  }
-  
-  footer .disclaimer {
+}
+
+footer .disclaimer {
     color: #8C8C8C;
     padding: 20px 0 40px;
     z-index: 100;
-  }
-  
-  footer .back-to-top {
+}
+
+footer .back-to-top {
     bottom: 16%;
     right: 1%;
     z-index: 100;
@@ -1628,37 +1644,46 @@ footer {
     width: 36.03px;
     height: 36.03px;
     opacity: 2px;
-  }
-  
-  .footer-list li a {
+}
+
+.footer-list li a {
     font-size: 20px;
     line-height: 40px;
     color: #fff;
     font-family: "Urbanist", sans-serif;
     font-weight: 300;
     transition: 0.5s ease;
-  }
-  
-  .footer-list li a:hover {
-    color:#007bff;
-  }
-  
-  .footer-list-container  {
+}
+
+.footer-list li a:hover {
+    color: #007bff;
+}
+
+.footer-list-container {
     display: flex;
     justify-content: space-between;
-  }
-  
-  .footer-list li.more a {
-    color: #007bff;
-  }
-  
-  .footer-list li.more a:hover{
-    color:#fff;
-  }
+}
 
-  .project .sticky-head p:empty{
+.footer-list li.more a {
+    color: #007bff;
+}
+
+.footer-list li.more a:hover {
+    color: #fff;
+}
+
+.project .sticky-head p:empty {
     display: none;
-  }
+}
+
+.ai-carousel .owl-item {
+    opacity: 0;
+    transition: 1s ease;
+}
+
+.ai-carousel .owl-item.active {
+    opacity: 1;
+}
 
 /*============================= Media Queries ==================================*/
 
@@ -1714,7 +1739,8 @@ footer {
     .expertise .service-card.large {
         height: 460px;
     }
-    .expertise .service-card.small-img{
+
+    .expertise .service-card.small-img {
         height: 215px;
     }
 
@@ -1729,10 +1755,6 @@ footer {
 
     .banner-top {
         margin-top: 20px;
-    }
-
-    .ai-carousel .owl-item{
-        padding-left: 60px;
     }
 
     .banner-content {
@@ -1884,6 +1906,10 @@ footer {
         width: 135px;
         height: 135px;
     }
+
+    .form-img img {
+        max-width: 140px;
+    }
 }
 
 @media only screen and (max-width:1440px) {
@@ -1944,12 +1970,15 @@ footer {
     .expertise .service-card.large {
         height: 386px;
     }
-    .expertise .service-card.small-img{
+
+    .expertise .service-card.small-img {
         height: 183px;
     }
+
     .expertise .grid-container {
         gap: 20px;
     }
+
     .innovative, .services, .contact-form {
         padding-bottom: 70px;
     }
@@ -1971,7 +2000,7 @@ footer {
         max-width: 400px;
     }
 
-    .ai-carousel .owl-item{
+    .ai-carousel .owl-item {
         padding-left: 0px;
     }
 
@@ -2082,14 +2111,14 @@ footer {
     }
 }
 @media only screen and (max-width:1024px) {
-    
+
 
     h1, .development-container h1 {
         font-size: 90px;
         line-height: 120px;
     }
 
-    h3 , .list-unstyled h3{
+    h3, .list-unstyled h3 {
         font-size: 32px;
         line-height: 42px;
     }
@@ -2150,18 +2179,20 @@ footer {
         line-height: 24px;
     }
 
-    .expertise .grid-container{
+    .expertise .grid-container {
         gap: 20px;
     }
+
     .expertise .service-card.large {
         height: 350px;
     }
-    .expertise .service-card.small-img{
+
+    .expertise .service-card.small-img {
         height: 165px;
     }
 
-    
-    .expertise .service-card .overlay{
+
+    .expertise .service-card .overlay {
         padding: 10px;
     }
 
@@ -2174,9 +2205,10 @@ footer {
         line-height: 24px;
     }
 
-    .business-content{
+    .business-content {
         max-width: 800px;
     }
+
     .excellence .count {
         padding: 95px 0 100px 0px;
     }
@@ -2225,7 +2257,7 @@ footer {
         height: 60px;
     }
 
-    
+
     .award-title {
         width: 290px;
     }
@@ -2233,6 +2265,7 @@ footer {
     .tech-stack .sidebar::-webkit-scrollbar {
         width: 14px;
     }
+
     .contact-form form input {
         height: 60px;
         box-sizing: border-box;
@@ -2243,10 +2276,11 @@ footer {
         padding: 15px 20px;
     }
 
-    .social-section li{
-        max-width:60px;
-        height:60px;
+    .social-section li {
+        max-width: 60px;
+        height: 60px;
     }
+
     .owl-carousel__prev i, .owl-carousel__next i {
         font-size: 18px;
         line-height: 18px;
@@ -2256,16 +2290,18 @@ footer {
         margin: 40px 0;
         gap: 30px;
     }
+
     .author-info .rating {
         max-width: 120px;
     }
+
     .swiper-container .owl-item {
         border: 2px solid #F0F0F0;
         padding: 18px 22px 26px 22px;
     }
 
-    .testimonial-section .quote{
-        max-width:50px;
+    .testimonial-section .quote {
+        max-width: 50px;
     }
 }
 
@@ -2279,15 +2315,20 @@ footer {
         font-size: 28px;
         line-height: 40px;
     }
+
     h4 {
         font-size: 20px;
         line-height: 34px;
     }
 
-    header{
+    header {
         box-shadow: 0px 4px 35px #0000001A;
         background: #fff;
-        padding: 16px 0;
+        padding: 8px 0;
+    }
+
+    .nav-container img {
+        max-width: 110px;
     }
 
     .navbar-collapse {
@@ -2300,25 +2341,28 @@ footer {
         right: 0;
         width: 100%;
         border: 2px solid #f0f0f0;
-        background:#fff;
+        background: #fff;
         padding: 15px;
     }
 
-    .navbar-nav li{
+    .navbar-nav li {
         width: 100%;
         display: flex;
         justify-content: center;
         border-bottom: 1px solid #f0f0f0;
         padding: 10px;
     }
-    .menu ul{
-        gap:0px;
+
+    .menu ul {
+        gap: 0px;
     }
-    .menu .circle-btn a{
+
+    .menu .circle-btn a {
         display: flex;
         justify-content: center;
         padding-top: 20px;
     }
+
     .banner-bottom .banner-content {
         max-width: 480px;
     }
@@ -2344,17 +2388,19 @@ footer {
     .expertise .grid-container {
         gap: 15px;
     }
+
     .expertise .service-card.large {
         height: 311px;
     }
-    .expertise .service-card.small-img{
+
+    .expertise .service-card.small-img {
         height: 148px;
     }
-
 
     .business-content {
         max-width: 100%;
     }
+
     .excellence .count {
         padding: 40px 0 40px 0px;
     }
@@ -2363,28 +2409,34 @@ footer {
         font-size: 30px;
         line-height: 42px;
     }
+
     .mob-business-image {
         width: 100%;
         max-height: 430px;
         height: auto;
     }
+
     .excellence .stats {
         font-size: 30px;
         padding: 15px 30px;
     }
+
     element.style {
         max-width: 750px;
         margin: 0 auto;
     }
+
     .services .list-desktop h3 {
         font-size: 24px;
         line-height: 30px;
         text-align: center;
     }
+
     .services .slash::after {
         height: 40px;
         left: -60px;
     }
+
     .services .list-desktop li {
         padding: 0px 58px;
     }
@@ -2397,7 +2449,8 @@ footer {
         width: 40px;
         gap: 6px;
     }
-    .award-rating img{
+
+    .award-rating img {
         max-width: 18px;
     }
 
@@ -2409,6 +2462,7 @@ footer {
         max-width: 150px;
         width: 100%;
     }
+
     .award-logo img {
         max-width: 140px;
         width: 100%;
@@ -2444,6 +2498,7 @@ footer {
     .swiper-container {
         width: calc(55% + 34px);
     }
+
     .testimonial-content {
         width: 36%;
     }
@@ -2453,7 +2508,7 @@ footer {
         height: 50px;
     }
 
-    .gray-btn img{
+    .gray-btn img {
         max-width: 25px;
     }
 
@@ -2467,7 +2522,7 @@ footer {
         line-height: 30px;
     }
 
-    footer .contact-img{
+    footer .contact-img {
         max-width: 30px;
     }
 
@@ -2475,21 +2530,24 @@ footer {
         font-size: 14px;
         line-height: 22px;
     }
+
     .contact-form form .input-group input[type="tel"] {
         padding-left: 135px !important;
     }
 
 }
 
-@media screen and (max-width:767px){
+@media screen and (max-width:767px) {
     h3, .list-unstyled h3 {
         font-size: 40px;
         line-height: 56px;
     }
+
     h4 {
         font-size: 30px;
         line-height: 42px;
     }
+
     h5, .heading5 {
         font-size: 24px;
         line-height: 34px;
@@ -2504,15 +2562,17 @@ footer {
         padding: 60px 0px;
     }
 
-    
+
 
     .expertise {
         margin-bottom: 70px;
     }
+
     .expertise .service-card.large {
         height: 480px;
     }
-    .expertise .service-card.small-img{
+
+    .expertise .service-card.small-img {
         height: 206px;
     }
 
@@ -2524,6 +2584,7 @@ footer {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
+
     .expertise .service-card .overlay {
         padding: 15px;
     }
@@ -2532,20 +2593,23 @@ footer {
         font-size: 36px;
         line-height: 50px;
     }
+
     .excellence .stats {
         font-size: 32px;
         padding: 15px 30px;
     }
+
     .excellence .info {
         font-size: 16px;
         line-height: 26px;
     }
+
     .excellence .stats {
         font-size: 30px;
         padding: 15px 20px;
     }
 
-    .work_info{
+    .work_info {
         max-width: 600px;
         margin: auto;
     }
@@ -2553,69 +2617,76 @@ footer {
     .project_work .row_top .work_item:nth-child(even) .work_info {
         top: 0;
     }
-    
-    .honor-intro{
+
+    .honor-intro {
         max-width: 100%;
     }
 
-    .award-list{
+    .award-list {
         max-width: 100%;
         padding-top: 30px;
     }
+
     .award-item {
         padding: 30px 0px;
     }
+
     .award-rating {
         width: 60px;
         gap: 10px;
     }
-    .award-title{
+
+    .award-title {
         max-width: 350px;
     }
+
     .award-logo {
         max-width: 200px;
     }
 
-    .project-container .honor-intro{
+    .project-container .honor-intro {
         position: relative;
     }
+
     .sticky-head {
         position: relative;
         top: 0px;
     }
+
     .project .sticky-head {
         position: relative;
         top: 0px;
     }
 
-    .project .award-content{
+    .project .award-content {
         flex-direction: column;
-        gap:26px;
+        gap: 26px;
     }
 
-    .project .award-img{
+    .project .award-img {
         max-width: 100%;
     }
-    .project .award-img img{
+
+    .project .award-img img {
         height: 500px;
         object-fit: cover;
     }
-    .project .project-content{
+
+    .project .project-content {
         text-align: center;
     }
 
-    .project .info{
+    .project .info {
         display: flex;
         justify-content: center;
     }
-    
     .secret-success #customAccordion {
         padding-top: 30px;
     }
 
-    .secret-success .accordion-body{
+    .secret-success .accordion-body {
         border-top: 2px solid #f0f0f0;
-        padding: 20px 15px;
+        margin-top: 15px;
     }
     .secret-success .accordion-button {
         font-weight: bold;
@@ -2623,12 +2694,14 @@ footer {
         justify-content: space-between;
         align-items: center;
         position: relative;
-        padding: 15px;
+        padding-left: 0;
+        padding-right: 0;
     }
     .secret-success .accordion-item {
-        border: 2px solid #f0f0f0; 
         margin-bottom: 12px; 
         position: relative;
+        padding: 15px;
+        border: 2px solid #f0f0f0;
     }
 
     .secret-success .accordion-button::after {
@@ -2662,30 +2735,30 @@ footer {
         color: inherit; 
     }
 
-    
-
     .contact-form .contact-content{
         width: 100%;
     }
+
     .gray-btn {
         width: 60px;
         height: 60px;
     }
-    .gray-btn img{
+
+    .gray-btn img {
         max-width: 35px;
     }
 
-    .resources .right-content img{
+    .resources .right-content img {
         width: 100%;
         max-height: 300px;
         object-fit: cover;
     }
 
-    .resources .right-content h5{
+    .resources .right-content h5 {
         padding: 10px 0;
     }
 
-    .resources .p2-bold{
+    .resources .p2-bold {
         padding: 5px 0;
     }
 
@@ -2695,10 +2768,11 @@ footer {
         border-bottom: 0;
     }
 
-    .testimonial-section .testimonial-container{
+    .testimonial-section .testimonial-container {
         flex-direction: column;
     }
-    .testimonial-section .testimonial-content{
+
+    .testimonial-section .testimonial-content {
         width: 100%;
     }
 
@@ -2721,11 +2795,12 @@ footer {
         font-size: 24px;
         line-height: 36px;
     }
+
     .solution h3 {
         padding-bottom: 30px;
     }
 
-    .solution .hover-area p{
+    .solution .hover-area p {
         padding: 10px 0;
     }
     .solution .sol-num {
@@ -2734,52 +2809,62 @@ footer {
     .solution .hover-area:hover .arrow_circle_blue_caret i {
         transform: rotate(0deg);
     }
+
     .gif-slider {
         display: none;
     }
+
     .gif-slider.active {
-        display: block; 
+        display: block;
     }
+
     .gif-slider {
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.4s ease-in-out;
     }
-    
+
     .gif-slider.active {
-        max-height: 500px; 
+        max-height: 500px;
     }
 
-    .social-section ul{
+    .social-section ul {
         padding: 20px 0 0 0;
     }
 
-    footer .list-group-item{
-        border:none;
+    footer .list-group-item {
+        border: none;
         border-bottom: 1px solid #1A2F56;
         background: transparent;
         padding: 15px 0 7px 0;
     }
-    footer .list-group{
+
+    footer .list-group {
         background: transparent;
     }
-    footer button{
-        border:0;
+
+    footer button {
+        border: 0;
         background: transparent;
     }
-    footer button i{
+
+    footer button i {
         color: #3F81FB;
         font-size: 16px;
     }
-    footer .address .email, footer .address .phone,footer .address .location {
-        gap:20px;
+
+    footer .address .email, footer .address .phone, footer .address .location {
+        gap: 20px;
     }
-    footer .back-to-top{
+
+    footer .back-to-top {
         top: 16px;
     }
-    footer .contact-us{
-        padding:0 0 20px 0;
+
+    footer .contact-us {
+        padding: 0 0 20px 0;
     }
+
     footer .disclaimer {
         padding: 20px 0 20px;
     }
@@ -2793,30 +2878,42 @@ footer {
         font-size: 56px;
         line-height: 75px;
     }
+
     .portfolio__text {
         font-size: 60px;
         line-height: 90px;
     }
+
     h3, .list-unstyled h3 {
         font-size: 34px;
         line-height: 44px;
     }
+
     h4 {
         font-size: 22px;
         line-height: 34px;
     }
+
     h5, .heading5 {
         font-size: 20px;
         line-height: 30px;
     }
+
     h6 {
         font-size: 14px;
         line-height: 20px;
     }
+
+    p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
     .p2-regular, .p2-bold {
         font-size: 16px;
         line-height: 26px;
     }
+
     .p2-bold {
         font-weight: 500;
     }
@@ -2827,45 +2924,54 @@ footer {
         max-width: 333px;
         padding: 40px 0 0;
     }
+
     .banner-bottom-left {
         left: -20px;
         margin-top: 7px;
         max-width: 302px;
     }
+
     .banner-top-right {
         max-width: 181px;
         top: 34px;
         right: -22px;
     }
+
     .expertise .service-card.large {
-        height: 420px;
+        height: 300px;
     }
+
     .expertise .service-card.small-img {
         height: 180px;
     }
-    
+
     .reveal {
         font-size: 30px;
         line-height: 44px;
     }
+
     .excellence .count {
         padding: 20px 0 20px 0px;
     }
+
     .excellence .info {
         font-size: 14px;
         line-height: 24px;
     }
+
     .excellence .stats {
         font-size: 26px;
         padding: 15px 20px;
     }
+
     .mob-business-image {
         max-height: 330px;
     }
-    
+
     .services-mobile .list-mobile li {
         padding: 25px 0 30px;
     }
+
     .work_info {
         max-width: 450px;
     }
@@ -2874,68 +2980,144 @@ footer {
         font-size: 32px;
         line-height: 40px;
     }
+
     .award-rating {
         width: 45px;
         gap: 8px;
     }
+
     .award-title {
         max-width: 272px;
     }
+
     .solution h4 {
         font-size: 22px;
         line-height: 34px;
     }
+
+    .scrolling-tabs {
+        gap: 7px;
+    }
+
     .solution .sol-num {
         margin-right: 18px;
     }
     .scrolling-tabs li {
-        font-size: 16px;
         font-weight: 600;
-        letter-spacing: .5px;
+        letter-spacing: 0px;
+        padding: 6px 10px;
+        font-size: 15px;
+        line-height: 20px;
     }
-    .project .award-img{
+
+    .project .award-img {
         max-width: 100%;
     }
-    .project .award-img img{
+
+    .project .award-img img {
         height: 400px;
         object-fit: cover;
     }
 
-    .social-section ul{
+    .social-section ul {
         flex-wrap: wrap;
     }
-    
+
     footer .contact-img {
         max-width: 20px;
         height: auto;
     }
+
+    .project-content h4 {
+        margin-bottom: 10px;
+    }
+
+    .project-content .info {
+        gap: 8px;
+    }
+
+    .testimonial-brands img, .build-container img {
+        max-width: 90px;
+    }
+
+    .gray-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .gray-btn img {
+        max-width: 25px;
+    }
+
+    .form-img {
+        padding: 10px 0;
+    }
+
+    .grey-btn-container {
+        margin-bottom: 20px;
+    }
+
+    .contact-form .card {
+        padding: 0px !important;
+    }
+
+    .contact-form-container > div {
+        padding: 5px 10px !important;
+    }
 }
+
 @media screen and (max-width:580px) {
     h1, .development-container h1 {
         font-size: 46px;
         line-height: 50px;
     }
+
     h3, .list-unstyled h3 {
         font-size: 28px;
         line-height: 38px;
     }
+
     h4, .solution h4 {
         font-size: 20px;
         line-height: 29px;
     }
+
     h5, .heading5 {
         font-size: 14px;
         line-height: 20px;
     }
-    .p1-regular{
+
+    .p1-regular {
         font-size: 14px;
     }
+
     .p2-regular, .p2-bold {
         font-size: 14px;
         line-height: 22px;
     }
+
     .p2-bold {
         font-weight: 400;
+    }
+
+    h4.overlay {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .hover-area h4 {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    h4.overlay {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .hover-area h4 {
+        font-size: 18px;
+        line-height: 30px;
     }
 
     .nav-container img {
@@ -2962,53 +3144,71 @@ footer {
         height: 35px;
         width: 35px;
     }
+
     a, .circle-btn span i, .arrow_circle_white i, .contact-form .start-project button:hover .arrow_circle_white i {
         font-size: 18px;
     }
+
     .circle-btn span i {
         margin-top: 2px;
     }
 
-    .brands h5{
+    .brands h5 {
         font-size: 18px;
     }
-    .brands .slider-container{
-        padding:0;
+
+    .brands .slider-container {
+        padding: 0;
     }
+
     .expertise .service-card .overlay {
         padding: 12px;
     }
+
     .expertise .service-card.large {
-        height: 350px;
+        height: 220px;
     }
+
     .expertise .service-card.small-img {
         height: 154px;
     }
+
     .expertise .grid-container {
         gap: 18px;
     }
 
     .reveal {
-        font-size: 26px;
-        line-height: 40px;
+        font-size: 24px;
+        line-height: 32px;
     }
+
     .excellence .stats {
-        font-size: 25px;
+        font-size: 22px;
         padding: 15px;
+        letter-spacing: 0px;
     }
+
     .excellence .info {
         font-size: 12px;
         line-height: 22px;
     }
+
     .mob-business-image {
         max-height: 250px;
     }
+
     .services-mobile .list-mobile li {
-        padding: 22px 0 26px;
+        padding: 15px 0px;
     }
-    .portfolio__text{
+
+    .service-mob-img {
+        font-weight: 700;
+    }
+
+    .portfolio__text {
         padding: 0 0 40px 0;
     }
+
     .award-title {
         max-width: 180px;
     }
@@ -3020,13 +3220,15 @@ footer {
         margin-right: 16px;
     }
     .social-section li {
-        max-width: 50px;
-        height: 50px;
+        max-width: unset;
+        height: auto;
     }
+
     .resources .heading5 {
         font-size: 18px;
         line-height: 26px;
     }
+
     .resources .right-content h5 {
         padding: 6px 0;
     }
@@ -3035,31 +3237,81 @@ footer {
         font-size: 28px;
         line-height: 36px;
     }
+
     .author-info .rating {
         max-width: 98px;
     }
-    .testimonial-author h5{
+
+    .testimonial-author h5 {
         font-size: 18px;
     }
+
     .testimonial-section .quote {
         max-width: 40px;
     }
+
     .contact-form form input {
-        height: 50px;
+        height: 40px;
         padding: 7px 10px;
     }
+
     .contact-form .iti__selected-flag {
         padding: 15px 10px;
         font-size: 14px !important;
     }
+
     .contact-form form .input-group input[type="tel"] {
         padding-left: 90px !important;
     }
+
     .contact-form .text textarea {
         padding: 10px;
     }
+
     .services .service-mob-img:hover img {
         max-width: 250px;
+    }
+
+    .award-item {
+        padding: 15px 0px;
+    }
+
+    .gif-slider .btn_wrapper {
+        padding: 10px 0px 20px 0px !important;
+    }
+
+    .contact-form .start-project button {
+        font-size: 16px;
+        height: 50px;
+    }
+
+    .social-section img {
+        width: 35px;
+    }
+
+    .custom-container-spacingsm {
+        padding: 30px 0px;
+    }
+
+    .owl-carousel__prev, .owl-carousel__next {
+        padding: 7px;
+    }
+
+    .testimonial-section .testimonial-brands {
+        margin: 20px 0;
+        gap: 30px;
+    }
+
+    .owl-carousel__nav {
+        gap: 10px;
+    }
+
+    .testimonial-container {
+        gap: 0px;
+    }
+
+    footer .disclaimer {
+        font-size: 12px;
     }
 }
 
@@ -3068,23 +3320,22 @@ footer {
         font-size: 36px;
         line-height: 44px;
     }
-    
+
     h3, .list-unstyled h3 {
         font-size: 25px;
         line-height: 33px;
     }
-    h4, .solution h4 {
-        font-size: 17px;
-        line-height: 29px;
-    }
+
     h5, .heading5 {
         font-size: 13px;
         line-height: 20px;
     }
+
     h6 {
         font-size: 13px;
         line-height: 20px;
     }
+
     .p2-regular, .p2-bold {
         font-size: 13px;
         line-height: 20px;
@@ -3106,15 +3357,18 @@ footer {
         top: 25px;
         right: -20px;
     }
+
     .banner-bottom-left {
         left: -20px;
         margin-top: 20px;
         max-width: 240px;
     }
+
     .banner-bottom .banner-content {
         max-width: 214px;
         padding: 56px 0 0;
     }
+
     .ai-development .owl-carousel {
         padding: 10px 10px 12px;
     }
@@ -3125,44 +3379,51 @@ footer {
     .expertise .service-card.small-img {
         height: 124px;
     }
+
     .expertise .grid-container {
         gap: 15px;
     }
+
     .expertise .service-card .overlay {
         padding: 8px;
     }
-    .reveal {
-        font-size: 25px;
-        line-height: 38px;
-    }
+
     .excellence .info {
         font-size: 11px;
         line-height: 19px;
     }
+
     .excellence .stats {
         padding: 8px;
     }
+
     .mob-business-image {
         max-height: 165px;
     }
+
     .portfolio__text {
-        font-size: 40px;
+        font-size: 50px;
         line-height: 74px;
     }
+
     .honors p {
         font-size: 15px;
         line-height: 20px;
     }
+
     .award-rating {
         width: 30px;
         gap: 8px;
     }
+
     .award-rating img {
         max-width: 12px;
     }
+
     .award-title {
         max-width: 125px;
     }
+
     .award-logo img {
         max-width: 100px;
         width: 100%;
@@ -3190,23 +3451,25 @@ footer {
         font-weight: 700;
         line-height: 16px;
     }
+
     .wc-btn-secondary, .wc-btn-primary {
         padding: 10px;
     }
+
     .arrow_circle_blue_caret {
         height: 28px;
         width: 28px;
     }
+
     .arrow_circle_blue_caret i {
         font-size: 12px;
     }
-    .scrolling-tabs li {
-        font-size: 17px;
-    }
+
     .project h4 {
         font-size: 24px;
         line-height: 34px;
     }
+
     .btn_wrapper, #btn_wrapper {
         height: 135px;
         width: 135px;
@@ -3217,11 +3480,8 @@ footer {
     .expertise .grid-container {
         gap: 12px;
     }
-    .expertise .service-card.large {
-        height: 215px;
-    }
+
     .expertise .service-card.small-img {
         height: 107px;
     }
 }
-

@@ -1,10 +1,13 @@
 function updateMargin() {
-  var marginLeft = $(".resource-container").css("margin-left");
+  let marginLeft = $(".resource-container").css("margin-left");
   $(".testimonial-container").css("margin-left", marginLeft);
+  $(".success-container").css("margin-left", marginLeft);
 }
 
 $(document).ready(updateMargin);
 $(window).on("resize", updateMargin);
+
+// Smooth Scroll
 
 // ai-carousel
 $(".ai-carousel").owlCarousel({
@@ -12,12 +15,11 @@ $(".ai-carousel").owlCarousel({
   autoplay: true,
   autoplayTimeout: 3000,
   animateOut: "fadeOut",
-  smartSpeed: 1000,
+  animateIn: "fadeIn",
   dots: false,
   nav: false,
   items: 1,
   margin: 20,
-  // stagePadding: 30,
   responsive: {
     0: {
       items: 1,
@@ -38,11 +40,13 @@ $(".brands-container").owlCarousel({
   nav: false,
   dots: false,
   autoplay: true,
-  autoplayTimeout: 2000,
-  autoplayHoverPause: true,
+  slideTransition: "linear",
+  autoplaySpeed: 6000,
+  smartSpeed: 6000,
   responsive: {
     0: {
-      items: 2,
+      items: 3,
+      margin: 20,
     },
     600: {
       items: 4,
@@ -53,20 +57,26 @@ $(".brands-container").owlCarousel({
   },
 });
 
+$(".brands-container").trigger("play.owl.autoplay", [2000]);
+function setSpeed() {
+  $(".brands-container").trigger("play.owl.autoplay", [6000]);
+}
+setTimeout(setSpeed, 1000);
+
 $(".swiper-container").owlCarousel({
   loop: true,
   margin: 40,
   nav: false,
   dots: false,
   autoplay: false,
-  // autoplayTimeout: 1000,
-  // autoplayHoverPause: true,
   responsive: {
     0: {
-      items: 1.5,
+      items: 1.2,
+      margin:20,
     },
     600: {
-      items: 1,
+      items: 1.2,
+      margin:20,
     },
     992: {
       items: 2,
@@ -75,7 +85,7 @@ $(".swiper-container").owlCarousel({
 });
 
 // Telephone Field
-var input = document.querySelector("#phone");
+let input = document.querySelector("#phone");
 window.intlTelInput(input, {
   initialCountry: "in",
   separateDialCode: true,
@@ -99,15 +109,27 @@ $(document).ready(function () {
 });
 
 const categories = {
-  "Frontend": ["Angular", "JavaScript", "Bootstrap", "React", "HTML", "CSS", "Next.js", "Vue", "Nuxt.js", "Svelte", "TypeScript"],
-  "Backend": ["React", "Next.js", "Bootstrap", "Svelte", "Vue"],
-  "Microsoft": ["Bootstrap", "CSS", "Nuxt.js", "TypeScript"],
-  "Mobile": ["JavaScript", "React", "Vue", "CSS"],
+  Frontend: [
+    "Angular",
+    "JavaScript",
+    "Bootstrap",
+    "React",
+    "HTML",
+    "CSS",
+    "Next.js",
+    "Vue",
+    "Nuxt.js",
+    "Svelte",
+    "TypeScript",
+  ],
+  Backend: ["React", "Next.js", "Bootstrap", "Svelte", "Vue"],
+  Microsoft: ["Bootstrap", "CSS", "Nuxt.js", "TypeScript"],
+  Mobile: ["JavaScript", "React", "Vue", "CSS"],
   "AI & ML": ["Angular", "Bootstrap", "Nuxt.js"],
-  "DevOps": ["Bootstrap", "CSS", "Nuxt.js", "TypeScript"],
-  "Cybersecurity": ["Angular", "JavaScript", "Bootstrap", "React", "HTML", "CSS"],
+  DevOps: ["Bootstrap", "CSS", "Nuxt.js", "TypeScript"],
+  Cybersecurity: ["Angular", "JavaScript", "Bootstrap", "React", "HTML", "CSS"],
   "Cloud Computing": ["Next.js", "Vue", "Nuxt.js", "Svelte", "TypeScript"],
-  "Blockchain": ["JavaScript", "React", "Vue", "CSS"],
+  Blockchain: ["JavaScript", "React", "Vue", "CSS"],
   "Big Data": ["React", "Next.js", "Bootstrap", "Svelte", "Vue"],
 };
 
@@ -116,13 +138,19 @@ const mobileCategoryList = document.getElementById("mobile-category-list");
 const techGrid = document.getElementById("tech-grid");
 
 function formatImageName(tech) {
-  return tech.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "") + ".png";
+  return (
+    tech
+      .toLowerCase()
+      .replace(/\s+/g, "-")
+      .replace(/[^a-z0-9-]/g, "") + ".png"
+  );
 }
 
 function loadCategory(category) {
-  techGrid.innerHTML = categories[category].map(tech => {
-    let imgSrc = `images/${formatImageName(tech)}`;
-    return `
+  techGrid.innerHTML = categories[category]
+    .map((tech) => {
+      let imgSrc = `images/${formatImageName(tech)}`;
+      return `
       <div class="col-lg-3 col-4">
         <div class="card p-4 d-flex justify-content-center text-center rounded-0 align-items-center h-100">
           <img src="${imgSrc}" onerror="this.onerror=null; this.src='images/default.png'" 
@@ -130,24 +158,35 @@ function loadCategory(category) {
           <div class="p1-regular">${tech}</div>
         </div>
       </div>`;
-  }).join('');
+    })
+    .join("");
 
- // Highlight active tab
-  document.querySelectorAll(".nav-item, .scrolling-tabs li").forEach(li => li.classList.remove("active"));
+  // Highlight active tab
+  document
+    .querySelectorAll(".nav-item, .scrolling-tabs li")
+    .forEach((li) => li.classList.remove("active"));
   document.getElementById(category)?.classList.add("active");
   document.getElementById(`mobile-${category}`)?.classList.add("active");
 }
 
-Object.keys(categories).forEach(category => {
+Object.keys(categories).forEach((category) => {
   const li = document.createElement("li");
-  li.classList.add("nav-item", "px-4", "py-3", "text-light", "heading5", "d-flex", "justify-content-between");
+  li.classList.add(
+    "nav-item",
+    "px-4",
+    "py-3",
+    "text-light",
+    "heading5",
+    "d-flex",
+    "justify-content-between"
+  );
   li.id = category;
   li.textContent = category;
   li.onclick = () => loadCategory(category);
   desktopCategoryList.appendChild(li);
 });
 
-Object.keys(categories).forEach(category => {
+Object.keys(categories).forEach((category) => {
   const li = document.createElement("li");
   li.classList.add("heading5");
   li.id = `mobile-${category}`;
@@ -162,49 +201,19 @@ document.addEventListener("DOMContentLoaded", function () {
   const tabContainer = document.querySelector(".scrolling-tabs-container");
 
   tabContainer.addEventListener("wheel", function (event) {
-      event.preventDefault();
-      tabContainer.scrollLeft += event.deltaY*3; 
+    event.preventDefault();
+    tabContainer.scrollLeft += event.deltaY * 3;
   });
   tabContainer.scrollBy({
-    behavior: "smooth"
+    behavior: "smooth",
+  });
 });
-});
-
-
-// Text Change
-// document.addEventListener("DOMContentLoaded", function () {
-//   const textArray = [
-//     "AI Development",
-//     "Machine Learning",
-//     "Data Science",
-//     "Deep Learning",
-//   ];
-//   let index = 0;
-//   const textElement = document.getElementById("animated-text");
-
-//   setInterval(() => {
-//     textElement.classList.add("fade");
-
-//     setTimeout(() => {
-//       index = (index + 1) % textArray.length;
-//       textElement.textContent = textArray[index];
-//       textElement.classList.remove("fade");
-//     }, 500);
-//   }, 2000);
-// });
-
-// $(window).on("load", function () {
-//   $(".owl-carousel").trigger("refresh.owl.carousel");
-// });
 
 // solutions section
 document.querySelectorAll(".hover-area").forEach((item) => {
   item.addEventListener("click", function () {
-      // Toggle the gif-slider inside the clicked hover-area
       const gifSlider = this.querySelector(".gif-slider");
       gifSlider.classList.toggle("open");
-
-      // Find the caret icon inside the clicked hover-area and rotate it
       const caretIcon = this.querySelector(".caret-icon");
       caretIcon.classList.toggle("rotate");
   });
@@ -213,31 +222,51 @@ document.querySelectorAll(".hover-area").forEach((item) => {
 document.addEventListener("DOMContentLoaded", function () {
   const toggles = document.querySelectorAll(".hover-area");
 
-  toggles.forEach(toggle => {
-      toggle.addEventListener("click", function (event) {
-          event.stopPropagation();
+  toggles.forEach((toggle) => {
+    toggle.addEventListener("click", function (event) {
+      event.stopPropagation();
 
-          const parentRow = this.closest(".hover-area");
-          const content = parentRow.querySelector(".gif-slider");
-          const arrowIcon = this.querySelector("i");
+      const parentRow = this.closest(".hover-area");
+      const content = parentRow.querySelector(".gif-slider");
+      const arrowIcon = this.querySelector("i");
 
-          if (content.classList.contains("active")) {
-              content.style.maxHeight = "0";
-              content.classList.remove("active");
-              arrowIcon.style.transform = "rotate(0deg)";
-          } else {
-              document.querySelectorAll(".gif-slider.active").forEach(openSlider => {
-                  openSlider.style.maxHeight = "0";
-                  openSlider.classList.remove("active");
-                  openSlider.closest(".hover-area").querySelector(".arrow_circle_blue_caret i").style.transform = "rotate(0deg)";
-              });
+      if (content.classList.contains("active")) {
+        content.style.maxHeight = "0";
+        content.classList.remove("active");
+        arrowIcon.style.transform = "rotate(0deg)";
+      } else {
+        document
+          .querySelectorAll(".gif-slider.active")
+          .forEach((openSlider) => {
+            openSlider.style.maxHeight = "0";
+            openSlider.classList.remove("active");
+            openSlider
+              .closest(".hover-area")
+              .querySelector(".arrow_circle_blue_caret i").style.transform =
+              "rotate(0deg)";
+          });
 
-              content.classList.add("active");
-              content.style.maxHeight = content.scrollHeight + "px";
-              arrowIcon.style.transform = "rotate(180deg)";
-          }
-      });
+        content.classList.add("active");
+        content.style.maxHeight = content.scrollHeight + "px";
+        arrowIcon.style.transform = "rotate(180deg)";
+      }
+    });
   });
+});
+
+
+// secret-success
+$(".success-container").owlCarousel({
+  loop: true,
+  nav: false,
+  dots: false,
+
+  responsive: {
+    0: {
+      items: 2,
+      margin: 20,
+    },
+  },
 });
 
 document.addEventListener("DOMContentLoaded", function () {
