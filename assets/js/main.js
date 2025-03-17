@@ -65,10 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 (function ($) {
   "use strict";
-  // Get Device width
   let device_width = window.innerWidth;
-  // Home Page Client Cursor
-
   function mousemoveHandler(e) {
     try {
       const target = e.target;
@@ -100,40 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
   document.addEventListener("mousemove", mousemoveHandler);
-  //  Register GSAP
   gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitType);
-
-  //Config GSAP
-  // gsap.config({
-  //   nullTargetWarn: false,
-  // });
-  // document.querySelectorAll(".reveal").forEach((text) => {
-  //   let splitText = new SplitType(text, {
-  //     type: "words",
-  //   });
-
-  //   let words = splitText.words;
-  //   const section = text.closest(".innovative");
-
-  //   gsap.from(words, {
-  //     opacity: 0.2,
-  //     ease: "none",
-  //     stagger: {
-  //       amount: 0.5, 
-  //       from: "random",
-  //     },
-  //     duration: 0.3,
-  //     scrollTrigger: {
-  //       trigger: section,
-  //       start: "top top",
-  //       end: () => `+=${window.innerHeight}`,
-  //       scrub: true,
-  //       pin: true,
-  //       pinSpacing: true,
-  //       toggleActions: "play reverse play reverse",
-  //     },
-  //   });
-  // });
 
   document.addEventListener("scroll", function () {
     const element = document.getElementById("innovative-main-container");
@@ -224,17 +188,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // gsap.to(".bg_image img", {
-  //   xPercent: -18,
-  //   scrollTrigger: {
-  //     trigger: ".portfolio__area",
-  //     start: "top top",
-  //     end: "bottom center",
-  //     pin: ".bg_image",
-  //     scrub: 3,
-  //   },
-  // });
-
   // Button Hover Animation
   $(".btn-hover").on("mouseenter", function (e) {
     let x = e.pageX - $(this).offset().left;
@@ -256,16 +209,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Cursor JS
-  $("#cursor_style").on("change", function () {
-    let cursor_val = $(this).val();
+  // // Cursor JS
+  // $("#cursor_style").on("change", function () {
+  //   let cursor_val = $(this).val();
 
-    if (cursor_val == "1") {
-      $(".cursor1").hide();
-      $(".cursor2").hide();
-    } else {
-      $(".cursor1").show();
-      $(".cursor2").show();
-    }
-  });
+  //   if (cursor_val == "1") {
+  //     $(".cursor1").hide();
+  //     $(".cursor2").hide();
+  //   } else {
+  //     $(".cursor1").show();
+  //     $(".cursor2").show();
+  //   }
+  // });
 })(jQuery);
