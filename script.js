@@ -256,6 +256,21 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+// secret-success
+$(".success-container").owlCarousel({
+  loop: true,
+  nav: false,
+  dots: false,
+
+  responsive: {
+    0: {
+      items: 2,
+      margin: 20,
+    },
+  },
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   let accordionItems = document.querySelectorAll(".accordion-item");
 

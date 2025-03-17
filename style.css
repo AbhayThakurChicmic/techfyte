@@ -1337,10 +1337,10 @@ header {
 }
 
 
-.secret-success .scroll-container {
+.secret-success .success-slider {
     padding: 57px 0 0 0;
     display: flex;
-    overflow-x: hidden;
+    overflow-x: auto;
     scroll-behavior: smooth;
     gap: 16px;
 }
@@ -1348,13 +1348,19 @@ header {
     color:#2f2b2b
 }
 
-.secret-success .scroll-container::-webkit-scrollbar {
+.secret-success .success-slider::-webkit-scrollbar {
     display: none;
 }
 
+.secret-success .success-content{
+    padding:45px 0;
+}
+.secret-success .success-content img{
+    max-width: 100px;
+    height: auto;
+}
+
 .secret-success .scroll-item {
-    min-width: 914px;
-    height: 405px;
     border: 2px solid #F0F0F0;
     padding: 40px 60px;
     background: white;
@@ -2674,13 +2680,13 @@ footer .back-to-top {
         display: flex;
         justify-content: center;
     }
-    secret-success #customAccordion {
+    .secret-success #customAccordion {
         padding-top: 30px;
     }
 
-    .secret-success .accordion-body{
+    .secret-success .accordion-body {
         border-top: 2px solid #f0f0f0;
-        padding: 20px 15px;
+        margin-top: 15px;
     }
     .secret-success .accordion-button {
         font-weight: bold;
@@ -2688,12 +2694,14 @@ footer .back-to-top {
         justify-content: space-between;
         align-items: center;
         position: relative;
-        padding: 15px;
+        padding-left: 0;
+        padding-right: 0;
     }
     .secret-success .accordion-item {
-        border: 2px solid #f0f0f0; 
         margin-bottom: 12px; 
         position: relative;
+        padding: 15px;
+        border: 2px solid #f0f0f0;
     }
 
     .secret-success .accordion-button::after {
