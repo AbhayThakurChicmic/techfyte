@@ -209,16 +209,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // // Cursor JS
-  // $("#cursor_style").on("change", function () {
-  //   let cursor_val = $(this).val();
+  // Cursor JS
+  $("#cursor_style").on("change", function () {
+    let cursor_val = $(this).val();
 
-  //   if (cursor_val == "1") {
-  //     $(".cursor1").hide();
-  //     $(".cursor2").hide();
-  //   } else {
-  //     $(".cursor1").show();
-  //     $(".cursor2").show();
-  //   }
-  // });
+    if (cursor_val == "1") {
+      $(".cursor1").hide();
+      $(".cursor2").hide();
+    } else {
+      $(".cursor1").show();
+      $(".cursor2").show();
+    }
+  });
 })(jQuery);
