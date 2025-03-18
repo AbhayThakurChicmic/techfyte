@@ -260,7 +260,6 @@ $(".success-container").owlCarousel({
   loop: true,
   nav: false,
   dots: false,
-
   responsive: {
     0: {
       items: 2,
@@ -301,9 +300,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
-
-
-
 
 // bottom to top button in footer
 document.addEventListener("DOMContentLoaded", function () {
